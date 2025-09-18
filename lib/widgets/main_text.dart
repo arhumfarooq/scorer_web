@@ -1,4 +1,5 @@
  import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 // import 'package:scorer/constants/appcolors.dart';
 
@@ -21,9 +22,9 @@ class MainText extends StatelessWidget {
                     fontFamily:fontFamily?? "refsan",
                     fontWeight:fontWeight?? FontWeight.w400,
                     color:color?? AppColors.languageColor,
-                    fontSize:fontSize?? 18,
+                    fontSize:fontSize?? 18.sp,
                     letterSpacing: -0.1,
-                    height:height?? 2.0,
+                    height:height?? 2.0.h,
                     
                   
                   ),

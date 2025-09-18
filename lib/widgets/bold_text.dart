@@ -65,6 +65,7 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 // import 'package:scorer/constants/appcolors.dart';
 
@@ -94,9 +95,10 @@ class BoldText extends StatelessWidget {
       text,
       style: TextStyle(
         fontFamily: fontFamily ?? "giory",
-        fontSize: 22,
+        fontSize:fontSize?? 22.sp,
         letterSpacing: -0.3,
         fontWeight: FontWeight.w400,
+        height: height,
         color: selectionColor ?? AppColors.languageTextColor,
         // height: responsiveHeight,
       ),

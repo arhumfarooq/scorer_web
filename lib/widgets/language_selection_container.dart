@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 // import 'package:scorer/constants/appcolors.dart';
 // import 'package:scorer/widgets/bold_text.dart';
@@ -25,14 +26,14 @@ class LanguageSelectionContainer extends StatelessWidget {
       if (image.toLowerCase().endsWith(".svg")) {
         return SvgPicture.asset(
           image,
-          width: 35 ,
-          height: 35 ,
+          width: 35.w ,
+          height: 35.h ,
         );
       } else {
         return Image.asset(
           image,
-          width: 35 ,
-          height: 35 ,
+          width: 35.w ,
+          height: 35.h ,
           fit: BoxFit.contain,
         );
       }
@@ -43,23 +44,23 @@ class LanguageSelectionContainer extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: double.infinity,
-        height: 50,
+        height: 74.h,
         decoration: BoxDecoration(
           color: isSelected ? AppColors.selectLangugaeColor : Colors.transparent,
-          borderRadius: BorderRadius.circular(26 ),
+          borderRadius: BorderRadius.circular(26.r ),
           border: Border.all(
             color: isSelected
                 ? AppColors.selectLangugaeColor.withOpacity(0.1)
                 : AppColors.borderColor.withOpacity(0.25),
-            width: 2 
+            width: 2.w 
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 13 ),
+          padding: EdgeInsets.symmetric(horizontal: 13.w ),
           child: Row(
             children: [
               buildImage(),
-              SizedBox(width: 17 ),
+              SizedBox(width: 17.w ),
               BoldText(
                 text: text,
                 selectionColor: isSelected

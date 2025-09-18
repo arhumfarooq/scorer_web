@@ -98,7 +98,7 @@ static const String southAfrica= "assets/png/africa.png";
 static const String glass= "assets/png/glasses.png";
 static const String aa= "assets/png/aa.png";
 
-static const String man1= "assets/png/man.png";
+static const String man1= "assets/png/man1.png";
 static const String man3= "assets/png/group3.png";
 static const String ai2= "assets/png/ai.png";
 static const String profile= "assets/png/Profile.png";
@@ -106,6 +106,7 @@ static const String bg= "assets/png/bg.png";
 static const String badge= "assets/png/badge.png";
 static const String game= "assets/png/game.png";
 static const String pas= "assets/png/pas.png";
+static const String game2= "assets/png/game2.png";
 
 
 

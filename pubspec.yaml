@@ -39,6 +39,7 @@ dependencies:
   flutter_switch: ^0.3.2
   percent_indicator: ^4.2.5
   shared_preferences: ^2.5.3
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
   flutter_test:
