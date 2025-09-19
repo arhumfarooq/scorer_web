@@ -14,8 +14,8 @@ import 'package:scorer_web/widgets/login_button.dart';
 import 'package:scorer_web/widgets/login_textfield.dart';
 import 'package:scorer_web/widgets/main_text.dart';
 
-class AdminLgin extends StatelessWidget {
-  const AdminLgin({super.key});
+class FacilLoginScreen extends StatelessWidget {
+  const FacilLoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +35,8 @@ Padding(
   padding:  EdgeInsets.only(left: 60.w,right: 159.w),
   child: Center(
     child: Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      // crossAxisAlignment: CrossAxisAlignment.start,
-
       children: [
         Container(
           child: Stack(
@@ -45,7 +44,7 @@ Padding(
             children: [
              
               Image.asset(
-                                 Appimages.prince2,
+                                 Appimages.facil2,
                                   width: 472.w,
                height: 641.h,
                                  // height: 180 ,
@@ -53,7 +52,7 @@ Padding(
                                 Positioned(
                 right: -235,
                 top: 130,
-                child: CreateContainer(text: "Administrator Login",fontsize2: 30.sp,)),
+                child: CreateContainer(text: "Facilitator Login",fontsize2: 30.sp,)),
             ],
           ),
         ),
@@ -135,7 +134,7 @@ Padding(
     ),
   ),
 ),
- Spacer(),
+Spacer(),
  Padding(
    padding: EdgeInsets.only(left: 50.w),
    child: SizedBox(

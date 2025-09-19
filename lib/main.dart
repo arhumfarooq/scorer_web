@@ -25,6 +25,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:scorer_web/view/admin_lgin.dart';
 import 'package:scorer_web/view/choose_ypur_role_screen.dart';
+import 'package:scorer_web/view/facil_login_screen.dart';
+import 'package:scorer_web/view/player_login_screen.dart';
 import 'package:scorer_web/view/start_Screen.dart';
 import 'package:scorer_web/view/start_Screen1.dart';
 import 'package:scorer_web/view/start_Screen3.dart';
@@ -49,7 +51,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child:  AdminLgin(),
+      child:  PlayerLoginScreen(),
     );
   }
 }

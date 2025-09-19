@@ -137,7 +137,7 @@ class CreateContainer extends StatelessWidget {
             color: containerColor ?? AppColors.createColor,
             border: Border.all(
               color: borderColor ?? AppColors.createBorderColor,
-              width: 2 .w
+              width: 4.05 .w
             ),
           ),
           child: Center(
@@ -157,8 +157,8 @@ text ?? "create".tr,
         ),
         ishow
             ? Positioned(
-                top:top?? -40 .h,
-                right: (right ?? -1) .w,
+                top:top?? -50 .h,
+                right: (right ?? -20) .w,
                 child: SvgPicture.asset(
                   Appimages.arrowdown,
                   height: 69.h,
