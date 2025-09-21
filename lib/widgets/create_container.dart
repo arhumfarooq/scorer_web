@@ -108,7 +108,10 @@ class CreateContainer extends StatelessWidget {
   final double? width;
   final double? right;
   final double? top;
+  final double?arrowh;
+  final double?arrowW;
   final double?fontsize2;
+  final double?borderW;
 
   final bool ishow;
   const CreateContainer({
@@ -120,7 +123,7 @@ class CreateContainer extends StatelessWidget {
     this.containerColor,
     this.textColor,
     this.right,
-    this.ishow = true, this.top, this.fontsize2,
+    this.ishow = true, this.top, this.fontsize2, this.arrowh, this.arrowW, this.borderW,
   });
 
   @override
@@ -137,7 +140,7 @@ class CreateContainer extends StatelessWidget {
             color: containerColor ?? AppColors.createColor,
             border: Border.all(
               color: borderColor ?? AppColors.createBorderColor,
-              width: 4.05 .w
+              width:borderW?? 4.05 .w
             ),
           ),
           child: Center(
@@ -161,8 +164,8 @@ text ?? "create".tr,
                 right: (right ?? -20) .w,
                 child: SvgPicture.asset(
                   Appimages.arrowdown,
-                  height: 69.h,
-                  width: 83.w,
+                  height:arrowh?? 69.h,
+                  width:arrowW?? 83.w,
                 ),
               )
             : SizedBox()
