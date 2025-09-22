@@ -35,12 +35,12 @@ class PauseContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-      height: (height ?? 94).h,
+      height: (height ?? 80).h,
 
         width: (width ?? 287).w,
         decoration: BoxDecoration(
           color: color ?? AppColors.selectLangugaeColor,
-          borderRadius: BorderRadius.circular(25.r),
+          borderRadius: BorderRadius.circular(28.r),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -57,7 +57,7 @@ class PauseContainer extends StatelessWidget {
               Icon(
                 icon,
                 color: AppColors.whiteColor,
-                size: 30.sp,
+                size: 40.sp,
               ),
               SizedBox(width: 5 .w),
             ],

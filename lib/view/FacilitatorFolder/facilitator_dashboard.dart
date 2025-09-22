@@ -27,8 +27,7 @@ class FacilitatorDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GradientBackground(child: SafeArea(child: SingleChildScrollView(
-        child: Column(children: [
+      body: GradientBackground(child: SafeArea(child:  Column(children: [
           Container(
             width: double.infinity.w,
             height: 187.h,
@@ -60,61 +59,61 @@ class FacilitatorDashboard extends StatelessWidget {
           ),
           SizedBox(height: 56.h,),
         
-//           Container(
-//             height: 1050.h,
-//             width: 794.w,
-//             decoration: BoxDecoration(
-//               color: AppColors.whiteColor,
-//          borderRadius: BorderRadius.only(
-//           topLeft: Radius.circular(40.r),
-//           topRight: Radius.circular(40.r)
-//          )
-//             ),
-//             child: Stack(
-//               clipBehavior: Clip.none,
-//               children: [
-//   Positioned(
-//     top: -140,
-//     right: 312.w,
-//     left: 312.w,
-//     child: CustomStackImage(),
-//   ),
-
-//   Column(
-//     children: [
-//       SizedBox(height: 48.h,),
-//       Center(child: BoldText(text: "Welcome back, Adam!",fontSize: 48.sp,selectionColor: AppColors.blueColor,)),
-//       Center(child: MainText(
-//         fontSize: 22.sp,textAlign: TextAlign.center,
-//         text: "You’ve just entered a company in crisis. Every\ndecision you make could change its future."),),
-
-
-// SizedBox(height: 45.h,),
-//          FacilDashBoardStackContainer( controller: controller,),
-//            Expanded(
-//             child: Obx(() => screens[controller.selectedIndex.value]),
-//           ),
+      //           Container(
+      //             height: 1050.h,
+      //             width: 794.w,
+      //             decoration: BoxDecoration(
+      //               color: AppColors.whiteColor,
+      //          borderRadius: BorderRadius.only(
+      //           topLeft: Radius.circular(40.r),
+      //           topRight: Radius.circular(40.r)
+      //          )
+      //             ),
+      //             child: Stack(
+      //               clipBehavior: Clip.none,
+      //               children: [
+      //   Positioned(
+      //     top: -140,
+      //     right: 312.w,
+      //     left: 312.w,
+      //     child: CustomStackImage(),
+      //   ),
+      
+      //   Column(
+      //     children: [
+      //       SizedBox(height: 48.h,),
+      //       Center(child: BoldText(text: "Welcome back, Adam!",fontSize: 48.sp,selectionColor: AppColors.blueColor,)),
+      //       Center(child: MainText(
+      //         fontSize: 22.sp,textAlign: TextAlign.center,
+      //         text: "You’ve just entered a company in crisis. Every\ndecision you make could change its future."),),
+      
+      
+      // SizedBox(height: 45.h,),
+      //          FacilDashBoardStackContainer( controller: controller,),
+      //            Expanded(
+      //             child: Obx(() => screens[controller.selectedIndex.value]),
+      //           ),
            
-//     ],
-//   ),
-   
-//               ],
-//             ),
-//           ),
+      //     ],
+      //   ),
+         
+      //               ],
+      //             ),
+      //           ),
           
        Container(
-  height: 1050.h,
-  width: 794.w,
-  decoration: BoxDecoration(
-    color: AppColors.whiteColor,
-    borderRadius: BorderRadius.only(
+        height: 800.h,
+        width: 794.w,
+        decoration: BoxDecoration(
+          color: AppColors.whiteColor,
+          borderRadius: BorderRadius.only(
       topLeft: Radius.circular(40.r),
       topRight: Radius.circular(40.r),
-    ),
-  ),
-  child: Stack(
-    clipBehavior: Clip.none,
-    children: [
+          ),
+        ),
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
       Positioned(
         top: -140,
         right: 312.w,
@@ -123,47 +122,44 @@ class FacilitatorDashboard extends StatelessWidget {
       ),
       Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(height: 48.h),
-            Center(
-              child: BoldText(
-                text: "Welcome back, Adam!",
-                fontSize: 48.sp,
-                selectionColor: AppColors.blueColor,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 48.h),
+              Center(
+                child: BoldText(
+                  text: "Welcome back, Adam!",
+                  fontSize: 48.sp,
+                  selectionColor: AppColors.blueColor,
+                ),
               ),
-            ),
-            Center(
-              child: MainText(
-                fontSize: 22.sp,
-                textAlign: TextAlign.center,
-                text: "You’ve just entered a company in crisis. Every\ndecision you make could change its future.",
+              Center(
+                child: MainText(
+                  fontSize: 22.sp,
+                  textAlign: TextAlign.center,
+                  text: "You’ve just entered a company in crisis. Every\ndecision you make could change its future.",
+                ),
               ),
-            ),
-            SizedBox(height: 45.h),
-            FacilDashBoardStackContainer(controller: controller),
-
-            /// 👇 Ab yahan direct screen load karo
-            SizedBox(height: 20.h),
-            Expanded(
-              child: Obx(() => SingleChildScrollView(
-                    child: screens[controller.selectedIndex.value],
-                  )),
-            ),
+              SizedBox(height: 45.h),
+              FacilDashBoardStackContainer(controller: controller),
+                  
+              /// 👇 Ab yahan direct screen load karo
+              SizedBox(height: 20.h),
+              Obx(() => screens[controller.selectedIndex.value]),
+            ],
+          ),
+        ),
+      ),
           ],
         ),
       ),
-    ],
-  ),
-),
-
-
-
+      
+      
+      
         
         
-        ],),
-      ))),
+        ],),)),
     );
   }
 }

@@ -231,19 +231,20 @@ class CustomDashboardContainer extends StatelessWidget {
       ),
         
        arrowshow? Positioned(
-          top: 36 .h,
-          right:right?? 9 .w,
+          top: 72 .h,
+          // left: 629.w,
+          right:right?? -30 .w,
           child: AddOneContainer(
               onTap:
                     onTap,
                    
             svgPath: Appimages.forward,
-            width: 13 .w,
-            height: 14 .h,
-            height1: 46 .h,
-            height2: 32.5 .h,
-            width1: 46 .w,
-            width2: 32.5 .w,
+            width: 20.w,
+            height: 20 .h,
+            height1: 98.h,
+            height2: 69 .h,
+            width1: 98.w,
+            width2: 69 .w,
           ),
         ):SizedBox()
       ],
