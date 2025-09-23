@@ -216,8 +216,8 @@ class CustomDashboardContainer extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 17 .w),
                     child: PauseContainer(
                       onTap: onTap,
-                      height: 35.h,
-                      width: 300 .w,
+                      // height: 94.h,
+                      width: double.infinity,
                       color: color3,
                       text: text7 ?? "",
                       icon: icon3,

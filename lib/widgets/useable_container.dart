@@ -29,8 +29,8 @@ class UseableContainer extends StatelessWidget {
     
    
     return Container(
-      width: (width ?? 64.w) .w,
-      height: (height ?? 20.h) .h,
+      width: (width ?? 129.w) .w,
+      height: (height ?? 42.h) .h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(80 .r),
         color: color,
@@ -39,7 +39,7 @@ class UseableContainer extends StatelessWidget {
         child: MainText(
           text: text,
           fontFamily: fontFamily ?? "abz",
-          fontSize: (fontSize ?? 24) .sp,
+          fontSize: (fontSize ?? 18) .sp,
           color: textColor ?? AppColors.whiteColor,
         ),
       ),
