@@ -55,6 +55,8 @@ class ForwardButtonContainer extends StatelessWidget {
   final double? height2;
   final double? width1;
   final double? width2;
+  final double?imageH;
+  final double?imageW;
   final VoidCallback? onTap;
 
   const ForwardButtonContainer({
@@ -63,7 +65,7 @@ class ForwardButtonContainer extends StatelessWidget {
     this.height1,
     this.height2,
     this.width1,
-    this.width2, this.onTap,
+    this.width2, this.onTap, this.imageH, this.imageW,
   });
 
   @override
@@ -97,8 +99,8 @@ class ForwardButtonContainer extends StatelessWidget {
             child: Center(
               child: SvgPicture.asset(
                 image ?? Appimages.forward,
-                width: 12.w,
-                height: 14.h,
+                width:imageW?? 12.w,
+                height:imageH?? 14.h,
               ),
             ),
           ),

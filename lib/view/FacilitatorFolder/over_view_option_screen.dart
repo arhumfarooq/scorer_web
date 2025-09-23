@@ -42,10 +42,12 @@ class OverViewOptionScreen extends StatelessWidget {
       body: GradientBackground(
         child: SingleChildScrollView(
           child: Column(
+            // crossAxisAlignment: cros,
             children: [
               CustomAppbar(ishow: true),
               SizedBox(height: 56.h),
               Container(
+                height: 1050.h,
                 width: 794.w,
                 decoration: BoxDecoration(
                   color: AppColors.whiteColor,
@@ -58,9 +60,16 @@ class OverViewOptionScreen extends StatelessWidget {
                   clipBehavior: Clip.none,
                   children: [
                     Positioned(
-                      top: 57.h,
-                      left: -30.w,
-                      child: ForwardButtonContainer(image: Appimages.arrowback),
+                      top: 50.h,
+                      left: -40.w,
+                      child: ForwardButtonContainer(
+                       imageH: 20.h,
+                       imageW: 23.5.w, 
+                        height1: 90.h,
+                        height2: 65.h,
+                        width1: 90.w,
+                        width2: 65.w,
+                        image: Appimages.arrowback),
                     ),
                     Positioned(
                       top: -140,
@@ -72,7 +81,7 @@ class OverViewOptionScreen extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(height: 48.h),
                           Center(
@@ -110,7 +119,7 @@ class OverViewOptionScreen extends StatelessWidget {
                           SizedBox(height: 12.h),
 
                           /// Show selected screen
-                          Obx(() => screens[controller.selectedIndex.value]),
+                          Expanded(child: Obx(() => screens[controller.selectedIndex.value])),
                         ],
                       ),
                     ),
