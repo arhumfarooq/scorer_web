@@ -81,7 +81,7 @@ class TeamProgressContainer extends StatelessWidget {
                       text: controller.isCompleted.value
                           ? "5 of 5 submitted"
                           : "4 of 5 submitted",
-                      fontSize: 16.sp,
+                      fontSize: 20.sp,
                       selectionColor: AppColors.blueColor,
                     ),
                   ],
