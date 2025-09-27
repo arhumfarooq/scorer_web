@@ -65,7 +65,7 @@ class PlayersContainers extends StatelessWidget {
                   Icon(
                     icon,
                     color: iconColor ?? AppColors.forwardColor,
-                    size: 20.w,
+                    size: 40  .w,
                   ),
                 if (ishow) SizedBox(width: 7.w),
                 BoldText(

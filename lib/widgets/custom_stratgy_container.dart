@@ -194,6 +194,9 @@ class CustomStratgyContainer extends StatelessWidget {
   final int? flex;
   final double? fontSize2;
   final double? fontSize3;
+  final double?circleH;
+  final double?circleW;
+  final double?circleS;
 
   const CustomStratgyContainer({
     super.key,
@@ -219,7 +222,7 @@ class CustomStratgyContainer extends StatelessWidget {
     this.flex1,
     this.flex,
     this.fontSize2,
-    this.fontSize3,
+    this.fontSize3, this.circleH, this.circleW, this.circleS,
   });
 
   @override
@@ -246,8 +249,8 @@ class CustomStratgyContainer extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(top: 10.h),
                       child: Container(
-                        width: 30.w,
-                        height: 24.w,
+                        width:circleW?? 30.w,
+                        height:circleH?? 24.w,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: iconContainer,
@@ -255,7 +258,7 @@ class CustomStratgyContainer extends StatelessWidget {
                         child: Icon(
                           icon,
                           color: AppColors.whiteColor,
-                          size: 19.2.w,
+                          size:circleS?? 19.2.sp,
                         ),
                       ),
                     ),
