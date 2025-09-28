@@ -51,7 +51,7 @@ class CustomResponseContainer extends StatelessWidget {
           onTap: onTap,
           child: Container(
             // Converted: 226 * scaleHeight -> 226.h (scaled height)
-            height: containerHeight ?? 270.h,
+            height: containerHeight ?? 300.h,
             // Converted: 346 * scaleWidth -> 346.w (scaled width)
             width: containerWidth ?? double.infinity,
             decoration: BoxDecoration(
@@ -62,7 +62,7 @@ class CustomResponseContainer extends StatelessWidget {
             ),
             child: Padding(
               // Converted: 17 * scaleWidth -> 17.w (scaled horizontal padding)
-              padding: EdgeInsets.symmetric(horizontal: 17.w),
+              padding: EdgeInsets.symmetric(horizontal: 36.w),
               child: Column(
                 children: [
                   // Converted: 16 * scaleHeight -> 16.h (scaled vertical spacing)
@@ -105,6 +105,7 @@ class CustomResponseContainer extends StatelessWidget {
                         children: [
                           UseableContainer(
                             text: text ?? "pending".tr,
+                            // fontSize: 17.sp,
                             // Converted: 28 * scaleHeight -> 28.h
                             // height: 28.h,
                             // // Converted: 75 * scaleWidth -> 75.w
@@ -132,23 +133,23 @@ class CustomResponseContainer extends StatelessWidget {
                     ],
                   ),
                   // Converted: 17 * scaleHeight -> 17.h
-                  SizedBox(height: 30.h),
+                  SizedBox(height: 46.h),
                   MainText(
                     text: "Our primary objective is to increase customer satisfaction by 25% through Improved service delivery.",
                     // Replaced custom ResponsiveFont with standard scaled font size (14.sp)
-                    fontSize: 22.sp, 
+                    fontSize: 28.sp, 
                     height: 1.5.h,
                   ),
                   const Spacer(),
                   if (ishow1)
                     LoginButton(
                       // Converted: 14 * scaleWidth -> 14.sp
-                      fontSize: 24.sp,
+                      fontSize: 27.sp,
                       fontFamily: "refsan",
                       // Converted: 17 * scaleHeight -> 17.h
-                      imageHeight: 17.h,
+                      imageHeight: 25.h,
                       // Converted: 18 * scaleWidth -> 18.w
-                      imageWidth: 18.w,
+                      imageWidth: 25.w,
                       text: text1?.tr ?? "evaluate".tr,
                       // Converted: 45 * scaleHeight -> 45.h
                       height: 70.h,
@@ -177,9 +178,9 @@ class CustomResponseContainer extends StatelessWidget {
             child: Image.asset(
               Appimages.ai2,
               // Converted: 38 * scaleHeight -> 38.h
-              height: 48.h,
+              height: 58.h,
               // Converted: 38 * scaleWidth -> 38.w
-              width: 48.w,
+              width: 58.w,
             ),
           ),
         if (ishow)
@@ -191,9 +192,9 @@ class CustomResponseContainer extends StatelessWidget {
             child: SvgPicture.asset(
               Appimages.arrowdown,
               // Converted: 22 * scaleHeight -> 22.h
-              height: 39.h,
+              height: 30.h,
               // Converted: 20 * scaleWidth -> 20.w
-              width: 28.w,
+              width: 30.w,
             ),
           ),
       ],
