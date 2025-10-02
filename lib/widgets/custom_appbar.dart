@@ -4,11 +4,13 @@ import 'package:flutter_svg/svg.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
 import 'package:scorer_web/widgets/add_one_Container.dart';
+import 'package:scorer_web/widgets/create_container.dart';
 import 'package:scorer_web/widgets/setting_container.dart';
 
 class CustomAppbar extends StatelessWidget {
   final bool ishow;
-  const CustomAppbar({super.key,  this.ishow=false});
+  final bool isShow;
+  const CustomAppbar({super.key,  this.ishow=false,   this.isShow=true});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,9 @@ class CustomAppbar extends StatelessWidget {
                                     ishow: true,
                                   ),
                                   SizedBox(width: 6.w),
-                                  AddOneContainer(icon: Icons.add,onTap: () {
+                                  AddOneContainer(
+                                    isShow: isShow,
+                                    icon: Icons.add,onTap: () {
                                     // Get.toNamed(RouteName.createNewSessionScreen);
                                   },),
                                 ],

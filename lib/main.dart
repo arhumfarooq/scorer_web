@@ -33,6 +33,9 @@ import 'package:scorer_web/view/FacilitatorFolder/over_view_option_screen.dart';
 import 'package:scorer_web/view/FacilitatorFolder/view_response_Screen.dart';
 import 'package:scorer_web/view/FacilitatorFolder/view_score_Screen.dart';
 import 'package:scorer_web/view/adminFolder/admin_dashboard.dart';
+import 'package:scorer_web/view/adminFolder/admin_detailed_Screen.dart';
+import 'package:scorer_web/view/adminFolder/admin_over_view_option_screen.dart';
+import 'package:scorer_web/view/adminFolder/user_managemnet_screen.dart';
 import 'package:scorer_web/view/admin_lgin.dart';
 import 'package:scorer_web/view/choose_ypur_role_screen.dart';
 import 'package:scorer_web/view/facil_login_screen.dart';
@@ -61,7 +64,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child:  AdminDashboard(),
+      child:  AdminDetailedScreen(),
     );
   }
 }

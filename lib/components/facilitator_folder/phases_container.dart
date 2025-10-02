@@ -134,7 +134,7 @@ class PhaseContainer extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30.w),
       child: Container(
-        width: 657.w,
+        width: double.infinity,
         // The original logic was screenHeight * 0.13. Using 130.h assumes a 812px height design.
         height: 202.h,
         decoration: BoxDecoration(
