@@ -13,8 +13,11 @@ import 'package:scorer_web/widgets/main_text.dart';
 class AnalysisContainer extends StatelessWidget {
   final double? height;
   final bool ishow;
+  final double ?right;
+  final double?radius;
+  final double?width;
 
-  const AnalysisContainer({super.key, this.height, this.ishow = false});
+  const AnalysisContainer({super.key, this.height, this.ishow = false, this.right, this.radius, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +31,14 @@ class AnalysisContainer extends StatelessWidget {
           height: height ?? 580 .h,
           width: double.infinity,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(26.r),
-            border: Border.all(color: AppColors.greyColor, width: 1.7 .w),
+            borderRadius: BorderRadius.circular(radius?? 26.r),
+            border: Border.all(color: AppColors.greyColor, width:width?? 1.7 .w),
           ),
           child: Stack(
             children: [
               Positioned(
                 top:  70.h,
-                right: 280 .w,
+                right:right?? 280 .w,
                 child: SvgPicture.asset(Appimages.arrowdown),
               ),
               Padding(
@@ -143,12 +146,12 @@ class AnalysisContainer extends StatelessWidget {
         ),
         if (ishow)
           Positioned(
-            bottom: -75 .h,
-            // left: 57 * scaleWidth,
-            // right: 57 * scaleWidth,
+            bottom: -95 .h,
+            left: 57 .w,
+            right: 57 .w,
             child: Container(
-              height: 181 .h, 
-              width: 181 .w,
+              height: 220.h, 
+              width: 220.w,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
@@ -171,14 +174,14 @@ class AnalysisContainer extends StatelessWidget {
                   children: [
                     BoldText(
                       text: "89/100",
-                      fontSize: 30.sp,
+                      fontSize: 35.sp,
                       selectionColor: AppColors.createBorderColor,
                     ),
                     SizedBox(height: 4 .h),
                     BoldText(
                        text: "final_score".tr,
 
-                      fontSize: 16 .sp,
+                      fontSize: 24 .sp,
                       selectionColor: AppColors.blueColor,
                     )
                   ],

@@ -18,8 +18,8 @@ import 'package:scorer_web/widgets/main_text.dart';
 import 'package:scorer_web/widgets/useable_container.dart';
 // import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-class EvauateResponseScreen2 extends StatelessWidget {
-  const EvauateResponseScreen2({super.key});
+class ViewScoreScreen extends StatelessWidget {
+  const ViewScoreScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class EvauateResponseScreen2 extends StatelessWidget {
                   ),
                   Center(
                     child: BoldText(
-                      text: "Evaluate Response",
+                      text: "View Score",
                       fontSize: 48.sp,
                       selectionColor: AppColors.blueColor,
                     ),
@@ -97,144 +97,114 @@ class EvauateResponseScreen2 extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                            // SizedBox(height: 20.h),
-                  
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 40.w),
-                          child: CustomResponseContainer(
-                            ishow1: false,
-                            containerHeight: 270.h,
-                            color1: AppColors.yellowColor,
-                            text1: "view_score".tr,
-                            image: Appimages.eye,
-                            text: "pending".tr,
-                            ishow: true,
-                            textColor: AppColors.languageTextColor,
-                          ),
-                        ),
-                        // SizedBox(height: 20.h,),
-                          SizedBox(height: 26.h),
-                        Center(
-                          child: BoldText(
-                            text: "relevance_threshold".tr,
-                            fontSize: 34.h,
-                            selectionColor: AppColors.forwardColor,
-                          ),
-                        ),
-                          SizedBox(height: 26.h),
-
-                  
-                  
-                    Container(
-                      height: 880.h,
-                      width: double.infinity,
-                         decoration: BoxDecoration(
-                          border: Border.all(color: AppColors.greyColor, width: 2.98.w),
-                          borderRadius: BorderRadius.circular(47.r),
-                        ),
-                        child: Padding(
-                          padding:  EdgeInsets.symmetric(horizontal: 40.w),
-                          child: Column(
-                            children: [
-                              SizedBox(height: 60.h,),
-                                Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-
-                                 BoldText(
-  text: "your_evaluation".tr,
-  selectionColor: AppColors.blueColor,
-  fontSize: 24.sp, 
-),
-                                  UseableContainer(
-                                    fontSize: 18.sp,
-                                    text: "completed".tr,
-                                    // width: 83 * widthScaleFactor,
-                                    color: AppColors.forwardColor,
-                                  )
-                                ],
-                              ),
-
-                              SizedBox(height: 20.h,),
-                               Container(
-                                height: 147 .h,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: AppColors.greyColor, width: 2.98.w),
-                                  borderRadius: BorderRadius.circular(40.r),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.only(left: 19 .w, top:40.h),
-                                  child: BoldText(
-                                    text: "85",
-                                    fontSize: 43 .sp,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 20.h,),
-                                Container(
-                                height: 300 .h,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: AppColors.greyColor, width: 2.98.w),
-                                  borderRadius: BorderRadius.circular(40.r),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 19 .w),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(height: 20 .h),
-                                     BoldText(
-  text: "feedback_optional".tr,
-  fontSize: 28.sp,
-),
-                                      // SizedBox(height: 6 * heightScaleFactor),
-                                     MainText(
-  text: """Excellent strategic thinking with a comprehensive digital transformation approach. The timeline is realistic and the  three-phase implementation shows strong project management skills. Great work on considering both technical and human aspects."""
-  ,fontSize: 24 .sp,
-  // height: 1.1.h,
-),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            SizedBox(height: 20,),
-                             Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: AppColors.greyColor, width: 2.98.w),
-                            borderRadius: BorderRadius.circular(40.r),
-                          ),
-                          padding: EdgeInsets.symmetric(horizontal: 17.w, vertical: 20.h),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              BoldText(
-                                text: "scoring_breakdown".tr,
-                                fontSize: 24.sp,
-                                selectionColor: AppColors.blueColor,
-                              ),
-                              SizedBox(height: 31.h),
-                              CustomSloderRow(text: "clarity_specificity".tr, text2: "22/25"),
-                              CustomSloderRow(text: "strategic_thinking".tr, text2: "22/25"),
-                              CustomSloderRow(text: "feasibility".tr, text2: "22/25"),
-                              CustomSloderRow(text: "innovation".tr, text2: "22/25"),
-                            ],
-                          ),
-                        ),
-                  
-                             
-                              
-                            ],
-                          ),
-                        ),
+                        Container(
+  height: 371.h, // ScreenUtil().setHeight(171)
+  // width: 336.w, // ScreenUtil().setWidth(336)
+  width: double.infinity,
+  decoration: BoxDecoration(
+    border: Border.all(color: AppColors.greyColor, width: 3.31.w), // ScreenUtil().setWidth(1.7)
+    borderRadius: BorderRadius.circular(52.r), // Using .r for radius scaling
+  ),
+  child: Padding(
+    padding: EdgeInsets.symmetric(horizontal: 19.w), // ScreenUtil().setWidth(19)
+    child: Column(
+      children: [
+        SizedBox(height: 16.h), // ScreenUtil().setHeight(16)
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  Appimages.blackgirl,
+                  height: 112.h, // ScreenUtil().setHeight(47)
+                  width: 80.w, // ScreenUtil().setWidth(35)
+                ),
+                SizedBox(width: 3.w), // ScreenUtil().setWidth(3)
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    MainText(text: "Alex Martinez", fontSize: 30.sp), // ScreenUtil().setSp(14)
+                    MainText(
+                      text: "Team Alpha",
+                      color: AppColors.teamColor,
+                      fontSize: 30.sp, // ScreenUtil().setSp(13)
+                      height: 1,
                     ),
+                  ],
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                UseableContainer(
+                  height: 61.h, // ScreenUtil().setHeight(28)
 
+                  text: "submitted".tr,
+               fontSize: 20.sp,
+                  color: AppColors.forwardColor,
+                  textColor: AppColors.whiteColor,
+                ),
+                SizedBox(width: 4.w), // ScreenUtil().setWidth(4)
+                UseableContainer(
+                  text: "94",
+                  fontFamily: "giory",
+                  fontSize: 35.sp, // ScreenUtil().setSp(14)
+                  width: 83.w, // ScreenUtil().setWidth(37)
+                  height: 61.h, // ScreenUtil().setHeight(28)
+                  color: AppColors.orangeColor,
+                )
+              ],
+            )
+          ],
+        ),
+        SizedBox(height: 50.h), // ScreenUtil().setHeight(25)
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
+              children: [
+                BoldText(
+                  text: "3:42 PM",
+                  fontSize: 50.sp, // ScreenUtil().setSp(24)
+                  selectionColor: AppColors.forwardColor,
+                ),
+                BoldText(
+                  text: "submitted".tr,
+                  selectionColor: AppColors.blueColor,
+                  fontSize: 35.sp, // ScreenUtil().setSp(16)
+                )
+              ],
+            ),
+            SizedBox(width: 100.w), // ScreenUtil().setWidth(40)
+            Column(
+              children: [
+                BoldText(
+                  text: "4:15 PM",
+                  fontSize: 50.sp, // ScreenUtil().setSp(24)
+                  selectionColor: AppColors.forwardColor,
+                ),
+                BoldText(
+                  text: "scored".tr,
+                  selectionColor: AppColors.blueColor,
+                  fontSize: 30.sp, // ScreenUtil().setSp(16)
+                )
+              ],
+            )
+          ],
+        )
+      ],
+    ),
+  ),
+),
 
-                      Padding(
-                        padding:  EdgeInsets.symmetric(horizontal: 40.w),
-                        child: Container(
+SizedBox(height: 20.h,),
+                      AnalysisContainer(height: 700.h, ishow: true,right: 300.w,
+                      radius: 50.r,width: 3.31.w,
+                      ),
+                      SizedBox(height: 150.h,),
+Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(26.r),
@@ -312,109 +282,54 @@ class EvauateResponseScreen2 extends StatelessWidget {
                               ],
                             ),
                           ),
-                      ),
-                      SizedBox(height: 300.h,),
-
-                        Padding(
-                          padding:  EdgeInsets.symmetric(horizontal: 40.w),
-                          child: FeedbackContainer(ishow: true,),
-                        ),
-
-                        SizedBox(height: 20.h,),
-
-                        Padding(
-                          padding:  EdgeInsets.symmetric(horizontal: 40.w),
-                          child: AnalysisContainer(),
-                        ),
-
-                        Padding(
-                          // padding: EdgeInsets.all(8.0),
-                          padding:  EdgeInsets.symmetric(horizontal: 40.w),
-
-                          child: Column(
-                            children: [
-                                SizedBox(height: 20.h),
-                                            
-                          LoginButton(
-                            text: "accept_ai_score".tr,
-                            color: AppColors.forwardColor,
-                            image: Appimages.ai2,
-                            ishow: true,
-                            imageHeight: 48.h,
-                            imageWidth: 42.w,
-                          ),
-                          SizedBox(height: 15.h),
-                              LoginButton(
+                          SizedBox(height: 20.h,),
+                            LoginButton(
                         onTap: () {
                   // Get.toNamed(RouteName.overViewOptionScreen);
                 },
                        text: "move_next_stage".tr,
                     
                         icon: Icons.fast_forward,
-                        
-                        
+
   ishow: true,
                             imageHeight: 48.h,
                             imageWidth: 42.w,
-
-
-
-                          
-                      ),
-                      SizedBox(height: 20.h),
-                      LoginButton(
-                        
   
-
-
-
-                          
-                      text: "export_pdf".tr,
-                        ishow: true,
+                      ),
+                          SizedBox(height: 15.h,),
+                             LoginButton(
+                              
+                            text: "Share Responses".tr,
+                            color: AppColors.forwardColor,
+                            image: Appimages.move,
+                         
+                          ),
+                          SizedBox(height: 15.h,),
+                           LoginButton(
+                    
+                        text: "export_pdf".tr,
+                         ishow: true,
                             imageHeight: 48.h,
                             imageWidth: 42.w,
                         image: Appimages.export,
-                        
                         color: AppColors.redColor,
                       ),
-                                           SizedBox(height: 20.h),
-
-                      LoginButton(
-                     text: "edit_score_feedback".tr,
-                        
-  
-  
-
+                          SizedBox(height: 15.h,),
+  LoginButton(
+                       
+                        text: "edit_score_feedback".tr,
                         ishow: true,
                             imageHeight: 48.h,
                             imageWidth: 42.w,
                         icon: Icons.edit,
-                        
                         color: AppColors.orangeColor,
                       ),
-    
-                            ],
-                          ),
-                        ),
-
-//                         SfSlider(
-//   min: 0.0,
-//   max: 100.0,
-//   value: 40.0,
-//   activeColor: Colors.green,
-//   inactiveColor: Colors.grey.shade300,
-//   onChanged: (value) {
-//     print(value);
-//   },
-// ),
-  
 
 
-/// Empty thumb shape
-             
+                      SizedBox(height: 100,)
+
+                            // SizedBox(height: 20.h),
                   
-                        SizedBox(height: 20.h),
-                         
                       ],
                     ),
                   ),
