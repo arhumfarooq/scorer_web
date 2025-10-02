@@ -476,38 +476,45 @@ width: double.infinity,
                         ],
                       ),
                       SizedBox(height: 20.h),
-                      Row(
-                        children: [
-                          Expanded(
-                            flex: 3,
-                            child: Container(
-                              height: 6.h,
-                              // height: 6.h,
-                              // width: 200.w,
-                              decoration: BoxDecoration(
-                                color: AppColors.forwardColor,
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20.r),
-                                  bottomLeft: Radius.circular(20.r)
-                                )
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                           height: 6.h,
-                              decoration: BoxDecoration(
-                                color: AppColors.greyColor,
-                               borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(20.r),
-                                  bottomRight: Radius.circular(20.r)
-                                )
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      // Row(
+                      //   children: [
+                      //     Expanded(
+                      //       flex: 3,
+                      //       child: Container(
+                      //         height: 6.h,
+                      //         // height: 6.h,
+                      //         // width: 200.w,
+                      //         decoration: BoxDecoration(
+                      //           color: AppColors.forwardColor,
+                      //           borderRadius: BorderRadius.only(
+                      //             topLeft: Radius.circular(20.r),
+                      //             bottomLeft: Radius.circular(20.r)
+                      //           )
+                      //         ),
+                      //       ),
+                      //     ),
+                      //     Expanded(
+                      //       flex: 1,
+                      //       child: Container(
+                      //      height: 6.h,
+                      //         decoration: BoxDecoration(
+                      //           color: AppColors.greyColor,
+                      //          borderRadius: BorderRadius.only(
+                      //             topRight: Radius.circular(20.r),
+                      //             bottomRight: Radius.circular(20.r)
+                      //           )
+                      //         ),
+                      //       ),
+                      //     ),
+                      //   ],
+                      // ),
+                      LinearProgressIndicator(
+  value: 0.4, // 👈 required (0.0 = empty, 1.0 = full)
+  minHeight: 8,
+  color: AppColors.forwardColor,
+  backgroundColor: AppColors.greyColor,
+  borderRadius: BorderRadius.circular(10),
+),
                       SizedBox(height: 30.h),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

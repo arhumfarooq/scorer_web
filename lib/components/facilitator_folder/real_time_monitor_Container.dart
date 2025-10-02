@@ -38,32 +38,13 @@ class RealTimeMonitorContainer extends StatelessWidget {
               fontSize: 22.sp,
             ),
             SizedBox(height: verticalSpacing),
-            Row(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: Container(
-                    height: 8.h,
-                    // width: 160.w,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.r),
-                      color: AppColors.forwardColor,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    height: 8.h,
-                    // width: 80.w,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.r),
-                      color: AppColors.greyColor,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+          LinearProgressIndicator(
+  value: 0.4, // 👈 required (0.0 = empty, 1.0 = full)
+  minHeight: 8.h,
+  color: AppColors.forwardColor,
+  backgroundColor: AppColors.greyColor,
+  borderRadius: BorderRadius.circular(10),
+),
             SizedBox(height: verticalSpacing),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

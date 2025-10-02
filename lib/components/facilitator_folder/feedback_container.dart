@@ -22,7 +22,7 @@ class FeedbackContainer extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          height: 297, 
+          height: 470.h, 
           width:double.infinity ,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(26.r ),
@@ -96,7 +96,7 @@ text: "AI Feedback".tr,
         if (ishow)
           Positioned(
             top: -175 ,
-            left: 195 ,
+            left: 380.w ,
             child: SvgPicture.asset(
               Appimages.arrowdown,
               height: 38 ,
@@ -106,7 +106,8 @@ text: "AI Feedback".tr,
         if (ishow)
           Positioned(
             top: -170 ,
-            left: 110 ,
+            left: 110.w ,
+            right: 110.w,
             child: Image.asset(
               Appimages.ai2,
               height: 116 ,

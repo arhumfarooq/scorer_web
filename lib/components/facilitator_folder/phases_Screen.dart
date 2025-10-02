@@ -74,8 +74,10 @@ class PhasesScreen extends StatelessWidget {
                 PhaseContainer(),
                 SizedBox(height: 6.h,),
       
-                   Icon(Icons.arrow_downward_sharp,
-                    color: AppColors.forwardColor, size: 41.sp),
+                   Center(
+                     child: Icon(Icons.arrow_downward_sharp,
+                      color: AppColors.forwardColor, size: 41.sp),
+                   ),
                     StagesRow(),
                     SizedBox(height: 20.h,),
                      Padding(
@@ -84,34 +86,13 @@ class PhasesScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                          children: [
                            Obx(() {
-                                 return Row(
-                                   children: [
-                                     Expanded(
-                                       flex: controller.isCompleted.value ? 3 : 2,
-                                       child: Container(
-                                         height: 8.h,
-                                      
-                                         decoration: BoxDecoration(
-                                           color: controller.isCompleted.value
-                                               ? AppColors.forwardColor
-                                               : AppColors.selectLangugaeColor,
-                                           borderRadius: BorderRadius.circular(20.7.r),
-                                         ),
-                                       ),
-                                     ),
-                                     Expanded(
-                                        flex: controller.isCompleted.value ? 0 : 1,
-                                       child: Container(
-                                         height: 8.h,
-                                       
-                                         decoration: BoxDecoration(
-                                           color: AppColors.greyColor,
-                                           borderRadius: BorderRadius.circular(20.7.r),
-                                         ),
-                                       ),
-                                     ),
-                                   ],
-                                 );
+                                 return  LinearProgressIndicator(
+  value:controller.isCompleted.value?1.0: 0.4, // 👈 required (0.0 = empty, 1.0 = full)
+  minHeight: 8.h,
+  color: AppColors.selectLangugaeColor,
+  backgroundColor: AppColors.greyColor,
+  borderRadius: BorderRadius.circular(10),
+);
                                }),
                                SizedBox(height: 20.h,),
                                   Obx(() {
@@ -185,12 +166,14 @@ class PhasesScreen extends StatelessWidget {
 
 
                       CustomStratgyContainer(
+                        value: 0.6,
                       iconContainer: AppColors.forwardColor, icon: Icons.check, text1:  "phase1_strategy".tr, text2: "Completed • 20 min", text3: "completed".tr, smallContainer: AppColors.forwardColor, largeConatiner: AppColors.forwardColor,
                     flex: 3,flex1: 0,
                     ),
                      SizedBox(height: 10.h,),
 
                       CustomStratgyContainer(
+
                       iconContainer: AppColors.selectLangugaeColor, icon: Icons.play_arrow_sharp, text1: "phase2_strategy".tr ,text2: "Active • 30 min", text3: "active".tr, smallContainer: AppColors.selectLangugaeColor, largeConatiner: AppColors.selectLangugaeColor,
              
                     ),

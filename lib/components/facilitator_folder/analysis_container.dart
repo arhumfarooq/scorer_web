@@ -34,8 +34,8 @@ class AnalysisContainer extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                top: 80 .h,
-                right: 310 .w,
+                top:  70.h,
+                right: 280 .w,
                 child: SvgPicture.asset(Appimages.arrowdown),
               ),
               Padding(
@@ -76,39 +76,13 @@ class AnalysisContainer extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 10 .h),
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 3,
-                          child: Container(
-                            width: 220 .w,
-                            height: 8 .h,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(20 .r),
-                                topLeft: Radius.circular(20 .r),
-                              ),
-                              color: AppColors.forwardColor,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            width: 44 .w,
-                            height: 8 .h,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(20 .r),
-                                topRight: Radius.circular(20 .r),
-                              ),
-                              color: AppColors.greyColor,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(height: 30 .h),
+            LinearProgressIndicator(
+  value: 0.8, // 👈 required (0.0 = empty, 1.0 = full)
+  minHeight: 8.h,
+  color: AppColors.forwardColor,
+  backgroundColor: AppColors.greyColor,
+  borderRadius: BorderRadius.circular(10),
+),             SizedBox(height: 30 .h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -125,39 +99,13 @@ class AnalysisContainer extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 10 .h),
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Container(
-                            width: 180 .w,
-                            height: 8.h,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(20 .r),
-                                topLeft: Radius.circular(20 .r),
-                              ),
-                              color: AppColors.percenColor,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 2,
-                          child: Container(
-                            width: 84 .w,
-                            height: 8 .h,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(20 .r),
-                                topRight: Radius.circular(20 .r),
-                              ),
-                              color: AppColors.greyColor,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(height: 30 .h),
+                     LinearProgressIndicator(
+  value: 0.5, // 👈 required (0.0 = empty, 1.0 = full)
+  minHeight: 8.h,
+  color: AppColors.percenColor,
+  backgroundColor: AppColors.greyColor,
+  borderRadius: BorderRadius.circular(10),
+), SizedBox(height: 30 .h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -174,38 +122,13 @@ class AnalysisContainer extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 10 .h),
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            width: 130 .w,
-                            height: 8 .h,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(20 .r),
-                                topLeft: Radius.circular(20 .r),
-                              ),
-                              color: AppColors.orangeColor,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 3,
-                          child: Container(
-                            width: 134 .w,
-                            height: 8.h,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(20 .r),
-                                topRight: Radius.circular(20 .r),
-                              ),
-                              color: AppColors.greyColor,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
+                    LinearProgressIndicator(
+  value: 0.4, // 👈 required (0.0 = empty, 1.0 = full)
+  minHeight: 8.h,
+  color: AppColors.orangeColor,
+  backgroundColor: AppColors.greyColor,
+  borderRadius: BorderRadius.circular(10),
+),
                     SizedBox(height: 25 .h),
                   MainText(
   text: "AI Suggested Score: 9.1/10 - Comprehensive response with clear objectives, well-defined strategies, and realistic implementation timeline.".tr,

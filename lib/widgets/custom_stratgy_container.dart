@@ -171,6 +171,7 @@ import 'package:scorer_web/widgets/main_text.dart';
 import 'package:scorer_web/widgets/useable_container.dart';
 
 class CustomStratgyContainer extends StatelessWidget {
+  final double?value;
   final Color iconContainer;
   final IconData icon;
   final String text1;
@@ -222,7 +223,7 @@ class CustomStratgyContainer extends StatelessWidget {
     this.flex1,
     this.flex,
     this.fontSize2,
-    this.fontSize3, this.circleH, this.circleW, this.circleS,
+    this.fontSize3, this.circleH, this.circleW, this.circleS, this.value,
   });
 
   @override
@@ -292,32 +293,39 @@ class CustomStratgyContainer extends StatelessWidget {
                 fontSize: fontSize ?? 14.sp,
               ),
             SizedBox(height: spaceHeight2 ?? 25.h),
-            Row(
-              children: [
-                Expanded(
-                  flex: flex ?? 3,
-                  child: Container(
-                    height: 8.h,
-                    width: width1 ?? 314.w,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.r),
-                      color: largeConatiner,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: flex1 ?? 1,
-                  child: Container(
-                    height: 8.h,
-                    width: width2 ?? 0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.r),
-                      color: AppColors.greyColor,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            // Row(
+            //   children: [
+            //     Expanded(
+            //       flex: flex ?? 3,
+            //       child: Container(
+            //         height: 8.h,
+            //         width: width1 ?? 314.w,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(20.r),
+            //           color: largeConatiner,
+            //         ),
+            //       ),
+            //     ),
+            //     Expanded(
+            //       flex: flex1 ?? 1,
+            //       child: Container(
+            //         height: 8.h,
+            //         width: width2 ?? 0,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(20.r),
+            //           color: AppColors.greyColor,
+            //         ),
+            //       ),
+            //     ),
+            //   ],
+            // ),
+              LinearProgressIndicator(
+  value:value?? 0.4, // 40%
+  minHeight: 8.h,
+  color:largeConatiner?? AppColors.forwardColor,
+  backgroundColor: AppColors.greyColor,
+  borderRadius: BorderRadius.circular(10),
+),
           ],
         ),
       ),

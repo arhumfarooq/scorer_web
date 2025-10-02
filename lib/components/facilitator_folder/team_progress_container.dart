@@ -46,30 +46,13 @@ class TeamProgressContainer extends StatelessWidget {
               ),
               SizedBox(height: 12.h),
               Obx(() {
-                return Row(
-                  children: [
-                    Expanded(
-                      flex: controller.isCompleted.value ? 3 : 2,
-                      child: Container(
-                        height: 8.h,
-                        decoration: BoxDecoration(
-                          color: AppColors.forwardColor,
-                          borderRadius: BorderRadius.circular(20.r),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      flex: controller.isCompleted.value ? 0 : 2,
-                      child: Container(
-                        height: 8.h,
-                        decoration: BoxDecoration(
-                          color: AppColors.greyColor,
-                          borderRadius: BorderRadius.circular(20.r),
-                        ),
-                      ),
-                    ),
-                  ],
-                );
+                return  LinearProgressIndicator(
+  value:controller.isCompleted.value?1.0: 0.4, // 👈 required (0.0 = empty, 1.0 = full)
+  minHeight: 8.h,
+  color: AppColors.forwardColor,
+  backgroundColor: AppColors.greyColor,
+  borderRadius: BorderRadius.circular(10),
+);
               }),
               SizedBox(height: 12.h),
               Obx(
