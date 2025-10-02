@@ -13,7 +13,8 @@ import 'package:scorer_web/widgets/main_text.dart';
 import 'package:scorer_web/widgets/players_containers.dart';
 
 class LeaderBoardScreen extends StatelessWidget {
-  const LeaderBoardScreen({super.key});
+    final VoidCallback? onOpenDrawer; // 👈 callback
+  const LeaderBoardScreen({super.key, this.onOpenDrawer});
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class LeaderBoardScreen extends StatelessWidget {
 
     return SingleChildScrollView(
       child: Column(
+        
         children: [
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: 60.w),
@@ -102,9 +104,9 @@ class LeaderBoardScreen extends StatelessWidget {
                         ),
                       ),
                       GestureDetector(
-                        // onTap: () {
-                        //   showCustomBottomSheet(context: context);
-                        // },
+                        onTap: () {
+                           onOpenDrawer?.call(); //
+                        },
                         child: CreateContainer(
                           text: "use_filter".tr,
                           width: 173.w,

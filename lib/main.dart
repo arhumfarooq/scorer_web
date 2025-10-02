@@ -24,6 +24,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:scorer_web/view/AudioWaveExample.dart';
+import 'package:scorer_web/view/FacilitatorFolder/create_new_session_screen.dart';
 import 'package:scorer_web/view/FacilitatorFolder/end_session_Screen.dart';
 import 'package:scorer_web/view/FacilitatorFolder/evaluate_response_Screen.dart';
 import 'package:scorer_web/view/FacilitatorFolder/evauate_response_Screen2.dart';
@@ -31,6 +32,7 @@ import 'package:scorer_web/view/FacilitatorFolder/facilitator_dashboard.dart';
 import 'package:scorer_web/view/FacilitatorFolder/over_view_option_screen.dart';
 import 'package:scorer_web/view/FacilitatorFolder/view_response_Screen.dart';
 import 'package:scorer_web/view/FacilitatorFolder/view_score_Screen.dart';
+import 'package:scorer_web/view/adminFolder/admin_dashboard.dart';
 import 'package:scorer_web/view/admin_lgin.dart';
 import 'package:scorer_web/view/choose_ypur_role_screen.dart';
 import 'package:scorer_web/view/facil_login_screen.dart';
@@ -59,7 +61,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child:  EndSessionScreen(),
+      child:  AdminDashboard(),
     );
   }
 }

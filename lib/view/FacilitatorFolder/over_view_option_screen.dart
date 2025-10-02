@@ -8,17 +8,24 @@ import 'package:scorer_web/components/facilitator_folder/phases_Screen.dart';
 import 'package:scorer_web/components/facilitator_folder/players_Screen.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/controller/filter_controller.dart';
 import 'package:scorer_web/controller/over_view_controller.dart';
 import 'package:scorer_web/view/FacilitatorFolder/facil_over_view_stack_container.dart';
 import 'package:scorer_web/view/gradient_background.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/custom_appbar.dart';
 import 'package:scorer_web/widgets/custom_stack_image.dart';
+import 'package:scorer_web/widgets/filter_useable_container.dart';
 import 'package:scorer_web/widgets/forward_button_container.dart';
+import 'package:scorer_web/widgets/login_button.dart';
+import 'package:scorer_web/widgets/main_text.dart';
 import 'package:scorer_web/widgets/useable_container.dart';
 
 class OverViewOptionScreen extends StatelessWidget {
+   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>(); // 👈 add this
   final controller = Get.put(OverviewController());
+  final controller1 = Get.put(FilterController()); 
+
 
   OverViewOptionScreen({super.key});
 
@@ -29,16 +36,166 @@ class OverViewOptionScreen extends StatelessWidget {
     "Leaderboard".tr,
   ];
 
-  final List<Widget> screens = [
-    OverviewScreen(),
-    PhasesScreen(),
-    PlayersScreen(),
-    LeaderBoardScreen(),
-  ];
+ 
 
   @override
   Widget build(BuildContext context) {
+     final List<Widget> screens = [
+    OverviewScreen(),
+    PhasesScreen(),
+    PlayersScreen(),
+    LeaderBoardScreen(onOpenDrawer: () => _scaffoldKey.currentState?.openDrawer()), // 
+  ];
     return Scaffold(
+      // drawer: ,
+       key: _scaffoldKey, // yaha assign karna zaruri hai
+      drawer: SizedBox(
+        width: 412.w,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius:  BorderRadius.zero
+          ),
+          child: Drawer(
+            backgroundColor: AppColors.whiteColor,
+            
+            child: Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 38.w),
+              child: ScrollConfiguration(
+                 behavior: ScrollConfiguration.of(context).copyWith(
+    scrollbars: false, // ✅ ye side wali scrollbar hatayega
+  ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    // padding: EdgeInsets.zero,
+                    children: [
+                      SizedBox(height: 30.h,),
+                    Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                BoldText(
+                                 text: "filter".tr,
+                                  fontSize: 30.sp
+                                  ,
+                                  selectionColor: AppColors.blueColor,
+                                ),
+                                GestureDetector(
+                                  onTap: () => Get.back(),
+                                  child: MainText(
+                                    text: "cancel".tr,
+                                    fontSize: 24.sp,
+                                    color: AppColors.forwardColor,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                  
+                       SizedBox(height: 34),
+                  
+                            Center(
+                              child: BoldText(
+                                text: "by_phase".tr,
+                                fontSize: 32.sp,
+                                selectionColor: AppColors.blueColor,
+                              ),
+                            ),
+                                SizedBox(height: 20.h),
+                            
+                          
+                          Obx(() => FilterUseableContainer(
+                            height: 100.h,
+                                onTap: () => controller1
+                                .select(0),
+                                isSelected: controller.selectedIndex.value == 0,
+                                text: "phase_1".tr
+                              )),
+                           SizedBox(height: 10.h),
+                          Obx(() => FilterUseableContainer(
+                            height: 100.h,
+                  
+                                onTap: () => controller1.select(1),
+                                isSelected: controller.selectedIndex.value == 1,
+                                text: "phase_2".tr
+                              )),
+                                    SizedBox(height: 10.h),
+                            
+                          Obx(() => FilterUseableContainer(
+                            height: 100.h,
+                  
+                                onTap: () => controller1.select(2),
+                                isSelected: controller.selectedIndex.value == 2,
+                                text: "phase_3".tr
+                              )),
+                              SizedBox(height: 40.h),
+                  
+                      Center(
+                        child: BoldText(
+                          text: "by_stage".tr,
+                          fontSize: 32.sp,
+                          selectionColor: AppColors.blueColor,
+                        ),
+                      ),
+                                SizedBox(height: 20.h),
+                  
+                  
+                        Obx(() => FilterUseableContainer(
+                            height: 100.h,
+                  
+                            onTap: () => controller1.selectStage(0),
+                            isSelected: controller1.selectedstage.value == 0,
+                            text: "stage_1".tr
+                            
+                          )),
+                                     SizedBox(height: 10.h),
+                  
+                      Obx(() => FilterUseableContainer(
+                            height: 100.h,
+                  
+                            onTap: () => controller1.selectStage(1),
+                            isSelected: controller1.selectedstage.value == 1,
+                            text:"stage_2".tr
+                          )),
+                       SizedBox(height: 10.h),
+                      Obx(() => FilterUseableContainer(
+                            height: 100.h,
+                  
+                            onTap: () => controller1.selectStage(2),
+                            isSelected: controller1.selectedstage.value == 2,
+                            text: "Stage 3",
+                          )),
+                  
+                          SizedBox(height: 40.h),
+                  
+                      
+                      Center(
+                        child: LoginButton(
+                          // fontSize: 18,
+                          text: "clear_filter".tr,
+                          color: AppColors.redColor,
+                        ),
+                      ),
+                       SizedBox(height: 10.h),
+                      Center(
+                        child: LoginButton(
+                          // fontSize: 18,
+                          text: "apply_filter".tr,
+                          color: AppColors.forwardColor,
+                        ),
+                      ),
+                      SizedBox(height: 30.h,)
+                  
+                  
+                            
+                       
+                  
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
       body: GradientBackground(
         child: SingleChildScrollView(
           child: Column(
