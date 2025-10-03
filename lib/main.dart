@@ -47,6 +47,8 @@ import 'package:scorer_web/view/facil_login_screen.dart';
 import 'package:scorer_web/view/player_folder/player_dashboard_Screen.dart';
 import 'package:scorer_web/view/player_folder/player_dashboard_Screen2.dart';
 import 'package:scorer_web/view/player_folder/player_game_start_Screen.dart';
+import 'package:scorer_web/view/player_folder/player_leaderboard_Screen.dart';
+import 'package:scorer_web/view/player_folder/player_leaderboard_Screen2.dart';
 import 'package:scorer_web/view/player_folder/player_login_side.dart';
 import 'package:scorer_web/view/player_folder/response_submit_screen1.dart';
 import 'package:scorer_web/view/player_folder/response_submitted_Screen2.dart';
@@ -75,7 +77,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child:  ResponseSubmittedScreen2(),
+      child:  AdminDashboard(),
     );
   }
 }

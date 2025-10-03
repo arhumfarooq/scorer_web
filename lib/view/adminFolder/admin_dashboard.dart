@@ -28,6 +28,7 @@ import 'package:scorer_web/widgets/login_button.dart';
 import 'package:scorer_web/widgets/main_text.dart';
 import 'package:scorer_web/widgets/players_containers.dart';
 import 'package:scorer_web/widgets/useable_container.dart';
+import 'package:scorer_web/widgets/widget_nav_item.dart';
 // import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class AdminDashboard extends StatelessWidget {
@@ -47,95 +48,124 @@ class AdminDashboard extends StatelessWidget {
         child: Column(
           children: [
             /// ✅ Fixed Appbar
-            CustomAppbar(),
+            CustomAppbar(
+              width3: 205.w,
+height3: 61.h,
+borderW: 1.96.w,
+text: "Create New",
+right2: -30.w,
+right: 20.w,
+top: -30.h,
+
+            ),
             SizedBox(height: 56.h),
 
-            /// ✅ Fixed Top Container
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(40.r),
-                  topRight: Radius.circular(40.r)
-                ),
-              color: AppColors.whiteColor,
-
+         Expanded(
+           child: Row(
+            children: [
+              Padding(
+                padding:  EdgeInsets.only(left: 100.w),
+                child: SideNavBar(),
               ),
-              // color: AppColors.whiteColor,
-              width: 794.w,
-              height: 235.h,
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Positioned(
-                    top: 50.h,
-                    left: -40.w,
-                    child: ForwardButtonContainer(
-                      imageH: 20.h,
-                      imageW: 23.5.w,
-                      height1: 90.h,
-                      height2: 65.h,
-                      width1: 90.w,
-                      width2: 65.w,
-                      image: Appimages.arrowback,
+              Expanded(
+                child: Column(
+                  children: [
+                       /// ✅ Fixed Top Container
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40.r),
+                      topRight: Radius.circular(40.r)
                     ),
-                  ),
-                  Positioned(
-                    top: -140,
-                    right: 312.w,
-                    left: 312.w,
-                    child: CustomStackImage(
-                      image: Appimages.prince2,
-                      text: "Administrator",
-                    ),
-                  ),
-               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                     Center(
-                    child: BoldText(
-                      text: "Hello Administrator, Chris!",
-                      fontSize: 48.sp,
-                      selectionColor: AppColors.blueColor,
-                    ),
-                  ),
-                   MainText(text: "Welcome! You have full system access to\nmanage sessions, users, and game content.",fontSize: 22.sp,)
-
-                ],
-               )
-                ],
-              ),
-            ),
-
-            /// ✅ Scrollable Area
-            Expanded(
-              child: Container(
-                width: 794.w,
-                decoration: BoxDecoration(
                   color: AppColors.whiteColor,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40.r),
-                    bottomRight: Radius.circular(40.r)
+                
                   ),
-                ),
-                child: ScrollConfiguration(
-                    behavior: ScrollConfiguration.of(context).copyWith(
-    scrollbars: false, // ✅ ye side wali scrollbar hatayega
-  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                  // color: AppColors.whiteColor,
+                  width: 794.w,
+                  height: 235.h,
+                  child: Stack(
+                    clipBehavior: Clip.none,
                     children: [
-                       FacilDashBoardStackContainer(controller: controller),
-                  SizedBox(height: 20.h),
-                                 Expanded(child: Obx(() => screens[controller.selectedIndex.value])),
-                  
-                       
-                  
-                   
+                      Positioned(
+                        top: 50.h,
+                        left: -40.w,
+                        child: ForwardButtonContainer(
+                          imageH: 20.h,
+                          imageW: 23.5.w,
+                          height1: 90.h,
+                          height2: 65.h,
+                          width1: 90.w,
+                          width2: 65.w,
+                          image: Appimages.arrowback,
+                        ),
+                      ),
+                      Positioned(
+                        top: -140,
+                        right: 312.w,
+                        left: 312.w,
+                        child: CustomStackImage(
+                          image: Appimages.prince2,
+                          text: "Administrator",
+                        ),
+                      ),
+                   Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                         Center(
+                        child: BoldText(
+                          text: "Hello Administrator, Chris!",
+                          fontSize: 48.sp,
+                          selectionColor: AppColors.blueColor,
+                        ),
+                      ),
+                       MainText(text: "Welcome! You have full system access to\nmanage sessions, users, and game content.",fontSize: 22.sp,)
+                
+                    ],
+                   )
                     ],
                   ),
                 ),
+                
+                /// ✅ Scrollable Area
+                Expanded(
+                  child: Container(
+                    width: 794.w,
+                    decoration: BoxDecoration(
+                      color: AppColors.whiteColor,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40.r),
+                        bottomRight: Radius.circular(40.r)
+                      ),
+                    ),
+                    child: ScrollConfiguration(
+                        behavior: ScrollConfiguration.of(context).copyWith(
+                    scrollbars: false, // ✅ ye side wali scrollbar hatayega
+                  ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                           FacilDashBoardStackContainer(controller: controller),
+                      SizedBox(height: 20.h),
+                                     Expanded(child: Obx(() => screens[controller.selectedIndex.value])),
+                      
+                           
+                      
+                       
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                  ],
+                ),
               ),
-            ),
+              // Text("")
+              Container(
+                width: 200.w,
+              )
+            ],
+           ),
+         )
           ],
         ),
       ),

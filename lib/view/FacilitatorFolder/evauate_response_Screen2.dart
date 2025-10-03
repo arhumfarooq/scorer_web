@@ -15,6 +15,7 @@ import 'package:scorer_web/widgets/custom_stack_image.dart';
 import 'package:scorer_web/widgets/forward_button_container.dart';
 import 'package:scorer_web/widgets/login_button.dart';
 import 'package:scorer_web/widgets/main_text.dart';
+import 'package:scorer_web/widgets/team_alpha_container.dart';
 import 'package:scorer_web/widgets/useable_container.dart';
 // import 'package:syncfusion_flutter_sliders/sliders.dart';
 
@@ -25,401 +26,411 @@ class EvauateResponseScreen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GradientBackground(
-        child: Column(
+        child: Stack(
+
           children: [
-            /// ✅ Fixed Appbar
-            CustomAppbar(ishow: true),
-            SizedBox(height: 56.h),
-
-            /// ✅ Fixed Top Container
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(40.r),
-                  topRight: Radius.circular(40.r)
-                ),
-              color: AppColors.whiteColor,
-
-              ),
-              // color: AppColors.whiteColor,
-              width: 794.w,
-              height: 235.h,
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Positioned(
-                    top: 50.h,
-                    left: -40.w,
-                    child: ForwardButtonContainer(
-                      imageH: 20.h,
-                      imageW: 23.5.w,
-                      height1: 90.h,
-                      height2: 65.h,
-                      width1: 90.w,
-                      width2: 65.w,
-                      image: Appimages.arrowback,
+             Positioned(
+              top:700.h,
+              right: 0,
+              // left: 0,
+              child: TeamAlphaContainer()),
+            Column(
+              children: [
+                /// ✅ Fixed Appbar
+                CustomAppbar(ishow: true),
+                SizedBox(height: 56.h),
+            
+                /// ✅ Fixed Top Container
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40.r),
+                      topRight: Radius.circular(40.r)
                     ),
-                  ),
-                  Positioned(
-                    top: -140,
-                    right: 312.w,
-                    left: 312.w,
-                    child: CustomStackImage(),
-                  ),
-                  Center(
-                    child: BoldText(
-                      text: "Evaluate Response",
-                      fontSize: 48.sp,
-                      selectionColor: AppColors.blueColor,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            /// ✅ Scrollable Area
-            Expanded(
-              child: Container(
-                width: 794.w,
-                decoration: BoxDecoration(
                   color: AppColors.whiteColor,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40.r),
-                    bottomRight: Radius.circular(40.r)
+            
+                  ),
+                  // color: AppColors.whiteColor,
+                  width: 794.w,
+                  height: 235.h,
+                  child: Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      Positioned(
+                        top: 50.h,
+                        left: -40.w,
+                        child: ForwardButtonContainer(
+                          imageH: 20.h,
+                          imageW: 23.5.w,
+                          height1: 90.h,
+                          height2: 65.h,
+                          width1: 90.w,
+                          width2: 65.w,
+                          image: Appimages.arrowback,
+                        ),
+                      ),
+                      Positioned(
+                        top: -140,
+                        right: 312.w,
+                        left: 312.w,
+                        child: CustomStackImage(),
+                      ),
+                      Center(
+                        child: BoldText(
+                          text: "Evaluate Response",
+                          fontSize: 48.sp,
+                          selectionColor: AppColors.blueColor,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                child: ScrollConfiguration(
-                    behavior: ScrollConfiguration.of(context).copyWith(
-    scrollbars: false, // ✅ ye side wali scrollbar hatayega
-  ),
-                  child: SingleChildScrollView(
-                    padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                            // SizedBox(height: 20.h),
-                  
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 40.w),
-                          child: CustomResponseContainer(
-                            ishow1: false,
-                            containerHeight: 270.h,
-                            color1: AppColors.yellowColor,
-                            text1: "view_score".tr,
-                            image: Appimages.eye,
-                            text: "pending".tr,
-                            ishow: true,
-                            textColor: AppColors.languageTextColor,
-                          ),
-                        ),
-                        // SizedBox(height: 20.h,),
-                          SizedBox(height: 26.h),
-                        Center(
-                          child: BoldText(
-                            text: "relevance_threshold".tr,
-                            fontSize: 34.h,
-                            selectionColor: AppColors.forwardColor,
-                          ),
-                        ),
-                          SizedBox(height: 26.h),
-
-                  
-                  
-                    Container(
-                      height: 880.h,
-                      width: double.infinity,
-                         decoration: BoxDecoration(
-                          border: Border.all(color: AppColors.greyColor, width: 2.98.w),
-                          borderRadius: BorderRadius.circular(47.r),
-                        ),
-                        child: Padding(
-                          padding:  EdgeInsets.symmetric(horizontal: 40.w),
-                          child: Column(
-                            children: [
-                              SizedBox(height: 60.h,),
-                                Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            
+                /// ✅ Scrollable Area
+                Expanded(
+                  child: Container(
+                    width: 794.w,
+                    decoration: BoxDecoration(
+                      color: AppColors.whiteColor,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40.r),
+                        bottomRight: Radius.circular(40.r)
+                      ),
+                    ),
+                    child: ScrollConfiguration(
+                        behavior: ScrollConfiguration.of(context).copyWith(
+                scrollbars: false, // ✅ ye side wali scrollbar hatayega
+              ),
+                      child: SingleChildScrollView(
+                        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                                // SizedBox(height: 20.h),
+                      
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 40.w),
+                              child: CustomResponseContainer(
+                                ishow1: false,
+                                containerHeight: 270.h,
+                                color1: AppColors.yellowColor,
+                                text1: "view_score".tr,
+                                image: Appimages.eye,
+                                text: "pending".tr,
+                                ishow: true,
+                                textColor: AppColors.languageTextColor,
+                              ),
+                            ),
+                            // SizedBox(height: 20.h,),
+                              SizedBox(height: 26.h),
+                            Center(
+                              child: BoldText(
+                                text: "relevance_threshold".tr,
+                                fontSize: 34.h,
+                                selectionColor: AppColors.forwardColor,
+                              ),
+                            ),
+                              SizedBox(height: 26.h),
+            
+                      
+                      
+                        Container(
+                          height: 880.h,
+                          width: double.infinity,
+                             decoration: BoxDecoration(
+                              border: Border.all(color: AppColors.greyColor, width: 2.98.w),
+                              borderRadius: BorderRadius.circular(47.r),
+                            ),
+                            child: Padding(
+                              padding:  EdgeInsets.symmetric(horizontal: 40.w),
+                              child: Column(
                                 children: [
-
-                                 BoldText(
-  text: "your_evaluation".tr,
-  selectionColor: AppColors.blueColor,
-  fontSize: 24.sp, 
-),
-                                  UseableContainer(
-                                    fontSize: 18.sp,
-                                    text: "completed".tr,
-                                    // width: 83 * widthScaleFactor,
-                                    color: AppColors.forwardColor,
-                                  )
-                                ],
-                              ),
-
-                              SizedBox(height: 20.h,),
-                               Container(
-                                height: 147 .h,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: AppColors.greyColor, width: 2.98.w),
-                                  borderRadius: BorderRadius.circular(40.r),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.only(left: 19 .w, top:40.h),
-                                  child: BoldText(
-                                    text: "85",
-                                    fontSize: 43 .sp,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 20.h,),
-                                Container(
-                                height: 300 .h,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: AppColors.greyColor, width: 2.98.w),
-                                  borderRadius: BorderRadius.circular(40.r),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 19 .w),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                  SizedBox(height: 60.h,),
+                                    Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      SizedBox(height: 20 .h),
+            
                                      BoldText(
-  text: "feedback_optional".tr,
-  fontSize: 28.sp,
-),
-                                      // SizedBox(height: 6 * heightScaleFactor),
-                                     MainText(
-  text: """Excellent strategic thinking with a comprehensive digital transformation approach. The timeline is realistic and the  three-phase implementation shows strong project management skills. Great work on considering both technical and human aspects."""
-  ,fontSize: 24 .sp,
-  // height: 1.1.h,
-),
+              text: "your_evaluation".tr,
+              selectionColor: AppColors.blueColor,
+              fontSize: 24.sp, 
+            ),
+                                      UseableContainer(
+                                        fontSize: 18.sp,
+                                        text: "completed".tr,
+                                        // width: 83 * widthScaleFactor,
+                                        color: AppColors.forwardColor,
+                                      )
                                     ],
                                   ),
-                                ),
+            
+                                  SizedBox(height: 20.h,),
+                                   Container(
+                                    height: 147 .h,
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(color: AppColors.greyColor, width: 2.98.w),
+                                      borderRadius: BorderRadius.circular(40.r),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 19 .w, top:40.h),
+                                      child: BoldText(
+                                        text: "85",
+                                        fontSize: 43 .sp,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 20.h,),
+                                    Container(
+                                    height: 300 .h,
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(color: AppColors.greyColor, width: 2.98.w),
+                                      borderRadius: BorderRadius.circular(40.r),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.symmetric(horizontal: 19 .w),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          SizedBox(height: 20 .h),
+                                         BoldText(
+              text: "feedback_optional".tr,
+              fontSize: 28.sp,
+            ),
+                                          // SizedBox(height: 6 * heightScaleFactor),
+                                         MainText(
+              text: """Excellent strategic thinking with a comprehensive digital transformation approach. The timeline is realistic and the  three-phase implementation shows strong project management skills. Great work on considering both technical and human aspects."""
+              ,fontSize: 24 .sp,
+              // height: 1.1.h,
+            ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                SizedBox(height: 20,),
+                                 Container(
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: AppColors.greyColor, width: 2.98.w),
+                                borderRadius: BorderRadius.circular(40.r),
                               ),
-                            SizedBox(height: 20,),
-                             Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: AppColors.greyColor, width: 2.98.w),
-                            borderRadius: BorderRadius.circular(40.r),
-                          ),
-                          padding: EdgeInsets.symmetric(horizontal: 17.w, vertical: 20.h),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              BoldText(
-                                text: "scoring_breakdown".tr,
-                                fontSize: 24.sp,
-                                selectionColor: AppColors.blueColor,
+                              padding: EdgeInsets.symmetric(horizontal: 17.w, vertical: 20.h),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  BoldText(
+                                    text: "scoring_breakdown".tr,
+                                    fontSize: 24.sp,
+                                    selectionColor: AppColors.blueColor,
+                                  ),
+                                  SizedBox(height: 31.h),
+                                  CustomSloderRow(text: "clarity_specificity".tr, text2: "22/25"),
+                                  CustomSloderRow(text: "strategic_thinking".tr, text2: "22/25"),
+                                  CustomSloderRow(text: "feasibility".tr, text2: "22/25"),
+                                  CustomSloderRow(text: "innovation".tr, text2: "22/25"),
+                                ],
                               ),
-                              SizedBox(height: 31.h),
-                              CustomSloderRow(text: "clarity_specificity".tr, text2: "22/25"),
-                              CustomSloderRow(text: "strategic_thinking".tr, text2: "22/25"),
-                              CustomSloderRow(text: "feasibility".tr, text2: "22/25"),
-                              CustomSloderRow(text: "innovation".tr, text2: "22/25"),
-                            ],
-                          ),
-                        ),
-                  
-                             
-                              
-                            ],
-                          ),
-                        ),
-                    ),
-
-
-                      Padding(
-                        padding:  EdgeInsets.symmetric(horizontal: 40.w),
-                        child: Container(
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(26.r),
-                              border: Border.all(color: AppColors.greyColor, width: 1.5.w),
                             ),
-                            padding: EdgeInsets.symmetric(horizontal: 17.w, vertical: 20.h),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      
+                                 
+                                  
+                                ],
+                              ),
+                            ),
+                        ),
+            
+            
+                          Padding(
+                            padding:  EdgeInsets.symmetric(horizontal: 40.w),
+                            child: Container(
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(26.r),
+                                  border: Border.all(color: AppColors.greyColor, width: 1.5.w),
+                                ),
+                                padding: EdgeInsets.symmetric(horizontal: 17.w, vertical: 20.h),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        BoldText(
+                                          text: "team_response".tr,
+                                          fontSize: 28.sp,
+                                          selectionColor: AppColors.blueColor,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Image.asset(
+                                              Appimages.timeout2,
+                                              height: 30.h,
+                                              width: 30.w,
+                                            ),
+                                            MainText(
+                                              text: "2 min read",
+                                              fontSize: 24.sp,
+                                              color: AppColors.teamColor,
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    MainText(
+                                      text:
+                                          "Primary Objective: Our primary objective is to increase customer satisfaction by 25% through improved service delivery and enhanced user experience across all touchpoints.",
+                                      fontSize: 22.sp,
+                                      height: 1.2,
+                                    ),
+                                    SizedBox(height: 20.h),
                                     BoldText(
-                                      text: "team_response".tr,
+                                      text: "key_strategies".tr,
                                       fontSize: 28.sp,
                                       selectionColor: AppColors.blueColor,
                                     ),
-                                    Row(
-                                      children: [
-                                        Image.asset(
-                                          Appimages.timeout2,
-                                          height: 30.h,
-                                          width: 30.w,
-                                        ),
-                                        MainText(
-                                          text: "2 min read",
-                                          fontSize: 24.sp,
-                                          color: AppColors.teamColor,
-                                        )
-                                      ],
+                                    SizedBox(height: 20.h),
+                                    MainText(
+                                      text:
+                                          "Implement real-time feedback system: Deploy customer feedback tools at every service interaction point to capture immediate responses and identify pain points quickly.".tr,
+                                      fontSize: 22.sp,
+                                      height: 1.2,
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    MainText(
+                                      text:
+                                          "Reduce response time to under 2 hours: Streamline our support processes and implement automated routing to ensure faster resolution of customer inquiries.".tr,
+                                      fontSize: 22.sp,
+                                      height: 1.2,
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    MainText(
+                                      text:
+                                          "Enhance self-service capabilities: comprehensive FAQ sections, video tutorials, and chatbot assistance to empower customers to resolve common issues independently.".tr,
+                                      fontSize: 22.sp,
+                                      height: 1.2,
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    MainText(
+                                      text:
+                                          "These strategies align with our company's customer-centric approach and will be measured through monthly satisfaction surveys, response time analytics, and self-service adoption rates.".tr,
+                                      fontSize: 22.sp,
+                                      height: 1.2,
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 20.h),
-                                MainText(
-                                  text:
-                                      "Primary Objective: Our primary objective is to increase customer satisfaction by 25% through improved service delivery and enhanced user experience across all touchpoints.",
-                                  fontSize: 22.sp,
-                                  height: 1.2,
-                                ),
-                                SizedBox(height: 20.h),
-                                BoldText(
-                                  text: "key_strategies".tr,
-                                  fontSize: 28.sp,
-                                  selectionColor: AppColors.blueColor,
-                                ),
-                                SizedBox(height: 20.h),
-                                MainText(
-                                  text:
-                                      "Implement real-time feedback system: Deploy customer feedback tools at every service interaction point to capture immediate responses and identify pain points quickly.".tr,
-                                  fontSize: 22.sp,
-                                  height: 1.2,
-                                ),
-                                SizedBox(height: 20.h),
-                                MainText(
-                                  text:
-                                      "Reduce response time to under 2 hours: Streamline our support processes and implement automated routing to ensure faster resolution of customer inquiries.".tr,
-                                  fontSize: 22.sp,
-                                  height: 1.2,
-                                ),
-                                SizedBox(height: 20.h),
-                                MainText(
-                                  text:
-                                      "Enhance self-service capabilities: comprehensive FAQ sections, video tutorials, and chatbot assistance to empower customers to resolve common issues independently.".tr,
-                                  fontSize: 22.sp,
-                                  height: 1.2,
-                                ),
-                                SizedBox(height: 20.h),
-                                MainText(
-                                  text:
-                                      "These strategies align with our company's customer-centric approach and will be measured through monthly satisfaction surveys, response time analytics, and self-service adoption rates.".tr,
-                                  fontSize: 22.sp,
-                                  height: 1.2,
-                                ),
-                              ],
+                              ),
+                          ),
+                          SizedBox(height: 300.h,),
+            
+                            Padding(
+                              padding:  EdgeInsets.symmetric(horizontal: 40.w),
+                              child: FeedbackContainer(ishow: true,),
                             ),
-                          ),
-                      ),
-                      SizedBox(height: 300.h,),
-
-                        Padding(
-                          padding:  EdgeInsets.symmetric(horizontal: 40.w),
-                          child: FeedbackContainer(ishow: true,),
-                        ),
-
-                        SizedBox(height: 20.h,),
-
-                        Padding(
-                          padding:  EdgeInsets.symmetric(horizontal: 40.w),
-                          child: AnalysisContainer(),
-                        ),
-
-                        Padding(
-                          // padding: EdgeInsets.all(8.0),
-                          padding:  EdgeInsets.symmetric(horizontal: 40.w),
-
-                          child: Column(
-                            children: [
-                                SizedBox(height: 20.h),
-                                            
-                          LoginButton(
-                            text: "accept_ai_score".tr,
-                            color: AppColors.forwardColor,
-                            image: Appimages.ai2,
-                            ishow: true,
-                            imageHeight: 48.h,
-                            imageWidth: 42.w,
-                          ),
-                          SizedBox(height: 15.h),
+            
+                            SizedBox(height: 20.h,),
+            
+                            Padding(
+                              padding:  EdgeInsets.symmetric(horizontal: 40.w),
+                              child: AnalysisContainer(),
+                            ),
+            
+                            Padding(
+                              // padding: EdgeInsets.all(8.0),
+                              padding:  EdgeInsets.symmetric(horizontal: 40.w),
+            
+                              child: Column(
+                                children: [
+                                    SizedBox(height: 20.h),
+                                                
                               LoginButton(
-                        onTap: () {
-                  // Get.toNamed(RouteName.overViewOptionScreen);
-                },
-                       text: "move_next_stage".tr,
-                    
-                        icon: Icons.fast_forward,
+                                text: "accept_ai_score".tr,
+                                color: AppColors.forwardColor,
+                                image: Appimages.ai2,
+                                ishow: true,
+                                imageHeight: 48.h,
+                                imageWidth: 42.w,
+                              ),
+                              SizedBox(height: 15.h),
+                                  LoginButton(
+                            onTap: () {
+                      // Get.toNamed(RouteName.overViewOptionScreen);
+                    },
+                           text: "move_next_stage".tr,
                         
-                        
-  ishow: true,
-                            imageHeight: 48.h,
-                            imageWidth: 42.w,
-
-
-
-                          
-                      ),
-                      SizedBox(height: 20.h),
-                      LoginButton(
-                        
-  
-
-
-
-                          
-                      text: "export_pdf".tr,
-                        ishow: true,
-                            imageHeight: 48.h,
-                            imageWidth: 42.w,
-                        image: Appimages.export,
-                        
-                        color: AppColors.redColor,
-                      ),
-                                           SizedBox(height: 20.h),
-
-                      LoginButton(
-                     text: "edit_score_feedback".tr,
-                        
-  
-  
-
-                        ishow: true,
-                            imageHeight: 48.h,
-                            imageWidth: 42.w,
-                        icon: Icons.edit,
-                        
-                        color: AppColors.orangeColor,
-                      ),
-    
-                            ],
+                            icon: Icons.fast_forward,
+                            
+                            
+              ishow: true,
+                                imageHeight: 48.h,
+                                imageWidth: 42.w,
+            
+            
+            
+                              
                           ),
+                          SizedBox(height: 20.h),
+                          LoginButton(
+                            
+              
+            
+            
+            
+                              
+                          text: "export_pdf".tr,
+                            ishow: true,
+                                imageHeight: 48.h,
+                                imageWidth: 42.w,
+                            image: Appimages.export,
+                            
+                            color: AppColors.redColor,
+                          ),
+                                               SizedBox(height: 20.h),
+            
+                          LoginButton(
+                         text: "edit_score_feedback".tr,
+                            
+              
+              
+            
+                            ishow: true,
+                                imageHeight: 48.h,
+                                imageWidth: 42.w,
+                            icon: Icons.edit,
+                            
+                            color: AppColors.orangeColor,
+                          ),
+                
+                                ],
+                              ),
+                            ),
+            
+            //                         SfSlider(
+            //   min: 0.0,
+            //   max: 100.0,
+            //   value: 40.0,
+            //   activeColor: Colors.green,
+            //   inactiveColor: Colors.grey.shade300,
+            //   onChanged: (value) {
+            //     print(value);
+            //   },
+            // ),
+              
+            
+            
+            /// Empty thumb shape
+                 
+                      
+                            SizedBox(height: 20.h),
+                             
+                          ],
                         ),
-
-//                         SfSlider(
-//   min: 0.0,
-//   max: 100.0,
-//   value: 40.0,
-//   activeColor: Colors.green,
-//   inactiveColor: Colors.grey.shade300,
-//   onChanged: (value) {
-//     print(value);
-//   },
-// ),
-  
-
-
-/// Empty thumb shape
-             
-                  
-                        SizedBox(height: 20.h),
-                         
-                      ],
+                      ),
                     ),
                   ),
                 ),
-              ),
+              ],
             ),
           ],
         ),

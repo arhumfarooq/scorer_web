@@ -226,6 +226,7 @@ class CustomDashboardContainer extends StatelessWidget {
                       text: text7 ?? "",
                       icon: icon3,
                       svgPath: svg,
+                      
                     ),
                   ),
 
