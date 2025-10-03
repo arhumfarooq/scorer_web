@@ -45,6 +45,7 @@ class CustomDashboardContainer extends StatelessWidget {
   final double?mainHeight;
   final bool arrowshow;
   final VoidCallback? onTap;
+  final double?padding;
 
 
   const CustomDashboardContainer({
@@ -70,7 +71,7 @@ class CustomDashboardContainer extends StatelessWidget {
     this.height2,
     this.width,
     this.width2,
-    this.height,  this.isshow=false, this.smallImage, this.right, this.horizontal, this.mainWidth, this.mainHeight,  this.arrowshow=true, this.onTap,
+    this.height,  this.isshow=false, this.smallImage, this.right, this.horizontal, this.mainWidth, this.mainHeight,  this.arrowshow=true, this.onTap, this.padding,
   });
   bool get isSpanish => Get.locale?.languageCode == "es";
 
@@ -128,11 +129,14 @@ class CustomDashboardContainer extends StatelessWidget {
               ],
             ),
             SizedBox(height: 27.h),
-            MainText(
-              text: description,
-              textAlign: TextAlign.center,
-              height: 1.3,
-              fontSize: 28 .sp,
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: padding??0),
+              child: MainText(
+                text: description,
+                textAlign: TextAlign.center,
+                height: 1.3,
+                fontSize: 28 .sp,
+              ),
             ),
             SizedBox(height: (height ?? 37) .h),
             Row(

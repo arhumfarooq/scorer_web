@@ -21,7 +21,7 @@ class LoginTextfield extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(26 .r),
-        border: Border.all(color: AppColors.selectLangugaeColor.withOpacity(0.1), width: 2 .w),
+        border: Border.all(color: AppColors.selectLangugaeColor.withOpacity(0.1), width: 3 .w),
       ),
       child: ishow?TextFormField(
         decoration: InputDecoration(

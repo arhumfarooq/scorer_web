@@ -17,7 +17,15 @@ class AddOneContainer extends StatelessWidget {
   final double? width2;
   final VoidCallback?onTap;
   final bool isShow;
-
+final double? top;
+final double?right;
+final double ?height3;
+final double?width3;
+final double?borderW;
+final double?arrowH;
+final double?arrowW;
+final String?text;
+final double?right2;
 
   const AddOneContainer({
     super.key,
@@ -28,7 +36,7 @@ class AddOneContainer extends StatelessWidget {
     this.height1,
     this.width1,
     this.height2,
-    this.width2, this.onTap, this.isShow=false
+    this.width2, this.onTap, this.isShow=false, this.top, this.right, this.height3, this.width3, this.borderW, this.arrowH, this.arrowW, this.text, this.right2
     ,
   });
 
@@ -44,11 +52,13 @@ class AddOneContainer extends StatelessWidget {
         children: [
       Positioned(
             bottom: -60.h,
+            right:right2 ,
+
             child: 
                                     isShow?      CreateContainer(
-                                        top: -28.h,
-                                        right: -50.w,
-                                        text: "Add",height: 61.h,width: 102.w,borderW: 1.97.w,arrowW: 33.w,arrowh: 40.h,):SizedBox()
+                                        top:top?? -28.h,
+                                        right:right?? -50.w,
+                                        text:text?? "Add",height:height3?? 61.h,width:width3?? 102.w,borderW:borderW?? 1.97.w,arrowW:arrowW?? 33.w,arrowh:arrowH?? 40.h,):SizedBox()
           // 
           ),
           Container(

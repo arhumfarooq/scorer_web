@@ -33,11 +33,11 @@ import 'package:scorer_web/widgets/useable_container.dart';
 import 'package:scorer_web/widgets/useable_text_row.dart';
 // import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-class AdminDetailedScreen extends StatelessWidget {
+class UserFacilitateDetailedScree extends StatelessWidget {
     // final FacilDashboardController controller = Get.put(FacilDashboardController());
  
    
-   AdminDetailedScreen({super.key});
+   UserFacilitateDetailedScree({super.key});
 
 
   @override
@@ -130,7 +130,7 @@ class AdminDetailedScreen extends StatelessWidget {
                     
                           Center(
                             child: Image.asset(
-                              Appimages.prince2,
+                              Appimages.facil2,
                               width: 197.w ,
                               height: 263.h,
                               fit: BoxFit.contain,
@@ -272,91 +272,8 @@ class AdminDetailedScreen extends StatelessWidget {
                     SizedBox(height: 40.h,),
 
                     AccountInfoClumn(),
-                    SizedBox(height: 30.h
-                    ,),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 12.w),
-                        child: Container(
-                                            height: 220.h,
-                                            width: double.infinity,
-                                            decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.greyColor,width: 1.5),
-                        borderRadius: BorderRadius.circular(24)
-                                            ),
-                                            child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                        SizedBox(height: 30.h,),
-                        MainText(text: "recent_activity".tr,fontSize: 28.sp,),
-                        SizedBox(height: 20.h,),
-                        
-                         UseableTextrow(
-                                      height: 1,
-                                            color: AppColors.forwardColor,
-                                            text: "Alex submitted response • 1m ago"),
-                                            SizedBox(height: 10.h,),
-                                             UseableTextrow(
-                                      height: 1,
-                                            color: AppColors.forwardColor2,
-                                            text: "Sarah joined team discussion • 2m ago"),
-                                    SizedBox(height: 10.h,),
-                        
-                                             UseableTextrow(
-                                      height: 1,
-                                            color: AppColors.forwardColor3,
-                                            text: "Mike went inactive • 5m ago"),
-                        
-                        
-                            
-                          ],
-                        ),
-                                            ),
-                                          ),
-                      ),
-                      SizedBox(height: 30.h,),
-                       Padding(
-                         padding: EdgeInsets.symmetric(horizontal: 12.w),
-                         child: Container(
-                                             height: 220.h,
-                                             width: double.infinity,
-                                             decoration: BoxDecoration(
-                                               border: Border.all(color: AppColors.greyColor,width: 1.5),
-                                               borderRadius: BorderRadius.circular(24)
-                                             ),
-                                             child: Padding(
-                                               padding: const EdgeInsets.symmetric(horizontal: 20),
-                                               child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                         SizedBox(height: 30.h,),
-                         MainText(text:  "current_permissions".tr,fontSize: 28.sp,),
-                         SizedBox(height:20.h,),
-                         
-                          UseableTextrow(
-                             ishow: true,         height: 1,
-                                             color: AppColors.forwardColor,
-                                              text: "manage_users".tr,),
-                                             SizedBox(height: 10.h,),
-                                              UseableTextrow(ishow: true,
-                                      height: 1,
-                                             color: AppColors.forwardColor2,
-                                            text: "create_sessions".tr,),
-                                                                                       SizedBox(height: 10.h,),
-
-                                              UseableTextrow(ishow: true,
-                                      height: 1,
-                                             color: AppColors.forwardColor3,
-                                              text: "view_analytics".tr,),
-                         
-                         
-                            
-                          ],
-                                               ),
-                                             ),
-                                           ),
-                       ),
+                
+                     
                        SizedBox(height: 30.h,),
                          BoldText(
                                                        text:  "recent_sessions".tr,
@@ -369,27 +286,8 @@ class AdminDetailedScreen extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 40.w),
                     child: Column(
                       children: [
-                          CustomDashboardContainer(
-                            padding: 12.w,
-                      mainWidth: double.infinity,
-                      right: -30 .w,
-                      mainHeight: 450 .h,
-                      color2: AppColors.forwardColor,
-                      color1: AppColors.orangeColor,
-                      heading: "Team Building Workshop",
-                      text1: "Phase 2",
-                      height: 90.h,
-                      text2: "active".tr,
-                      text6: "2nd Position",
-                      smallImage: Appimages.Crown,
-                      description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
-                      icon1: Icons.play_arrow,
-                      text5: "12 Players",
-                      isshow: true,
-                    ),
 
-                    SizedBox(height: 18.h,),
-                       CustomDashboardContainer(
+  CustomDashboardContainer(
                       padding: 12.w,
                       mainWidth: double.infinity,
                       right: -30 .w,
@@ -407,10 +305,38 @@ class AdminDetailedScreen extends StatelessWidget {
                     text5: "12 Players",
                     isshow: true,
                   ),
+
+
+                    
+
+                    SizedBox(height: 18.h,),
+                      CustomDashboardContainer(
+                  padding: 12.w,
+                      mainWidth: double.infinity,
+                      right: -30 .w,
+                      mainHeight: 450 .h,
+                    color2: AppColors.forwardColor,
+                    color1: AppColors.orangeColor,
+                    heading: "Team Building Workshop",
+                    text1: "Phase 2",
+                    height: 90.h,
+                    text2: "aative".tr,
+                    text6: "2nd Position",
+                    smallImage: Appimages.Crown,
+                    description: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
+                    icon1: Icons.play_arrow,
+                    text5: "12 Players",
+                    isshow: true,
+                  ),
+                     SizedBox(height: 40 .h),
+LoginButton(text: "delete_facilitator".tr,ishow: true,image: Appimages.delete,color: AppColors.redColor,),
+   SizedBox(height: 20 .h),
+LoginButton(text: "edit_facilitator".tr,ishow: true,icon: Icons.edit,color: AppColors.forwardColor,),
+                 
                       ],
                     ),
                   ),
-                 
+                  
                   
                     
                     

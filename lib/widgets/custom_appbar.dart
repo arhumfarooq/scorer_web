@@ -8,9 +8,21 @@ import 'package:scorer_web/widgets/create_container.dart';
 import 'package:scorer_web/widgets/setting_container.dart';
 
 class CustomAppbar extends StatelessWidget {
+  final bool ishow4;
   final bool ishow;
   final bool isShow;
-  const CustomAppbar({super.key,  this.ishow=false,   this.isShow=true});
+  final double? top;
+final double?right;
+final double ?height3;
+final double?width3;
+final double?borderW;
+final double?arrowH;
+final double?arrowW;
+final String?text;
+final double?right2;
+final bool ishow3;
+
+  CustomAppbar({super.key,  this.ishow=false,   this.isShow=true, this.top, this.right, this.height3, this.width3, this.borderW, this.arrowH, this.arrowW, this.text, this.right2, this.ishow3=false,  this.ishow4=false});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +36,7 @@ class CustomAppbar extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SvgPicture.asset(Appimages.splash,width: 136.w,height: 118.h,),
-                    ishow? Image.asset(Appimages.house1,width: 205.w,height: 156.h,):
+                  ishow3?SizedBox():  ishow? Image.asset(Appimages.house1,width: 205.w,height: 156.h,):
                       Row(
                                 children: [
                                   SettingContainer(icons: Icons.settings),
@@ -34,7 +46,16 @@ class CustomAppbar extends StatelessWidget {
                                     ishow: true,
                                   ),
                                   SizedBox(width: 6.w),
-                                  AddOneContainer(
+                                ishow4?SizedBox():  AddOneContainer(
+                                    right2: right2,
+                                    top: top,
+                                    text: text,
+                                    right: right,
+                                    height3:height3 ,
+                                    width3: width3,
+                                    borderW: borderW,
+                                    arrowH: arrowH,
+                                    arrowW: arrowW,
                                     isShow: isShow,
                                     icon: Icons.add,onTap: () {
                                     // Get.toNamed(RouteName.createNewSessionScreen);

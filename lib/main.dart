@@ -35,10 +35,18 @@ import 'package:scorer_web/view/FacilitatorFolder/view_score_Screen.dart';
 import 'package:scorer_web/view/adminFolder/admin_dashboard.dart';
 import 'package:scorer_web/view/adminFolder/admin_detailed_Screen.dart';
 import 'package:scorer_web/view/adminFolder/admin_over_view_option_screen.dart';
+import 'package:scorer_web/view/adminFolder/create_new_Session_header.dart';
+import 'package:scorer_web/view/adminFolder/game_Screen2_admin_side.dart';
+import 'package:scorer_web/view/adminFolder/game_Screen_Adminside.dart';
+import 'package:scorer_web/view/adminFolder/user_Player_detailed_screen.dart';
+import 'package:scorer_web/view/adminFolder/user_facilitate_detailed_scree.dart';
 import 'package:scorer_web/view/adminFolder/user_managemnet_screen.dart';
 import 'package:scorer_web/view/admin_lgin.dart';
 import 'package:scorer_web/view/choose_ypur_role_screen.dart';
 import 'package:scorer_web/view/facil_login_screen.dart';
+import 'package:scorer_web/view/player_folder/player_dashboard_Screen.dart';
+import 'package:scorer_web/view/player_folder/player_dashboard_Screen2.dart';
+import 'package:scorer_web/view/player_folder/player_login_side.dart';
 import 'package:scorer_web/view/player_login_screen.dart';
 import 'package:scorer_web/view/start_Screen.dart';
 import 'package:scorer_web/view/start_Screen1.dart';
@@ -64,7 +72,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child:  AdminDetailedScreen(),
+      child:  PlayerDashboardScreen2(),
     );
   }
 }
