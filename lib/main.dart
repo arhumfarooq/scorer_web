@@ -1,28 +1,8 @@
-// import 'package:flutter/material.dart';
-// import 'package:scorer_web/view/gradient_background.dart';
-// import 'package:scorer_web/view/splash_Screen.dart';
-// import 'package:scorer_web/view/start_Screen.dart';
 
-// void main() {
-//   runApp(const MyApp());
-// }
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-
-//   // This widget is the root of your application.
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       // title: 'Flutter Demo',
-//       debugShowCheckedModeBanner: false,
-//       home: StartScreen()
-//     );
-//   }
-// }
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:scorer_web/view/AudioWaveExample.dart';
 import 'package:scorer_web/view/FacilitatorFolder/create_new_session_screen.dart';
 import 'package:scorer_web/view/FacilitatorFolder/end_session_Screen.dart';
@@ -53,6 +33,7 @@ import 'package:scorer_web/view/player_folder/player_login_side.dart';
 import 'package:scorer_web/view/player_folder/response_submit_screen1.dart';
 import 'package:scorer_web/view/player_folder/response_submitted_Screen2.dart';
 import 'package:scorer_web/view/player_login_screen.dart';
+import 'package:scorer_web/view/splash_Screen.dart';
 import 'package:scorer_web/view/start_Screen.dart';
 import 'package:scorer_web/view/start_Screen1.dart';
 import 'package:scorer_web/view/start_Screen3.dart';
@@ -72,12 +53,12 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
+        return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           home: child,
         );
       },
-      child:  AdminDashboard(),
+      child:  SplashScreen(),
     );
   }
 }

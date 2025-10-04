@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/view/gradient_background.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/forward_button_container.dart';
@@ -219,7 +222,11 @@ class StartScreen1 extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              ForwardButtonContainer(),
+                              ForwardButtonContainer(
+                                  onTap:(){
+                            Get.toNamed(RouteName.startScreen2);
+                          } ,
+                              ),
                             ],
                           ),
                         ),
