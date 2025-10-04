@@ -6,6 +6,7 @@ import 'package:scorer_web/components/role_Selection_container.dart';
 import 'package:scorer_web/components/role_text_container.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/controller/role_selection_controller.dart';
 import 'package:scorer_web/view/gradient_background.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
@@ -89,6 +90,28 @@ SizedBox(height: 50.h,),
                         Padding(
                           padding: EdgeInsets.only(left: 421.w,right: 701.w),
                           child: ForwardButtonContainer(
+                             onTap: () {
+    final controller = Get.find<RoleSelectionController>();
+
+    if (controller.selectedIndex.value == 0) {
+      
+      Get.toNamed(RouteName.adminLoginScreen);
+    } else if (controller.selectedIndex.value == 1) {
+      
+      Get.toNamed(RouteName.facilLoginScreen);
+    } 
+    else if (controller.selectedIndex.value == 2) {
+      
+      Get.toNamed(RouteName.playerLoginScreen);
+    } 
+    else {
+      
+    Get.snackbar(
+  "selection_required".tr,
+  "please_select_role".tr,
+  backgroundColor: AppColors.forwardColor,
+  colorText: AppColors.whiteColor,
+);}}
 // width2: 66.w,
 // height2: 66.h,
 //                             height1: 94.h,
