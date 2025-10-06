@@ -94,7 +94,7 @@ class CustomDashboardContainer extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border.all(
             color: AppColors.greyColor,
-            width: 1.5 .w,
+            width:3.3 .w,
           ),
           borderRadius: BorderRadius.circular(24 .r),
         ),

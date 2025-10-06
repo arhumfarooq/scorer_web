@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/instance_manager.dart';
+import 'package:scorer_web/components/facilitator_folder/audio_container.dart';
 import 'package:scorer_web/components/responsive_fonts.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
@@ -23,6 +24,9 @@ class PlayerLoginScreen extends StatelessWidget {
     return Scaffold(body: GradientBackground(child: SafeArea(child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+
+                          // AudioContainer()
+
         // SizedBox(height: 50.h,),
 Padding(
   padding: EdgeInsets.only(left: 50.w,top: 50.h),
@@ -129,6 +133,9 @@ Padding(
                               Get.toNamed(RouteName.bottomNavigation);
                             },
                           ),
+
+
+                          // AudioContainer()
     
               ],
             ),

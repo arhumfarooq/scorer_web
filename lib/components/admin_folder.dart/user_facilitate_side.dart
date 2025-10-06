@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/widgets/all_players_container.dart';
 
 class UserFacilitateSide extends StatelessWidget {
@@ -21,7 +22,7 @@ class UserFacilitateSide extends StatelessWidget {
           SizedBox(height: 20.h), // 🔹 height scaled
 
           AllPlayersContainer(
-            // onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
+            onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
             fontSize2: 12.sp, // 🔹 font scaled
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -30,6 +31,8 @@ class UserFacilitateSide extends StatelessWidget {
           SizedBox(height: 7.h),
 
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
+
             // onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
             text3: "inactive".tr,
             color: AppColors.orangeColor,
@@ -43,6 +46,8 @@ class UserFacilitateSide extends StatelessWidget {
 
           AllPlayersContainer(
             text3: "pending".tr,
+            onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
+
             // onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
             color: AppColors.redColor,
             width: 70.w,
@@ -54,6 +59,8 @@ class UserFacilitateSide extends StatelessWidget {
           SizedBox(height: 7.h),
 
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
+
             // onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
             fontSize2: 12.sp,
             text: "Alex Martinez",
@@ -63,6 +70,8 @@ class UserFacilitateSide extends StatelessWidget {
           SizedBox(height: 7.h),
 
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
+
             // onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
             fontSize2: 12.sp,
             text: "Alex Martinez",
@@ -72,6 +81,8 @@ class UserFacilitateSide extends StatelessWidget {
           SizedBox(height: 7.h),
 
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
+
             // onTap: () => Get.toNamed(RouteName.userFacilitateDetailedScree),
             fontSize2: 12.sp,
             text: "Alex Martinez",

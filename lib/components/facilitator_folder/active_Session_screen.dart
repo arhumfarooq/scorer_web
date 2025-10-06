@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:scorer_web/constants/appcolors.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/widgets/custom_dashboard_container.dart';
 
 class ActiveSessionScreen extends StatelessWidget {
@@ -24,6 +25,9 @@ class ActiveSessionScreen extends StatelessWidget {
             //   color: AppColors.arrowColor,
             //  )
              CustomDashboardContainer(
+              onTap: () {
+                Get.toNamed(RouteName.overViewOptionScreen);
+              },
              
           // width: 70,
                 heading: "Team Building Workshop",
@@ -40,7 +44,9 @@ class ActiveSessionScreen extends StatelessWidget {
               ),
               SizedBox(height: 20.h,),
                  CustomDashboardContainer(
-             
+               onTap: () {
+                Get.toNamed(RouteName.overViewOptionScreen);
+              },
           // width: 70,
                 heading: "Team Building Workshop",
                 text1: "phase_1".tr,

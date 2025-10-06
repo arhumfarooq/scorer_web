@@ -6,6 +6,7 @@ import 'package:scorer_web/components/facilitator_folder/metrices_container.dart
 import 'package:scorer_web/components/facilitator_folder/players_Row.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/create_container.dart';
 import 'package:scorer_web/widgets/login_button.dart';
@@ -217,7 +218,7 @@ SizedBox(height: 30.h,),
                 fontSize:24 ,
               
                 onTap: () {
-                      // Get.toNamed(RouteName.endSessionScreen);
+                      Get.toNamed(RouteName.endSessionScreen);
               },
                 text: "end_session".tr,
                 color: AppColors.redColor,

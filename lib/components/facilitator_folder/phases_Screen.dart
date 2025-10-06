@@ -9,6 +9,7 @@ import 'package:scorer_web/components/facilitator_folder/team_progress_container
 import 'package:scorer_web/components/responsive_fonts.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/controller/stage_controller.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/create_container.dart';
@@ -136,23 +137,22 @@ class PhasesScreen extends StatelessWidget {
                                  )),
                         SizedBox(width: 20.w),
                        Expanded(
-            child: PauseContainer(
-              onTap: () {
-                if (!controller.isCompleted.value) {
-                  
-                  controller.isCompleted.value = true;
-                } else {
-                  
-                // Get.toNamed(RouteName.viewResponsesScreen); 
-                  
-                }
-              },
-              // height: 42,
-              text: "assign_score".tr,
-          
-              icon: Icons.fast_forward,
-              color: AppColors.assignColor,
-            ),
+            child: Obx(() => PauseContainer(
+      onTap: () {
+        if (!controller.isCompleted.value) {
+          controller.isCompleted.value = true; // pehli dafa press par true
+        } else {
+          Get.toNamed(RouteName.viewResponsesScreen);
+        }
+      },
+      text: "assign_score".tr,
+      icon: Icons.fast_forward,
+      color: controller.isCompleted.value
+          ? AppColors.forwardColor   // ✅ agar true hai to forwardColor
+          : AppColors.assignColor,   // ❌ warna assignColor
+    ),
+)
+
           ),
                      ],
                     ),
@@ -193,6 +193,9 @@ class PhasesScreen extends StatelessWidget {
                  SizedBox(height: 50.h,),
                    Center(
                       child: LoginButton(
+                        onTap: () {
+                          Get.toNamed(RouteName.viewResponsesScreen);
+                        },
                         fontSize: 22,
                          text: "view_responses".tr,
                         color: AppColors.forwardColor,

@@ -17,8 +17,10 @@ import 'package:scorer_web/components/facilitator_folder/schedule_Screen.dart';
 import 'package:scorer_web/components/responsive_fonts.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/controller/facil_dashboard_controller.dart';
 import 'package:scorer_web/view/gradient_background.dart';
+import 'package:scorer_web/view/gradient_color.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/create_container.dart';
 import 'package:scorer_web/widgets/custom_appbar.dart';
@@ -49,6 +51,9 @@ class GameScreenAdminside extends StatelessWidget {
           children: [
             /// ✅ Fixed Appbar
             CustomAppbar(
+              onTap: () {
+                Get.toNamed(RouteName.game2Screen);
+              },
 width3: 205.w,
 height3: 61.h,
 borderW: 1.96.w,
@@ -62,93 +67,99 @@ top: -30.h,
             SizedBox(height: 56.h),
 
             /// ✅ Fixed Top Container
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(40.r),
-                  topRight: Radius.circular(40.r)
+            GradientColor(
+              height: 200.h,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(40.r),
+                    topRight: Radius.circular(40.r)
+                  ),
+                // color: AppColors.whiteColor,
+              
                 ),
-              color: AppColors.whiteColor,
-
-              ),
-              // color: AppColors.whiteColor,
-              width: 794.w,
-              height: 235.h,
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Positioned(
-                    top: 50.h,
-                    left: -40.w,
-                    child: ForwardButtonContainer(
-                      imageH: 20.h,
-                      imageW: 23.5.w,
-                      height1: 90.h,
-                      height2: 65.h,
-                      width1: 90.w,
-                      width2: 65.w,
-                      image: Appimages.arrowback,
+                // color: AppColors.whiteColor,
+                width: 794.w,
+                height: 235.h,
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Positioned(
+                      top: 50.h,
+                      left: -40.w,
+                      child: ForwardButtonContainer(
+                        imageH: 20.h,
+                        imageW: 23.5.w,
+                        height1: 90.h,
+                        height2: 65.h,
+                        width1: 90.w,
+                        width2: 65.w,
+                        image: Appimages.arrowback,
+                      ),
                     ),
-                  ),
-                  Positioned(
-                    top: -140,
-                    right: 312.w,
-                    left: 312.w,
-                    child: CustomStackImage(
-                      image: Appimages.prince2,
-                      text: "Administrator",
+                    Positioned(
+                      top: -140,
+                      right: 312.w,
+                      left: 312.w,
+                      child: CustomStackImage(
+                        image: Appimages.prince2,
+                        text: "Administrator",
+                      ),
                     ),
-                  ),
-               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                     Center(
-                    child: BoldText(
-                      text: "Game Format Management",
-                      fontSize: 48.sp,
-                      selectionColor: AppColors.blueColor,
+                 Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                       Center(
+                      child: BoldText(
+                        text: "Game Format Management",
+                        fontSize: 48.sp,
+                        selectionColor: AppColors.blueColor,
+                      ),
                     ),
-                  ),
-                   MainText(text: "Each of these formats has its own logic, flow,\nand evaluation methods.",fontSize: 22.sp,
-                   textAlign: TextAlign.center,
-                   )
-
-                ],
-               )
-                ],
+                     MainText(text: "Each of these formats has its own logic, flow,\nand evaluation methods.",fontSize: 22.sp,
+                     textAlign: TextAlign.center,
+                     )
+              
+                  ],
+                 )
+                  ],
+                ),
               ),
             ),
 
             /// ✅ Scrollable Area
             Expanded(
-              child: Container(
-                width: 794.w,
-                decoration: BoxDecoration(
-                  color: AppColors.whiteColor,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40.r),
-                    bottomRight: Radius.circular(40.r)
+              child: GradientColor(
+                ishow: false,
+                child: Container(
+                  width: 794.w,
+                  decoration: BoxDecoration(
+                    // color: AppColors.whiteColor,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(40.r),
+                      bottomRight: Radius.circular(40.r)
+                    ),
                   ),
-                ),
-                child: ScrollConfiguration(
-                    behavior: ScrollConfiguration.of(context).copyWith(
-    scrollbars: false, // ✅ ye side wali scrollbar hatayega
-  ),
-                  child: SingleChildScrollView(
-                    child: Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 70.w),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          GameUseAbleContainer(),
-                          SizedBox(height: 25.h,),
-                           GameUseAbleContainer(),
-                          SizedBox(height: 25.h,), GameUseAbleContainer(),
-                          SizedBox(height: 25.h,), GameUseAbleContainer(),
-                          SizedBox(height: 25.h,),
-                      
-                         
-                        ],
+                  child: ScrollConfiguration(
+                      behavior: ScrollConfiguration.of(context).copyWith(
+                    scrollbars: false, // ✅ ye side wali scrollbar hatayega
+                  ),
+                    child: SingleChildScrollView(
+                      child: Padding(
+                        padding:  EdgeInsets.symmetric(horizontal: 70.w),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            GameUseAbleContainer(),
+                            SizedBox(height: 25.h,),
+                             GameUseAbleContainer(),
+                            SizedBox(height: 25.h,), GameUseAbleContainer(),
+                            SizedBox(height: 25.h,), GameUseAbleContainer(),
+                            SizedBox(height: 25.h,),
+                        
+                           
+                          ],
+                        ),
                       ),
                     ),
                   ),

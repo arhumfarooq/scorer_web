@@ -12,6 +12,7 @@ import 'package:scorer_web/controller/filter_controller.dart';
 import 'package:scorer_web/controller/over_view_controller.dart';
 import 'package:scorer_web/view/FacilitatorFolder/facil_over_view_stack_container.dart';
 import 'package:scorer_web/view/gradient_background.dart';
+import 'package:scorer_web/view/gradient_color.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/custom_appbar.dart';
 import 'package:scorer_web/widgets/custom_stack_image.dart';
@@ -234,107 +235,116 @@ class OverViewOptionScreen extends StatelessWidget {
                          
                                 
                                 
-                                         Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(40.r),
-                                        topRight: Radius.circular(40.r)
-                                      ),
-                                    color: AppColors.whiteColor,
-                                
-                                    ),
-                                    // color: AppColors.whiteColor,
-                                    width: 794.w,
-                                    height: 235.h,
-                                    child: Stack(
-                                      clipBehavior: Clip.none,
-                                      children: [
-                                     Positioned(
-                        top: 50.h,
-                        left: -40.w,
-                        child: ForwardButtonContainer(
-                         imageH: 20.h,
-                         imageW: 23.5.w, 
-                          height1: 90.h,
-                          height2: 65.h,
-                          width1: 90.w,
-                          width2: 65.w,
-                          image: Appimages.arrowback),
+                                         GradientColor(
+                                          height: 225.h,
+                                           child: Container(
+                                                                               decoration: BoxDecoration(
+                                                                                 borderRadius: BorderRadius.only(
+                                                                                   topLeft: Radius.circular(40.r),
+                                                                                   topRight: Radius.circular(40.r)
+                                                                                 ),
+                                                                               // color: AppColors.whiteColor,
+                                                                           
+                                                                               ),
+                                                                               // color: AppColors.whiteColor,
+                                                                               width: 794.w,
+                                                                               height: 235.h,
+                                                                               child: Stack(
+                                                                                 clipBehavior: Clip.none,
+                                                                                 children: [
+                                                                                Positioned(
+                                                                   top: 50.h,
+                                                                   left: -40.w,
+                                                                   child: ForwardButtonContainer(
+                                                                     onTap: () {
+                                                                       Get.back();
+                                                                     },
+                                                                    imageH: 20.h,
+                                                                    imageW: 23.5.w, 
+                                                                     height1: 90.h,
+                                                                     height2: 65.h,
+                                                                     width1: 90.w,
+                                                                     width2: 65.w,
+                                                                     image: Appimages.arrowback),
+                                              ),
+                                                                                   Positioned(
+                                            top: -140,
+                                            right: 312.w,
+                                            left: 312.w,
+                                            child: CustomStackImage(
+                                            
                                             ),
-                                        Positioned(
-                                          top: -140,
-                                          right: 312.w,
-                                          left: 312.w,
-                                          child: CustomStackImage(
-                                          
-                                          ),
-                                        ),
-                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                           Center(
-                                          child: BoldText(
-                                            // text: "Hello Administrator, Chris!",
-                        text: "Eranove Odyssey – Team A",
-                                            fontSize: 48.sp,
-                                            selectionColor: AppColors.blueColor,
-                                          ),
-                                        ),
-                                        //  MainText(text: "Welcome! You have full system access to\nmanage sessions, users, and game content.",fontSize: 22.sp,)
-                                   Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                UseableContainer(
-                                  text: "Phase 2",
-                                  color: AppColors.orangeColor,
-                                  fontFamily: "abz",
-                                ),
-                                SizedBox(width: 26.w),
-                                UseableContainer(
-                                  text: "Active",
-                                  fontFamily: "abz",
-                                  color: AppColors.forwardColor,
-                                ),
-                              ],
-                            ),
-                                      ],
-                                     )
-                                      ],
-                                    ),
-                                  ),
+                                                                                   ),
+                                                                                Column(
+                                                                                 mainAxisAlignment: MainAxisAlignment.center,
+                                                                                 children: [
+                                             Center(
+                                            child: BoldText(
+                                              // text: "Hello Administrator, Chris!",
+                                                                   text: "Eranove Odyssey – Team A",
+                                              fontSize: 48.sp,
+                                              selectionColor: AppColors.blueColor,
+                                            ),
+                                                                                   ),
+                                                                                   //  MainText(text: "Welcome! You have full system access to\nmanage sessions, users, and game content.",fontSize: 22.sp,)
+                                                                              Row(
+                                                                         mainAxisAlignment: MainAxisAlignment.center,
+                                                                         children: [
+                                                                           UseableContainer(
+                                                                             text: "Phase 2",
+                                                                             color: AppColors.orangeColor,
+                                                                             fontFamily: "abz",
+                                                                           ),
+                                                                           SizedBox(width: 26.w),
+                                                                           UseableContainer(
+                                                                             text: "Active",
+                                                                             fontFamily: "abz",
+                                                                             color: AppColors.forwardColor,
+                                                                           ),
+                                                                         ],
+                                                                       ),
+                                                                                 ],
+                                                                                )
+                                                                                 ],
+                                                                               ),
+                                                                             ),
+                                         ),
                                       
                                           Expanded(
-                                      child: Container(
-                                        width: 794.w,
-                                        decoration: BoxDecoration(
-                                          color: AppColors.whiteColor,
-                                          borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(40.r),
-                                            bottomRight: Radius.circular(40.r)
+                                      child: GradientColor(
+                                        ishow: false,
+                                        child: Container(
+                                          width: 794.w,
+                                          decoration: BoxDecoration(
+                                            // color: AppColors.whiteColor,
+                                            borderRadius: BorderRadius.only(
+                                              bottomLeft: Radius.circular(40.r),
+                                              bottomRight: Radius.circular(40.r)
+                                            ),
                                           ),
-                                        ),
-                                        child: ScrollConfiguration(
-                                            behavior: ScrollConfiguration.of(context).copyWith(
-                                          scrollbars: false, // ✅ ye side wali scrollbar hatayega
-                                        ),
-                                          child: Padding(
-                                            padding:                           EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
-            
-                                            
-                                            child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.center,
-                                              children: [
-                                                                  FacilOverViewStackContainer(
-                                                                      controller: controller,
-                                                                      tabs: tabs,
-                                                                    ),
-                                            SizedBox(height: 20.h),
-                                                                         Expanded(child: Obx(() => screens[controller.selectedIndex.value])),
-                                            
-                                                                 
-                                            
-                                             
-                                              ],
+                                          child: ScrollConfiguration(
+                                              behavior: ScrollConfiguration.of(context).copyWith(
+                                            scrollbars: false, // ✅ ye side wali scrollbar hatayega
+                                          ),
+                                            child: Padding(
+                                              padding:                           EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+                                                    
+                                              
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                children: [
+                                                                    FacilOverViewStackContainer(
+                                                                        controller: controller,
+                                                                        tabs: tabs,
+                                                                      ),
+                                              SizedBox(height: 20.h),
+                                                                           Expanded(child: Obx(() => screens[controller.selectedIndex.value])),
+                                              
+                                                                   
+                                              
+                                               
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ),

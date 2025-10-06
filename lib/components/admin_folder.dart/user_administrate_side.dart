@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/widgets/all_players_container.dart';
 
 class UserAdministrateSide extends StatelessWidget {
@@ -20,8 +21,10 @@ class UserAdministrateSide extends StatelessWidget {
 
           // Player Containers
           AllPlayersContainer(
+            onTap: () => Get.toNamed(RouteName.userAdminDetailedScree),
+
             fontSize2: 12.sp,
-            onTap: () {}, // 👈 yahan empty callback
+            // onTap: () {}, // 👈 yahan empty callback
             text: "Alex Martinez",
             text2: "john.smith@company.com",
             image: Appimages.prince2,

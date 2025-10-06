@@ -24,6 +24,7 @@ import 'package:scorer_web/controller/filter_controller.dart';
 import 'package:scorer_web/controller/over_view_controller.dart';
 import 'package:scorer_web/view/FacilitatorFolder/facil_over_view_stack_container.dart';
 import 'package:scorer_web/view/gradient_background.dart';
+import 'package:scorer_web/view/gradient_color.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/create_container.dart';
 import 'package:scorer_web/widgets/custom_appbar.dart';
@@ -35,6 +36,7 @@ import 'package:scorer_web/widgets/forward_button_container.dart';
 import 'package:scorer_web/widgets/login_button.dart';
 import 'package:scorer_web/widgets/main_text.dart';
 import 'package:scorer_web/widgets/players_containers.dart';
+import 'package:scorer_web/widgets/team_alpha_container.dart';
 import 'package:scorer_web/widgets/useable_container.dart';
 // import 'package:syncfusion_flutter_sliders/sliders.dart';
 
@@ -214,115 +216,131 @@ class AdminOverViewOptionScreen extends StatelessWidget {
         ),
       ),
       body: GradientBackground(
-        child: Column(
+        child: Stack(
+
           children: [
-            /// ✅ Fixed Appbar
-            CustomAppbar(),
-            SizedBox(height: 56.h),
-
-            /// ✅ Fixed Top Container
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(40.r),
-                  topRight: Radius.circular(40.r)
-                ),
-              color: AppColors.whiteColor,
-
-              ),
-              // color: AppColors.whiteColor,
-              width: 794.w,
-              height: 235.h,
-              child: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Positioned(
-                    top: 50.h,
-                    left: -40.w,
-                    child: ForwardButtonContainer(
-                      imageH: 20.h,
-                      imageW: 23.5.w,
-                      height1: 90.h,
-                      height2: 65.h,
-                      width1: 90.w,
-                      width2: 65.w,
-                      image: Appimages.arrowback,
-                    ),
-                  ),
-                  Positioned(
-                    top: -140,
-                    right: 312.w,
-                    left: 312.w,
-                    child: CustomStackImage(
-                      image: Appimages.prince2,
-                      text: "Administrator",
-                    ),
-                  ),
-               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                     Center(
-                    child: BoldText(
-                     text: "Eranove Odyssey – Team A",
-                      fontSize: 48.sp,
-                      selectionColor: AppColors.blueColor,
-                    ),
-                  ),
-                  //  MainText(text: "Welcome! You have full system access to\nmanage sessions, users, and game content.",fontSize: 22.sp,)
-  Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              UseableContainer(
-                                text: "Phase 2",
-                                color: AppColors.orangeColor,
-                                fontFamily: "abz",
-                              ),
-                              SizedBox(width: 26.w),
-                              UseableContainer(
-                                text: "Active",
-                                fontFamily: "abz",
-                                color: AppColors.forwardColor,
-                              ),
-                            ],
-                          ),
-                ],
-               )
-                ],
-              ),
-            ),
-
-            /// ✅ Scrollable Area
-            Expanded(
-              child: Container(
-                width: 794.w,
-                decoration: BoxDecoration(
-                  color: AppColors.whiteColor,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40.r),
-                    bottomRight: Radius.circular(40.r)
-                  ),
-                ),
-                child: ScrollConfiguration(
-                    behavior: ScrollConfiguration.of(context).copyWith(
-    scrollbars: false, // ✅ ye side wali scrollbar hatayega
-  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                         FacilOverViewStackContainer(
-                            controller:controller2,
-                            tabs: tabs,
-                          ),
-                  SizedBox(height: 20.h),
-                                 Expanded(child: Obx(() => screens[controller2.selectedIndex.value])),
+              Positioned(
+              top:700.h,
+              right: 0,
+              // left: 0,
+              child: TeamAlphaContainer()),
+            Column(
+              children: [
+                /// ✅ Fixed Appbar
+                CustomAppbar(ishow: true),
+                SizedBox(height: 56.h),
+            
+                /// ✅ Fixed Top Container
+                GradientColor(
+                  height: 200.h,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40.r),
+                        topRight: Radius.circular(40.r)
+                      ),
+                    // color: AppColors.whiteColor,
                   
-                       
-                  
-                   
-                    ],
+                    ),
+                    // color: AppColors.whiteColor,
+                    width: 794.w,
+                    height: 235.h,
+                    child: Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        Positioned(
+                          top: 50.h,
+                          left: -40.w,
+                          child: ForwardButtonContainer(
+                            imageH: 20.h,
+                            imageW: 23.5.w,
+                            height1: 90.h,
+                            height2: 65.h,
+                            width1: 90.w,
+                            width2: 65.w,
+                            image: Appimages.arrowback,
+                          ),
+                        ),
+                        Positioned(
+                          top: -140,
+                          right: 312.w,
+                          left: 312.w,
+                          child: CustomStackImage(
+                            image: Appimages.prince2,
+                            text: "Administrator",
+                          ),
+                        ),
+                     Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                           Center(
+                          child: BoldText(
+                           text: "Eranove Odyssey – Team A",
+                            fontSize: 48.sp,
+                            selectionColor: AppColors.blueColor,
+                          ),
+                        ),
+                        //  MainText(text: "Welcome! You have full system access to\nmanage sessions, users, and game content.",fontSize: 22.sp,)
+                    Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    UseableContainer(
+                                      text: "Phase 2",
+                                      color: AppColors.orangeColor,
+                                      fontFamily: "abz",
+                                    ),
+                                    SizedBox(width: 26.w),
+                                    UseableContainer(
+                                      text: "Active",
+                                      fontFamily: "abz",
+                                      color: AppColors.forwardColor,
+                                    ),
+                                  ],
+                                ),
+                      ],
+                     )
+                      ],
+                    ),
                   ),
                 ),
-              ),
+            
+                /// ✅ Scrollable Area
+                Expanded(
+                  child: GradientColor(
+                    ishow: false,
+                    child: Container(
+                      width: 794.w,
+                      decoration: BoxDecoration(
+                        // color: AppColors.whiteColor,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(40.r),
+                          bottomRight: Radius.circular(40.r)
+                        ),
+                      ),
+                      child: ScrollConfiguration(
+                          behavior: ScrollConfiguration.of(context).copyWith(
+                        scrollbars: false, // ✅ ye side wali scrollbar hatayega
+                      ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                               FacilOverViewStackContainer(
+                                  controller:controller2,
+                                  tabs: tabs,
+                                ),
+                        SizedBox(height: 20.h),
+                                       Expanded(child: Obx(() => screens[controller2.selectedIndex.value])),
+                        
+                             
+                        
+                         
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

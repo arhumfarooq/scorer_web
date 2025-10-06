@@ -7,7 +7,8 @@ import 'package:scorer_web/widgets/add_one_Container.dart';
 import 'package:scorer_web/widgets/create_container.dart';
 import 'package:scorer_web/widgets/setting_container.dart';
 
-class CustomAppbar extends StatelessWidget {
+class CustomAppbar extends StatelessWidget  {
+  final VoidCallback?onTap;
   final bool ishow4;
   final bool ishow;
   final bool isShow;
@@ -22,7 +23,8 @@ final String?text;
 final double?right2;
 final bool ishow3;
 
-  CustomAppbar({super.key,  this.ishow=false,   this.isShow=true, this.top, this.right, this.height3, this.width3, this.borderW, this.arrowH, this.arrowW, this.text, this.right2, this.ishow3=false,  this.ishow4=false});
+
+  CustomAppbar({super.key,  this.ishow=false,   this.isShow=true, this.top, this.right, this.height3, this.width3, this.borderW, this.arrowH, this.arrowW, this.text, this.right2, this.ishow3=false,  this.ishow4=false, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +49,7 @@ final bool ishow3;
                                   ),
                                   SizedBox(width: 6.w),
                                 ishow4?SizedBox():  AddOneContainer(
+                                  
                                     right2: right2,
                                     top: top,
                                     text: text,
@@ -57,9 +60,7 @@ final bool ishow3;
                                     arrowH: arrowH,
                                     arrowW: arrowW,
                                     isShow: isShow,
-                                    icon: Icons.add,onTap: () {
-                                    // Get.toNamed(RouteName.createNewSessionScreen);
-                                  },),
+                                    icon: Icons.add,onTap:onTap),
                                 ],
                               ),
                     

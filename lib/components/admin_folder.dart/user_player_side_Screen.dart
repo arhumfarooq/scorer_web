@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 // import 'package:scorer/widgets/all_players_container.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/widgets/all_players_container.dart';
 
 class UserPlayerSideScreen extends StatelessWidget {
@@ -31,7 +32,7 @@ class UserPlayerSideScreen extends StatelessWidget {
           SizedBox(height: 7.h),
       
           AllPlayersContainer(
-            // onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
             text3: "inactive".tr,
             color: AppColors.orangeColor,
             width: 65.w, // ✅ width with .w
@@ -43,7 +44,7 @@ class UserPlayerSideScreen extends StatelessWidget {
           SizedBox(height: 7.h),
       
           AllPlayersContainer(
-            // onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
             text3: "pending".tr,
             color: AppColors.redColor,
             width: 80.w,
@@ -55,7 +56,7 @@ class UserPlayerSideScreen extends StatelessWidget {
           SizedBox(height: 7.h),
       
           AllPlayersContainer(
-            // onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
             fontSize2: 12.sp,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -64,7 +65,7 @@ class UserPlayerSideScreen extends StatelessWidget {
           SizedBox(height: 7.h),
       
           AllPlayersContainer(
-            // onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
             fontSize2: 12.sp,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -73,7 +74,7 @@ class UserPlayerSideScreen extends StatelessWidget {
           SizedBox(height: 7.h),
       
           AllPlayersContainer(
-            // onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
             fontSize2: 12.sp,
             text: "Alex Martinez",
             text2: "john.smith@company.com",
@@ -82,7 +83,7 @@ class UserPlayerSideScreen extends StatelessWidget {
           SizedBox(height: 7.h),
       
           AllPlayersContainer(
-            // onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
+            onTap: () => Get.toNamed(RouteName.userPlayerDetailedScree),
             fontSize2: 12.sp,
             text: "Alex Martinez",
             text2: "john.smith@company.com",

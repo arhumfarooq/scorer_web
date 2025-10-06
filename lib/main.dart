@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:scorer_web/components/facilitator_folder/audio_container.dart';
 import 'package:scorer_web/constants/app_routes.dart';
 import 'package:scorer_web/localization/app_translation.dart';
 import 'package:scorer_web/localization/translation_service.dart';
@@ -41,6 +42,7 @@ import 'package:scorer_web/view/start_Screen.dart';
 import 'package:scorer_web/view/start_Screen1.dart';
 import 'package:scorer_web/view/start_Screen3.dart';
 import 'package:scorer_web/view/start_screen2.dart';
+import 'package:scorer_web/widgets/widget_nav_item.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -66,7 +68,7 @@ class MyApp extends StatelessWidget {
           getPages: AppRoutes.getAppRoutes(),
           fallbackLocale: const Locale('en', 'US'),
           debugShowCheckedModeBanner: false,
-          home: AudioEqualizer(),
+          home: ChooseYpurRoleScreen(),
         );
       },
       // child:  AudioVisualizer(),
