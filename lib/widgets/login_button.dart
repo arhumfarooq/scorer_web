@@ -6,8 +6,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 // import 'package:scorer/widgets/bold_text.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
-
-class LoginButton extends StatelessWidget {
+class LoginButton extends StatefulWidget {
+  // ... (keep all your existing parameters)
   final String text;
   final Color? color;
   final bool ishow;
@@ -21,9 +21,9 @@ class LoginButton extends StatelessWidget {
   final double? radius;
   final double? fontSize;
   final VoidCallback?onTap;
-
   const LoginButton({
-    super.key,
+    // ... (keep your existing constructor)
+        super.key,
     required this.text,
     this.color,
     this.ishow = false,
@@ -39,62 +39,123 @@ class LoginButton extends StatelessWidget {
   });
 
   @override
+  State<LoginButton> createState() => _LoginButtonState();
+}
+
+class _LoginButtonState extends State<LoginButton> {
+  bool _isHovering = false;
+
+  @override
   Widget build(BuildContext context) {
-    
-  
+    final Color buttonColor = widget.color ?? AppColors.selectLangugaeColor;
+    final Color hoverColor = _darkenColor(buttonColor, 0.15);
+    final bool isEnabled = true ?? true;
 
     Widget? leading;
 
-    if (ishow) {
-      if (icon != null) {
-        
-        leading = Icon(icon, size: (imageHeight ?? 24) .h, color: AppColors.whiteColor);
-      } else if (image != null) {
-        
-        if (image!.endsWith(".svg")) {
+    if (widget.ishow) {
+      if (widget.icon != null) {
+        leading = Icon(
+          widget.icon,
+          size: (widget.imageHeight ?? 24).h,
+          color: AppColors.whiteColor,
+        );
+      } else if (widget.image != null) {
+        if (widget.image!.endsWith(".svg")) {
           leading = SvgPicture.asset(
-            image!,
-            height: (imageHeight ?? 24) .h,
-            width: (imageWidth ?? 24) .w,
+            widget.image!,
+            height: (widget.imageHeight ?? 24).h,
+            width: (widget.imageWidth ?? 24).w,
             colorFilter: ColorFilter.mode(AppColors.whiteColor, BlendMode.srcIn),
           );
         } else {
           leading = Image.asset(
-            image!,
-            height: (imageHeight ?? 24) .h,
-            width: (imageWidth ?? 24) .w,
+            widget.image!,
+            height: (widget.imageHeight ?? 24).h,
+            width: (widget.imageWidth ?? 24).w,
           );
         }
       }
     }
 
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: (height ?? 74).h,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular((radius ?? 27) .r),
-          color: color ?? AppColors.selectLangugaeColor,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            if (leading != null) ...[
-              leading,
-              SizedBox(width: 10 .w),
-            ],
-            Center(
-              child: BoldText(
-                fontFamily: fontFamily,
-                text: text,
-                selectionColor: AppColors.whiteColor,
-                fontSize: (fontSize ?? 22).sp,
+    return MouseRegion(
+      onEnter: (_) => setState(() => _isHovering = true),
+      onExit: (_) => setState(() => _isHovering = false),
+      cursor: isEnabled ? SystemMouseCursors.click : SystemMouseCursors.forbidden,
+      child: InkWell(
+        onTap: isEnabled ? widget.onTap : null,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          curve: Curves.easeInOut,
+          height: (widget.height ?? 74).h,
+          width: widget.width != null ? widget.width!.w : double.infinity,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular((widget.radius ?? 27).r),
+            color: isEnabled
+                ? (_isHovering ? hoverColor : buttonColor)
+                : buttonColor.withOpacity(0.5),
+            boxShadow: _isHovering && isEnabled
+                ? [
+                    BoxShadow(
+                      color: buttonColor.withOpacity(0.4),
+                      blurRadius: 15,
+                      spreadRadius: 2,
+                      offset: const Offset(0, 5),
+                    )
+                  ]
+                : [
+                    BoxShadow(
+                      color: buttonColor.withOpacity(0.2),
+                      blurRadius: 4,
+                      offset: const Offset(0, 2),
+                    )
+                  ],
+            border: _isHovering && isEnabled
+                ? Border.all(
+                    color: _lightenColor(buttonColor, 0.2),
+                    width: 1.w,
+                  )
+                : null,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (leading != null) ...[
+                AnimatedScale(
+                  duration: const Duration(milliseconds: 200),
+                  scale: _isHovering ? 1.1 : 1.0,
+                  child: leading,
+                ),
+                SizedBox(width: 10.w),
+              ],
+              AnimatedScale(
+                duration: const Duration(milliseconds: 200),
+                scale: _isHovering ? 1.05 : 1.0,
+                child: BoldText(
+                  fontFamily: widget.fontFamily,
+                  text: widget.text,
+                  selectionColor: isEnabled
+                      ? AppColors.whiteColor
+                      : AppColors.whiteColor.withOpacity(0.7),
+                  fontSize: (widget.fontSize ?? 22).sp,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
+  }
+
+  Color _darkenColor(Color color, double factor) {
+    final hsl = HSLColor.fromColor(color);
+    final hslDark = hsl.withLightness((hsl.lightness - factor).clamp(0.0, 1.0));
+    return hslDark.toColor();
+  }
+
+  Color _lightenColor(Color color, double factor) {
+    final hsl = HSLColor.fromColor(color);
+    final hslLight = hsl.withLightness((hsl.lightness + factor).clamp(0.0, 1.0));
+    return hslLight.toColor();
   }
 }

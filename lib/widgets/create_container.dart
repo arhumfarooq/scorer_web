@@ -143,19 +143,22 @@ class CreateContainer extends StatelessWidget {
               width:borderW?? 4.05 .w
             ),
           ),
-          child: Center(
-            child: FittedBox(
-  fit: BoxFit.scaleDown, // 🔹 text ko shrink karke ek line me fit karega
-  child: Text(
-text ?? "create".tr,
-    style: TextStyle(
-      fontFamily: "gotham",
-      fontSize:fontsize2?? 42.sp,
-      color: textColor ?? AppColors.createBorderColor,
-    ),
-  ),
-)
-
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Center(
+              child: FittedBox(
+              fit: BoxFit.scaleDown, // 🔹 text ko shrink karke ek line me fit karega
+              child: Text(
+            text ?? "create".tr,
+                style: TextStyle(
+                  fontFamily: "gotham",
+                  fontSize:fontsize2?? 42.sp,
+                  color: textColor ?? AppColors.createBorderColor,
+                ),
+              ),
+            )
+            
+            ),
           ),
         ),
         ishow

@@ -81,41 +81,13 @@ class MetricesContainer extends StatelessWidget {
             ),
             // Original height: screenHeight * 0.025. Scaling to 25.h
             SizedBox(height: 25.h),
-            Row(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: Container(
-                    // Original height: screenHeight * 0.006. Scaling to 6.h
-                    height: 8.h,
-                    // Removed redundant width: screenWidth * 0.38, as Expanded manages width
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20.r),
-                        bottomLeft: Radius.circular(20.r),
-                      ),
-                      color: AppColors.forwardColor,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    // Original height: screenHeight * 0.006. Scaling to 6.h
-                    height: 8.h,
-                    // Removed redundant width: screenWidth * 0.25, as Expanded manages width
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(20.r),
-                        bottomRight: Radius.circular(20.r),
-                      ),
-                      color: AppColors.greyColor,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            // Original height: screenHeight * 0.02. Scaling to 20.h
+             LinearProgressIndicator(
+  value:0.4, // 40%
+  minHeight: 8.h,
+  color: AppColors.forwardColor,
+  backgroundColor: AppColors.greyColor,
+  borderRadius: BorderRadius.circular(10),
+),   // Original height: screenHeight * 0.02. Scaling to 20.h
             SizedBox(height: 20.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -136,38 +108,13 @@ class MetricesContainer extends StatelessWidget {
             // Original height: screenHeight * 0.02. Scaling to 20.h
             SizedBox(height: 20.h),
             // Duplicated progress bar structure
-            Row(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: Container(
-                    // Original height: screenHeight * 0.006. Scaling to 6.h
-                    height: 8.h,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20.r),
-                        bottomLeft: Radius.circular(20.r),
-                      ),
-                      color: AppColors.forwardColor,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    // Original height: screenHeight * 0.006. Scaling to 6.h
-                    height: 8.h,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(20.r),
-                        bottomRight: Radius.circular(20.r),
-                      ),
-                      color: AppColors.greyColor,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+           LinearProgressIndicator(
+  value:0.4, // 40%
+  minHeight: 8.h,
+  color: AppColors.forwardColor,
+  backgroundColor: AppColors.greyColor,
+  borderRadius: BorderRadius.circular(10),
+),   
             // Original height: screenHeight * 0.02. Scaling to 20.h
             SizedBox(height: 20.h),
             Row(
