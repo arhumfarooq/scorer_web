@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
           getPages: AppRoutes.getAppRoutes(),
           fallbackLocale: const Locale('en', 'US'),
           debugShowCheckedModeBanner: false,
-          home: UserManagemnetScreen(),
+          home: SplashScreen(),
         );
       },
       // child:  AudioVisualizer(),
