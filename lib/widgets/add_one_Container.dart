@@ -26,6 +26,7 @@ final double?arrowH;
 final double?arrowW;
 final String?text;
 final double?right2;
+final double?padding1;
 
   const AddOneContainer({
     super.key,
@@ -36,7 +37,7 @@ final double?right2;
     this.height1,
     this.width1,
     this.height2,
-    this.width2, this.onTap, this.isShow=false, this.top, this.right, this.height3, this.width3, this.borderW, this.arrowH, this.arrowW, this.text, this.right2
+    this.width2, this.onTap, this.isShow=false, this.top, this.right, this.height3, this.width3, this.borderW, this.arrowH, this.arrowW, this.text, this.right2, this.padding1
     ,
   });
 

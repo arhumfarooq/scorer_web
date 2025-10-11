@@ -93,6 +93,7 @@ class CustomAppbar extends StatefulWidget {
   final String? text;
   final double? right2;
   final bool ishow3;
+  final double ?padding1;
 
   const CustomAppbar({
     super.key,
@@ -109,7 +110,7 @@ class CustomAppbar extends StatefulWidget {
     this.right2,
     this.ishow3 = false,
     this.ishow4 = false,
-    this.onTap,
+    this.onTap, this.padding1,
   });
 
   @override
@@ -215,6 +216,7 @@ class _CustomAppbarState extends State<CustomAppbar>
                               widget.ishow4
                                   ? const SizedBox()
                                   : AddOneContainer(
+                                    padding1:widget.padding1,
                                       right2: widget.right2,
                                       top: widget.top,
                                       text: widget.text,

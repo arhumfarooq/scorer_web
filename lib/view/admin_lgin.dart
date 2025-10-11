@@ -203,7 +203,7 @@ class _AdminLginState extends State<AdminLgin> with TickerProviderStateMixin {
                                     onTap: () {
                                       Get.toNamed(RouteName.adminDashboard);
                                     },
-                                  ),
+                                ),
                                 ],
                               ),
                             ),

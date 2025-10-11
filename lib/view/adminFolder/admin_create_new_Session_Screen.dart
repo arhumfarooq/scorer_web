@@ -67,6 +67,7 @@ class AdminCreateNewSessionScreen extends StatelessWidget {
                     top: 50.h,
                     left: -40.w,
                     child: ForwardButtonContainer(
+                      onTap: () => Get.back(),
                       imageH: 20.h,
                       imageW: 23.5.w,
                       height1: 90.h,

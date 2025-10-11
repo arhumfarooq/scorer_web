@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:scorer_web/components/admin_folder.dart/admin_schedule_folder.dart';
 import 'package:scorer_web/components/admin_folder.dart/user_administrate_side.dart';
 import 'package:scorer_web/components/admin_folder.dart/user_player_side_Screen.dart';
 import 'package:scorer_web/components/facilitator_folder/audio_container.dart';
@@ -70,7 +71,7 @@ class MyApp extends StatelessWidget {
           getPages: AppRoutes.getAppRoutes(),
           fallbackLocale: const Locale('en', 'US'),
           debugShowCheckedModeBanner: false,
-          home: SplashScreen(),
+          home: AdminDashboard(),
         );
       },
       // child:  AudioVisualizer(),

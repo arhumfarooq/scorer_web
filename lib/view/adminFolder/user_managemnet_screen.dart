@@ -57,21 +57,9 @@ class UserManagemnetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: GradientBackground(
-        child: Column(
-          children: [
-            /// ✅ Fixed Appbar
-            CustomAppbar(
-isShow: true,
-onTap: () {
-  Get.toNamed(RouteName.createNewSessionHeader);
-},
-
-            ),
-            SizedBox(height: 56.h),
-
-            /// ✅ Fixed Top Container
+    return Expanded(child: Column(
+      children: [
+          /// ✅ Fixed Top Container
             GradientColor(
               height: 200.h,
               child: Container(
@@ -89,19 +77,19 @@ onTap: () {
                 child: Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    Positioned(
-                      top: 50.h,
-                      left: -40.w,
-                      child: ForwardButtonContainer(
-                        imageH: 20.h,
-                        imageW: 23.5.w,
-                        height1: 90.h,
-                        height2: 65.h,
-                        width1: 90.w,
-                        width2: 65.w,
-                        image: Appimages.arrowback,
-                      ),
-                    ),
+                    // Positioned(
+                    //   top: 50.h,
+                    //   left: -40.w,
+                    //   child: ForwardButtonContainer(
+                    //     imageH: 20.h,
+                    //     imageW: 23.5.w,
+                    //     height1: 90.h,
+                    //     height2: 65.h,
+                    //     width1: 90.w,
+                    //     width2: 65.w,
+                    //     image: Appimages.arrowback,
+                    //   ),
+                    // ),
                     Positioned(
                       top: -140,
                       right: 312.w,
@@ -217,9 +205,28 @@ onTap: () {
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-    );
+      ],
+    ));
+    
+    
+//      Scaffold(
+//       body: GradientBackground(
+//         child: Column(
+//           children: [
+//             /// ✅ Fixed Appbar
+//             CustomAppbar(
+// isShow: true,
+// onTap: () {
+//   Get.toNamed(RouteName.createNewSessionHeader);
+// },
+
+//             ),
+//             SizedBox(height: 56.h),
+
+          
+//           ],
+//         ),
+//       ),
+//     );
   }
 }
