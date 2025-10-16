@@ -19,11 +19,7 @@ class ActiveSessionScreen extends StatelessWidget {
         children: [
           Column(
             children: [
-            //  Container(
-            //   width: 698.w,
-            //   height: 602.h,
-            //   color: AppColors.arrowColor,
-            //  )
+           
              CustomDashboardContainer(
               onTap: () {
                 Get.toNamed(RouteName.overViewOptionScreen);
@@ -61,21 +57,7 @@ class ActiveSessionScreen extends StatelessWidget {
                 icon2: Icons.fast_forward,
               ),
           
-              //   CustomDashboardContainer(
-                
-              //   // onTap:()=> Get.toNamed(RouteName.overViewOptionScreen),
-              //   heading: "Team Building Workshop",
-              //   text1: "phase_1".tr,
-              //   // height: 10,
-              //   text2:"phase_1".tr,
-              //   description: "Team Building Workshop strengthens teamwork through interactive activities.",
-              //   text3: "resume".tr,
-              //   text4:  "end".tr,
-              //   icon1: Icons.play_arrow,
-              //   text5: "15 Players",
-              //   text6: "paused".tr,
-              //   icon2: Icons.square,
-              // ),
+          
             ],
           ),
         ],

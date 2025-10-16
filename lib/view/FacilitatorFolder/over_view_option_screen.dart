@@ -32,10 +32,10 @@ class OverViewOptionScreen extends StatelessWidget {
   OverViewOptionScreen({super.key});
 
   final List<String> tabs = [
-    "Overview".tr,
-    "Phases".tr,
-    "Players".tr,
-    "Leaderboard".tr,
+    "overview".tr,
+    "phases".tr,
+    "players".tr,
+    "leaderboard".tr,
   ];
 
  
@@ -297,7 +297,7 @@ class OverViewOptionScreen extends StatelessWidget {
                                                                            ),
                                                                            SizedBox(width: 26.w),
                                                                            UseableContainer(
-                                                                             text: "Active",
+                                                                             text: "active".tr,
                                                                              fontFamily: "abz",
                                                                              color: AppColors.forwardColor,
                                                                            ),

@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
           getPages: AppRoutes.getAppRoutes(),
           fallbackLocale: const Locale('en', 'US'),
           debugShowCheckedModeBanner: false,
-          home: AdminDashboard(),
+          home: FacilLoginScreen(),
         );
       },
       // child:  AudioVisualizer(),

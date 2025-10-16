@@ -225,6 +225,8 @@ class AppTranslations extends Translations {
   "feasibility": "Feasibility",
   "innovation": "Innovation",
   "accept_ai_score": "Accept AI Score (85)",
+  'company_crisis_message': "You’ve just entered a company in crisis. Every\ndecision you make could change its future.",
+
   "manual_overwrite": "Manual Overwrite",
    "your_evaluation": "Your Evaluation",
   "feedback_optional": "Feedback (Optional)",

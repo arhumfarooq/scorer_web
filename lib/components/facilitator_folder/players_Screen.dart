@@ -143,7 +143,7 @@ arrowW: 70.w,
 borderW: 1.4.w
 ,
                    fontsize2: 20.sp,
-                    text: "Team Alpha".tr
+                     text: "team_alpha".tr
                   ),
                   SizedBox(height: 30.h,),
                      AllPlayersContainer(text: "Sarah Johnson", text2: "Joined 2:35 PM", image: Appimages.player2),

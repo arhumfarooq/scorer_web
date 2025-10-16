@@ -32,7 +32,7 @@ class PhasesScreen extends StatelessWidget {
       SizedBox(height: 50.h,),
         Center(
       child: CreateContainer(
-                      text: "Current Phase", fontsize2: 31.sp,width: 260.w,height: 70.h,borderW: 1.97.w,
+                      text: "current_phase".tr, fontsize2: 31.sp,width: 260.w,height: 70.h,borderW: 1.97.w,
                       arrowW: 33.w,arrowh: 40.h,top:-30.h ,right: -10.w,
                       
                       ),
@@ -160,7 +160,7 @@ class PhasesScreen extends StatelessWidget {
 
                     TeamProgressContainer(controller: controller),
                     SizedBox(height: 49.h,),
-                    BoldText(text: "All Phases",fontSize: 24,selectionColor: AppColors.blueColor,),
+                    BoldText(text:  "all_phases".tr,fontSize: 24,selectionColor: AppColors.blueColor,),
                      SizedBox(height: 30.h,),
 
 

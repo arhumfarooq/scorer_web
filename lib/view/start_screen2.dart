@@ -114,7 +114,7 @@ class _StartScreen2State extends State<StartScreen2>
                                     children: [
                                       Center(
                                         child: BoldText(
-                                          text: "A Role for Everyone",
+                                          text: "role_title".tr,  
                                           textAlign: TextAlign.center,
                                           fontSize: 48.sp,
                                           selectionColor: AppColors.blueColor,
@@ -125,9 +125,7 @@ class _StartScreen2State extends State<StartScreen2>
                                       Center(
                                         child: MainText(
                                           textAlign: TextAlign.center,
-                                          text:
-                                              "Whether you’re an Administrator setting up sessions, a Facilitator\nmanaging the game, or a Player competing for the top spot,\nScore’Master+ is designed to fit your role perfectly.",
-                                        ),
+                                       text: "role_description".tr,                          ),
                                       ),
                                     ],
                                   ),

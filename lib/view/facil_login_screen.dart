@@ -158,6 +158,7 @@ import 'package:get/get.dart';
 import 'package:scorer_web/components/responsive_fonts.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/view/gradient_background.dart';
 import 'package:scorer_web/widgets/create_container.dart';
 import 'package:scorer_web/widgets/forward_button_container.dart';
@@ -253,7 +254,8 @@ class _FacilLoginScreenState extends State<FacilLoginScreen>
                                 right: -235,
                                 top: 130,
                                 child: CreateContainer(
-                                  text: "Facilitator Login",
+                                                               text: "facilitator_login".tr,
+
                                   fontsize2: 30.sp,
                                 ),
                               ),
@@ -332,7 +334,7 @@ class _FacilLoginScreenState extends State<FacilLoginScreen>
                                     text: "login".tr,
                                     fontSize: 20,
                                     onTap: () {
-                                      // Get.toNamed(RouteName.bottomNavigation);
+                                      Get.toNamed(RouteName.facilitatorDashboard);
                                     },
                                   ),
                                 ],

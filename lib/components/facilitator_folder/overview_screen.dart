@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_utils/get_utils.dart';
 import 'package:scorer_web/components/facilitator_folder/engagement_Container.dart';
 import 'package:scorer_web/components/facilitator_folder/new_session_container.dart';
 import 'package:scorer_web/constants/appcolors.dart';
@@ -27,11 +28,14 @@ class OverviewScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-            BoldText(text: "Session Information",selectionColor: AppColors.blueColor,fontSize: 32.sp,),
+            BoldText(
+  text: "session_info".tr
+              
+              ,selectionColor: AppColors.blueColor,fontSize: 32.sp,),
         MainText(
           fontSize: 26.sp,
-          text: "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression."),
-         
+  text: "session_description".tr,
+        )         
         ],
       ),
       ) ,

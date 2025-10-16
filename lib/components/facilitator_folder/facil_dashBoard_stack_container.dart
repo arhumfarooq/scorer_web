@@ -52,7 +52,7 @@
                       onTap: () {
                         controller.changeTab(0);
                       },
-                      text:   "Active Sessions",
+                      text:  "active_sessions".tr,
                       color: controller.selectedIndex.value == 0
                           ? AppColors.whiteColor
                           : AppColors.languageColor,
@@ -63,7 +63,7 @@
                 Expanded(
                   child: Center(
                     child: MainText(
-                      text:  "Scheduled",
+                      text:  "scheduled".tr,
                       fontSize: 28 .sp,
                       color: controller.selectedIndex.value == 0
                           ? AppColors.languageColor

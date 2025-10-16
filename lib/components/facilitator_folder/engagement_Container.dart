@@ -68,7 +68,7 @@ class EngagementContainer extends StatelessWidget {
         fit: BoxFit.scaleDown,
         alignment: Alignment.centerLeft,
         child: BoldText(
-    text: "Active Players".tr,
+    text:  "active_players".tr,
     selectionColor: AppColors.blueColor,
     fontSize: 30 .sp,
         ),
@@ -101,7 +101,7 @@ class EngagementContainer extends StatelessWidget {
         fit: BoxFit.scaleDown,
         alignment: Alignment.centerLeft,
         child: BoldText(
-    text: "Engagement".tr,
+    text:  "engagement".tr,
     selectionColor: AppColors.blueColor,
     fontSize: 30 .sp,
         ),
