@@ -77,26 +77,14 @@ class UserManagemnetScreen extends StatelessWidget {
                 child: Stack(
                   clipBehavior: Clip.none,
                   children: [
-                    // Positioned(
-                    //   top: 50.h,
-                    //   left: -40.w,
-                    //   child: ForwardButtonContainer(
-                    //     imageH: 20.h,
-                    //     imageW: 23.5.w,
-                    //     height1: 90.h,
-                    //     height2: 65.h,
-                    //     width1: 90.w,
-                    //     width2: 65.w,
-                    //     image: Appimages.arrowback,
-                    //   ),
-                    // ),
+                 
                     Positioned(
                       top: -140,
                       right: 312.w,
                       left: 312.w,
                       child: CustomStackImage(
                         image: Appimages.prince2,
-                        text: "Administrator",
+                        text: "administrator".tr,
                       ),
                     ),
                  Column(
@@ -104,12 +92,12 @@ class UserManagemnetScreen extends StatelessWidget {
                   children: [
                        Center(
                       child: BoldText(
-                        text: "Users Management",
+                       text: "users_management".tr,
                         fontSize: 48.sp,
                         selectionColor: AppColors.blueColor,
                       ),
                     ),
-                     MainText(text: "Securely manage roles, permissions, and\naccess.",fontSize: 22.sp,textAlign: TextAlign.center,)
+                     MainText( text: "securely_manage_roles".tr,fontSize: 22.sp,textAlign: TextAlign.center,)
               
                   ],
                  )
@@ -171,20 +159,7 @@ class UserManagemnetScreen extends StatelessWidget {
                                 ),
                               ),
                       
-                      //                           Obx(() {
-                      //   double screenWidth = 1.sw;
-                      //   double totalWidth = screenWidth - 64.w; // ✅ margin ka calculation sahi
-                      //   double tabWidth = totalWidth / tabs.length;
-                      //   double left = controller.selectedIndex.value * tabWidth;
-                      
-                      //   return UserManagementStackContainer(
-                      //     totalWidth: totalWidth,
-                      //     left: left,
-                      //     tabWidth: tabWidth,
-                      //     tabs: tabs,
-                      //     controller: controller,
-                      //   );
-                      // }),
+                      //                      
                       SizedBox(height: 30.h,),
                       
                          ViewResponseStackContainer(
@@ -208,25 +183,5 @@ class UserManagemnetScreen extends StatelessWidget {
       ],
     ));
     
-    
-//      Scaffold(
-//       body: GradientBackground(
-//         child: Column(
-//           children: [
-//             /// ✅ Fixed Appbar
-//             CustomAppbar(
-// isShow: true,
-// onTap: () {
-//   Get.toNamed(RouteName.createNewSessionHeader);
-// },
-
-//             ),
-//             SizedBox(height: 56.h),
-
-          
-//           ],
-//         ),
-//       ),
-//     );
-  }
+      }
 }

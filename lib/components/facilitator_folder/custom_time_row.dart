@@ -11,25 +11,23 @@ class CustomTimeRow extends StatelessWidget {
     super.key,
   });
 
-  // Removed final double heightScaleFactor;
-  // Removed final double widthScaleFactor;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        // --- Widget 1: Time Duration ---
+    
         Expanded(
           child: Container(
-            // Dimensions now use ScreenUtil extensions
+       
             height: 180.h,
             width: 105.w, 
             decoration: BoxDecoration(
               border: Border.all(
                 color: AppColors.greyColor,
-                width: 1.7.w, // Use .w for border width
+                width: 1.7.w, 
               ),
-              borderRadius: BorderRadius.circular(35.r), // Use .r for radius
+              borderRadius: BorderRadius.circular(35.r), 
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

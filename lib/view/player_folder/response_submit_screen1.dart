@@ -84,7 +84,7 @@ class ResponseSubmitScreen1 extends StatelessWidget {
                             left: 312.w,
                             child: CustomStackImage(
                               image: Appimages.player2,
-                              text: "Player",
+                              text: "player".tr,
                             ),
                           ),
                           Column(
@@ -163,25 +163,11 @@ class ResponseSubmitScreen1 extends StatelessWidget {
                                   
                                 SizedBox(height: 20.h,),
                             BoldText(
-                                    text: "Response Submitted!".tr,
+                                    text: "response_submitted".tr,
                                     fontSize: 30.sp,
                                     selectionColor: AppColors.blueColor,
                                   ),
-                            // Row(
-                            //   mainAxisAlignment: MainAxisAlignment.center,
-                            //   children: [
-                            //     SvgPicture.asset(
-                            //       Appimages.person,
-                            //       height: 25.h,
-                            //       width: 25.w,
-                            //     ),
-                            //     SizedBox(width: 8 .w),
-                            //     MainText(
-                            //       text: "Facilitator: Sarah Johnson",
-                            //       fontSize: 20.sp,
-                            //     )
-                            //   ],
-                            // ),
+                           
                             Center(
                             child: MainText(
                               height: 1.2,
@@ -225,8 +211,8 @@ class ResponseSubmitScreen1 extends StatelessWidget {
                                   ),
                                   SizedBox(height: 10 .h),
                                   MainText(
-                                    // text: "mountain_resort_reason".tr,
-                                    text: "The mountain resort offers the best balance of cost-effectiveness and team-building opportunities. The outdoor activities will help strengthen team bonds...",
+                                    text: "mountain_resort_reason".tr,
+                                    // text: "The mountain resort offers the best balance of cost-effectiveness and team-building opportunities. The outdoor activities will help strengthen team bonds...",
                                     fontSize: 20.sp,
                                     height: 1.5,
                                   ),

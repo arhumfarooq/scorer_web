@@ -32,296 +32,7 @@ import 'package:scorer_web/widgets/setting_container.dart';
 import 'package:scorer_web/widgets/widget_nav_item.dart';
 
 // // class AdminDashboard extends StatelessWidget {
-// //   final BottomNavController controller1 = Get.put(BottomNavController());
-// //   final FacilDashboardController controller = Get.put(FacilDashboardController());
-// //   AdminDashboard({super.key});
 
-// //   final List<Widget> screens = [
-// //     AdminActiveSession(),
-// //     AdminScheduleScreen(),
-// //   ];
-
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return Scaffold(
-// //       body: GradientBackground(
-// //         child: SafeArea(
-// //           child: Column(
-// //             children: [
-// //               // ✅ Custom AppBar
-// //               CustomAppbar(
-// //                 width3: 205.w,
-// //                 height3: 61.h,
-// //                 borderW: 1.96.w,
-// //                 text: "Create New",
-// //                 right2: -30.w,
-// //                 right: 20.w,
-// //                 top: -30.h,
-// //                 onTap: () {
-// //                   Get.toNamed(RouteName.createNewSessionScreen);
-// //                 },
-// //               ),
-
-// //               SizedBox(height: 56.h),
-
-// //               // ✅ Top Gradient Welcome Section
-// //             Expanded(
-// //               child: Row(
-// //                 // crossAxisAlignment: CrossAxisAlignment.start,
-// //                 children: [
-// //                   Padding(
-// //                       padding: EdgeInsets.only(left: 100.w),
-// //                       child: SideNavBar(
-// // onTap: () {
-// //   if (controller1.selectedIndex==0) {
-    
-    
-// //   }
-// // },
-
-// //                       ),
-// //                     ),
-// //                   Expanded(
-// //                     child: Center(
-// //                       child: Column(
-// //                         children: [
-// //                             GradientColor(
-// //                           height: 220.h,
-// //                           child: Container(
-// //                             width: 794.w,
-// //                             height: 100.h,
-                           
-// //                             child: Stack(
-// //                               clipBehavior: Clip.none,
-// //                               children: [
-// //                                 Positioned(
-// //                                   top: -140,
-// //                                   right: 312.w,
-// //                                   left: 312.w,
-// //                                   child: CustomStackImage(
-// //                                     image:  Appimages.prince2,
-// //                                   ),
-// //                                 ),
-// //                                 Column(
-// //                                   mainAxisAlignment: MainAxisAlignment.center,
-// //                                   children: [
-// //                                     Center(
-// //                                       child: BoldText(
-// //                                         text: "Hello Administrator, Chris!",
-// //                                         fontSize: 48.sp,
-// //                                         selectionColor: AppColors.blueColor,
-// //                                       ),
-// //                                     ),
-// //                                     Center(
-// //                                       child: MainText(
-// //                                         fontSize: 22.sp,
-// //                                         textAlign: TextAlign.center,
-// //                                         text:
-// //                                         "Welcome! You have full system access to\nmanage sessions, users, and game content."
-// //                                             // "You’ve just entered a company in crisis. Every\ndecision you make could change its future.",
-// //                                       ),
-// //                                     ),
-// //                                   ],
-// //                                 ),
-// //                               ],
-// //                             ),
-// //                           ),
-// //                         ),
-                      
-// //                         // ✅ Main Content Area
-// //                         Expanded(
-// //                           child: GradientColor(
-// //                             ishow: false,
-// //                             child: Container(
-// //                               width: 794.w,
-                           
-// //                               child: Column(
-// //                                 crossAxisAlignment: CrossAxisAlignment.center,
-// //                                 children: [
-// //                                   SizedBox(height: 20.h),
-// //                                   FacilDashBoardStackContainer(controller: controller),
-// //                                   SizedBox(height: 20.h),
-                      
-// //                                   // ✅ Switchable screens without layout issue
-// //                                   Expanded(
-// //                                     child: Obx(() => screens[controller.selectedIndex.value]),
-// //                                   ),
-// //                                 ],
-// //                               ),
-// //                             ),
-// //                           ),
-// //                         ),
-// //                         ],
-// //                       ),
-// //                     ),
-// //                   ),
-// //                 SizedBox(width: 200.w),
-// //                 ],
-// //               ),
-// //             )
-// //             ],
-// //           ),
-// //         ),
-// //       ),
-// //     );
-// //   }
-// // }
-// class AdminDashboard extends StatelessWidget {
-//   final BottomNavController controller1 = Get.put(BottomNavController());
-//   final FacilDashboardController controller = Get.put(FacilDashboardController());
-//   AdminDashboard({super.key});
-
-//   final List<Widget> screens = [
-//     AdminActiveSession(),
-//     AdminScheduleScreen(),
-//   ];
-
-//   // 👇 Define different Column layouts for each index
-//   List<Widget> getScreenContent(int index) {
-//     switch (index) {
-//       case 0:
-//         return [
-//           SizedBox(height: 20.h),
-//           FacilDashBoardStackContainer(controller: controller),
-//           SizedBox(height: 20.h),
-//           // Expanded(child: screens[0]),
-//             Expanded(
-//                                     child: Obx(() => screens[controller.selectedIndex.value]),
-//                                   ),
-//         ];
-//       case 1:
-//         return [
-//           SizedBox(height: 20.h),
-//           BoldText(
-//             text: "Admin Schedule",
-//             fontSize: 35.sp,
-//             selectionColor: AppColors.blueColor,
-//           ),
-//           SizedBox(height: 20.h),
-//           Expanded(child: screens[1]),
-//         ];
-//       case 2:
-//         return [
-//           SizedBox(height: 20.h),
-//           BoldText(
-//             text: "User Management",
-//             fontSize: 35.sp,
-//             selectionColor: AppColors.blueColor,
-//           ),
-//           SizedBox(height: 20.h),
-//           Expanded(child: Center(child: Text("Users Screen Coming Soon"))),
-//         ];
-//       default:
-//         return [];
-//     }
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: GradientBackground(
-//         child: SafeArea(
-//           child: Column(
-//             children: [
-//               // ✅ AppBar
-//               CustomAppbar(
-//                 width3: 205.w,
-//                 height3: 61.h,
-//                 borderW: 1.96.w,
-//                 text: "Create New",
-//                 right2: -30.w,
-//                 right: 20.w,
-//                 top: -30.h,
-//                 onTap: () {
-//                   Get.toNamed(RouteName.createNewSessionScreen);
-//                 },
-//               ),
-
-//               SizedBox(height: 56.h),
-
-//               // ✅ Main layout
-//               Expanded(
-//                 child: Row(
-//                   children: [
-//                     Padding(
-//                       padding: EdgeInsets.only(left: 100.w),
-//                       child: SideNavBar(controller: controller1),
-//                     ),
-//                     Expanded(
-//                       child: Center(
-//                         child: Column(
-//                           children: [
-//                             GradientColor(
-//                               height: 220.h,
-//                               child: Container(
-//                                 width: 794.w,
-//                                 height: 100.h,
-//                                 child: Stack(
-//                                   clipBehavior: Clip.none,
-//                                   children: [
-//                                     Positioned(
-//                                       top: -140,
-//                                       right: 312.w,
-//                                       left: 312.w,
-//                                       child: CustomStackImage(
-//                                         image: Appimages.prince2,
-//                                       ),
-//                                     ),
-//                                     Column(
-//                                       mainAxisAlignment: MainAxisAlignment.center,
-//                                       children: [
-//                                         Center(
-//                                           child: BoldText(
-//                                             text: "Hello Administrator, Chris!",
-//                                             fontSize: 48.sp,
-//                                             selectionColor: AppColors.blueColor,
-//                                           ),
-//                                         ),
-//                                         Center(
-//                                           child: MainText(
-//                                             fontSize: 22.sp,
-//                                             textAlign: TextAlign.center,
-//                                             text:
-//                                                 "Welcome! You have full system access to\nmanage sessions, users, and game content.",
-//                                           ),
-//                                         ),
-//                                       ],
-//                                     ),
-//                                   ],
-//                                 ),
-//                               ),
-//                             ),
-
-//                             // ✅ Dynamic content area (switches when SideNavBar changes)
-//                             Expanded(
-//                               child: GradientColor(
-//                                 ishow: false,
-//                                 child: Container(
-//                                   width: 794.w,
-//                                   child: Obx(() => Column(
-//                                         crossAxisAlignment:
-//                                             CrossAxisAlignment.center,
-//                                         children: getScreenContent(
-//                                             controller1.selectedIndex.value),
-//                                       )),
-//                                 ),
-//                               ),
-//                             ),
-//                           ],
-//                         ),
-//                       ),
-//                     ),
-//                     SizedBox(width: 200.w),
-//                   ],
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
 class AdminDashboard extends StatelessWidget {
   final BottomNavController controller1 = Get.put(BottomNavController());
   final FacilDashboardController controller = Get.put(FacilDashboardController());
@@ -355,20 +66,26 @@ class AdminDashboard extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Center(
-                          child: BoldText(
-                            text: "Hello Administrator, Chris!",
-                            fontSize: 48.sp,
-                            selectionColor: AppColors.blueColor,
-                          ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            BoldText(
+                              text: "hello_admin".tr,
+                              fontSize: 48.sp,
+                              selectionColor: AppColors.blueColor,
+                            ),
+                             BoldText(
+                              text: ", Chris!",
+                              fontSize: 48.sp,
+                              selectionColor: AppColors.blueColor,
+                            ),
+                          ],
                         ),
                         Center(
                           child: MainText(
                             fontSize: 22.sp,
                             textAlign: TextAlign.center,
-                            text:
-                                "Welcome! You have full system access to\nmanage sessions, users, and game content.",
-                          ),
+                          text: "welcome_admin".tr,     ),
                         ),
                       ],
                     ),

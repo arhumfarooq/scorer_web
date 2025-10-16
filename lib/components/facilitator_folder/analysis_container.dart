@@ -134,7 +134,9 @@ class AnalysisContainer extends StatelessWidget {
 ),
                     SizedBox(height: 25 .h),
                   MainText(
-  text: "AI Suggested Score: 9.1/10 - Comprehensive response with clear objectives, well-defined strategies, and realistic implementation timeline.".tr,
+  text: "ai_suggested_score".tr,
+
+  // text: "AI Suggested Score: 9.1/10 - Comprehensive response with clear objectives, well-defined strategies, and realistic implementation timeline.".tr,
   fontSize: 22 .sp,
   height: 1.2,
 ),

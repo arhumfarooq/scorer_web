@@ -83,7 +83,7 @@ class ViewScoreScreen extends StatelessWidget {
                         ),
                         Center(
                           child: BoldText(
-                            text: "View Score",
+                             text: "view_score".tr,
                             fontSize: 48.sp,
                             selectionColor: AppColors.blueColor,
                           ),
@@ -223,84 +223,80 @@ class ViewScoreScreen extends StatelessWidget {
                             ),
                             SizedBox(height: 150.h,),
                                 Container(
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(26.r),
-                                    border: Border.all(color: AppColors.greyColor, width: 1.5.w),
-                                  ),
-                                  padding: EdgeInsets.symmetric(horizontal: 17.w, vertical: 20.h),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          BoldText(
-                                            text: "team_response".tr,
-                                            fontSize: 28.sp,
-                                            selectionColor: AppColors.blueColor,
-                                          ),
-                                          Row(
-                                            children: [
-                                              Image.asset(
-                                                Appimages.timeout2,
-                                                height: 30.h,
-                                                width: 30.w,
-                                              ),
-                                              MainText(
-                                                text: "2 min read",
-                                                fontSize: 24.sp,
-                                                color: AppColors.teamColor,
-                                              )
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                      SizedBox(height: 20.h),
-                                      MainText(
-                                        text:
-                                            "Primary Objective: Our primary objective is to increase customer satisfaction by 25% through improved service delivery and enhanced user experience across all touchpoints.",
-                                        fontSize: 22.sp,
-                                        height: 1.2,
-                                      ),
-                                      SizedBox(height: 20.h),
-                                      BoldText(
-                                        text: "key_strategies".tr,
-                                        fontSize: 28.sp,
-                                        selectionColor: AppColors.blueColor,
-                                      ),
-                                      SizedBox(height: 20.h),
-                                      MainText(
-                                        text:
-                                            "Implement real-time feedback system: Deploy customer feedback tools at every service interaction point to capture immediate responses and identify pain points quickly.".tr,
-                                        fontSize: 22.sp,
-                                        height: 1.2,
-                                      ),
-                                      SizedBox(height: 20.h),
-                                      MainText(
-                                        text:
-                                            "Reduce response time to under 2 hours: Streamline our support processes and implement automated routing to ensure faster resolution of customer inquiries.".tr,
-                                        fontSize: 22.sp,
-                                        height: 1.2,
-                                      ),
-                                      SizedBox(height: 20.h),
-                                      MainText(
-                                        text:
-                                            "Enhance self-service capabilities: comprehensive FAQ sections, video tutorials, and chatbot assistance to empower customers to resolve common issues independently.".tr,
-                                        fontSize: 22.sp,
-                                        height: 1.2,
-                                      ),
-                                      SizedBox(height: 20.h),
-                                      MainText(
-                                        text:
-                                            "These strategies align with our company's customer-centric approach and will be measured through monthly satisfaction surveys, response time analytics, and self-service adoption rates.".tr,
-                                        fontSize: 22.sp,
-                                        height: 1.2,
-                                      ),
-                                    ],
-                                  ),
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(26.r),
+                                  border: Border.all(color: AppColors.greyColor, width: 1.5.w),
                                 ),
-                                SizedBox(height: 20.h,),
+                                padding: EdgeInsets.symmetric(horizontal: 17.w, vertical: 20.h),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        BoldText(
+                                          text: "team_response".tr,
+                                          fontSize: 28.sp,
+                                          selectionColor: AppColors.blueColor,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Image.asset(
+                                              Appimages.timeout2,
+                                              height: 30.h,
+                                              width: 30.w,
+                                            ),
+                                            MainText(
+                                              text: "2 min read",
+                                              fontSize: 24.sp,
+                                              color: AppColors.teamColor,
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    MainText(
+                                      text:
+                                          "Primary Objective: Our primary objective is to increase customer satisfaction by 25% through improved service delivery and enhanced user experience across all touchpoints.",
+                                      fontSize: 22.sp,
+                                      height: 1.2,
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    BoldText(
+                                      text: "key_strategies".tr,
+                                      fontSize: 28.sp,
+                                      selectionColor: AppColors.blueColor,
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    MainText(
+                               text: "feedback_system".tr,
+
+                                      fontSize: 22.sp,
+                                      height: 1.2,
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    MainText(
+  text: "reduce_response_time".tr,
+                                                  fontSize: 22.sp,
+                                      height: 1.2,
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    MainText(
+  text: "enhance_self_service".tr,
+                                              fontSize: 22.sp,
+                                      height: 1.2,
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    MainText(
+                                    text: "alignment".tr,
+         fontSize: 22.sp,
+                                      height: 1.2,
+                                    ),
+                                  ],
+                                ),
+                              ),SizedBox(height: 20.h,),
                                   LoginButton(
                               onTap: () {
                         Get.toNamed(RouteName.overViewOptionScreen);

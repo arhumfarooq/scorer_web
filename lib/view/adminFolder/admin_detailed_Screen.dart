@@ -89,7 +89,7 @@ class AdminDetailedScreen extends StatelessWidget {
                       left: 312.w,
                       child: CustomStackImage(
                         image: Appimages.prince2,
-                        text: "Administrator",
+                        text: "administrator".tr,
                       ),
                     ),
                  Column(
@@ -97,7 +97,7 @@ class AdminDetailedScreen extends StatelessWidget {
                   children: [
                        Center(
                       child: BoldText(
-                        text: "Users Management",
+                        text: "users_management".tr,
                         fontSize: 48.sp,
                         selectionColor: AppColors.blueColor,
                       ),

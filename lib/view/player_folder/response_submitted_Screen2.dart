@@ -86,7 +86,7 @@ class ResponseSubmittedScreen2 extends StatelessWidget {
                             left: 312.w,
                             child: CustomStackImage(
                               image: Appimages.player2,
-                              text: "Player",
+                              text: "player".tr,
                             ),
                           ),
                           Column(
@@ -164,7 +164,7 @@ class ResponseSubmittedScreen2 extends StatelessWidget {
                             ),
                             SizedBox(height: 70.h,),
                                BoldText(
-                                    text: "Response Accepted!".tr,
+                                     text: "response_submitted".tr,
                                     fontSize: 30.sp,
                                     selectionColor: AppColors.blueColor,
                                   ),

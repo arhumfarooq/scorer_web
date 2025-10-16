@@ -60,7 +60,7 @@ class PlayerLoginSide extends StatelessWidget {
                         left: 312.w,
                         child: CustomStackImage(
                           image: Appimages.player2,
-                          text: "Player",
+                          text: "player".tr,
                         ),
                       ),
                       Column(
@@ -68,7 +68,8 @@ class PlayerLoginSide extends StatelessWidget {
                         children: [
                           Center(
                             child: BoldText(
-                              text: "Player Nickname",
+                                 text: "player_nickname".tr,
+
                               fontSize: 48.sp,
                               selectionColor: AppColors.blueColor,
                             ),
@@ -106,11 +107,11 @@ class PlayerLoginSide extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                 
-                         LoginTextfield(text: "Enter Nick Name",height: 120.h,fontsize: 35.sp,),
+                         LoginTextfield( text: "enter_nickname".tr,height: 120.h,fontsize: 35.sp,),
                           SizedBox(height: 20.h,),
-                          LoginTextfield(text: "Enter Team Nick Name",height: 120.h,fontsize: 35.sp,),
+                          LoginTextfield( text: "enter_team_nickname".tr,height: 120.h,fontsize: 35.sp,),
                           SizedBox(height: 30.h,),
-                          LoginButton(text: "Continue",color: AppColors.forwardColor,onTap: () {
+                          LoginButton(text: "continue".tr,color: AppColors.forwardColor,onTap: () {
                             Get.toNamed(RouteName.playerDashboardScreen2);
                           },
                           

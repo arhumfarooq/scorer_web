@@ -19,6 +19,7 @@ import 'package:scorer_web/view/FacilitatorFolder/facilitator_dashboard.dart';
 import 'package:scorer_web/view/FacilitatorFolder/over_view_option_screen.dart';
 import 'package:scorer_web/view/FacilitatorFolder/view_response_Screen.dart';
 import 'package:scorer_web/view/FacilitatorFolder/view_score_Screen.dart';
+import 'package:scorer_web/view/adminFolder/admin_create_new_Session_Screen.dart';
 import 'package:scorer_web/view/adminFolder/admin_dashboard.dart';
 import 'package:scorer_web/view/adminFolder/admin_detailed_Screen.dart';
 import 'package:scorer_web/view/adminFolder/admin_over_view_option_screen.dart';
@@ -71,7 +72,7 @@ class MyApp extends StatelessWidget {
           getPages: AppRoutes.getAppRoutes(),
           fallbackLocale: const Locale('en', 'US'),
           debugShowCheckedModeBanner: false,
-          home: FacilLoginScreen(),
+          home: UserPlayerDetailedScreen(),
         );
       },
       // child:  AudioVisualizer(),

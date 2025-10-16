@@ -225,7 +225,7 @@ class GameScreenAdminside extends StatelessWidget {
                         left: 312.w,
                         child: CustomStackImage(
                           image: Appimages.prince2,
-                          text: "Administrator",
+                          text: "administrator".tr,
                         ),
                       ),
                    Column(
@@ -233,12 +233,15 @@ class GameScreenAdminside extends StatelessWidget {
                     children: [
                          Center(
                         child: BoldText(
-                          text: "Game Format Management",
+                          text: "game_format_management".tr,
                           fontSize: 48.sp,
                           selectionColor: AppColors.blueColor,
                         ),
                       ),
-                       MainText(text: "Each of these formats has its own logic, flow,\nand evaluation methods.",fontSize: 22.sp,
+                       MainText(
+                         text: "format_description".tr,
+  fontSize: 22.sp,
+                        // text: "Each of these formats has its own logic, flow,\nand evaluation methods.",fontSize: 22.sp,
                        textAlign: TextAlign.center,
                        )
                 

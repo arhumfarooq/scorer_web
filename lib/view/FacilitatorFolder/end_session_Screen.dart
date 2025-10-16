@@ -109,7 +109,7 @@ class EndSessionScreen extends StatelessWidget {
                                     ),
                                     SizedBox(width: 26.w),
                                     UseableContainer(
-                                      text: "Active",
+                                      text: "active".tr,
                                       fontFamily: "abz",
                                       color: AppColors.forwardColor,
                                     ),
@@ -144,9 +144,7 @@ class EndSessionScreen extends StatelessWidget {
                           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                                
-                                
+                            children: [  
                                   Container(
                               height: 161.h ,
                               width: double.infinity,
@@ -186,8 +184,6 @@ class EndSessionScreen extends StatelessWidget {
                             ),
                             SizedBox(height: 20.h,),
                                 LoginButton(
-                      // fontSize: 20.sp,
-                                
                               text: "export_pdf".tr,
                               ishow: true,
                               image: Appimages.export,

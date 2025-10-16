@@ -63,7 +63,7 @@ class PlayerDashboardScreen2 extends StatelessWidget {
                         left: 312.w,
                         child: CustomStackImage(
                           image: Appimages.player2,
-                          text: "Player",
+                          text: "player".tr,
                         ),
                       ),
                       Column(

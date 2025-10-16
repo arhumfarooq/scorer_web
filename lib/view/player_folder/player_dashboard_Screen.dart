@@ -58,7 +58,7 @@ class PlayerDashboardScreen extends StatelessWidget {
                         left: 312.w,
                         child: CustomStackImage(
                           image: Appimages.player2,
-                          text: "Player",
+                          text: "player".tr,
                         ),
                       ),
                       Column(
@@ -66,15 +66,16 @@ class PlayerDashboardScreen extends StatelessWidget {
                         children: [
                           Center(
                             child: BoldText(
-                              text: "Welcome to Score’Master+!",
+                               text: "welcome_scoremaster".tr,
+
                               fontSize: 48.sp,
                               selectionColor: AppColors.blueColor,
                             ),
                           ),
                           MainText(
-                            text:
-                                "You’re all set to join a session. Enter your session\ncode or wait for your facilitator to start the game.",
-                            fontSize: 22.sp,
+  text: "join_session_text".tr,
+
+                                  fontSize: 22.sp,
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -153,7 +154,7 @@ class PlayerDashboardScreen extends StatelessWidget {
                               heading: "Eranove Odyssey – Team A",
                               text1: "Phase 2",
                               ishow: false,
-                              text2: "Scheduled",
+                              text2: "scheduled".tr,
                               description: "Leadership Assessment strengthens teamwork through interactive activities.",
                     
                               

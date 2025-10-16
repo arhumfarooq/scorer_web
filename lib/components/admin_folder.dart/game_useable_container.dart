@@ -46,7 +46,7 @@ class GameUseAbleContainer extends StatelessWidget {
                 ),
                 SizedBox(height: 17.h),
                 MainText(
-                  text: "Objective & Key Result alignment\nthrough decision-making".tr,
+                 text: "okr_description".tr, 
                   fontSize: 30.sp.sp,
                   height: 1.3,
                   color: AppColors.teamColor,

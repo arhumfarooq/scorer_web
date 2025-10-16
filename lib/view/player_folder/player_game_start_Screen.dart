@@ -83,7 +83,7 @@ class PlayerGameStartScreen extends StatelessWidget {
                             left: 312.w,
                             child: CustomStackImage(
                               image: Appimages.player2,
-                              text: "Player",
+                              text: "player".tr,
                             ),
                           ),
                           Column(
@@ -272,11 +272,7 @@ class PlayerGameStartScreen extends StatelessWidget {
                       fontSize: 20.sp,
                     ),
                     SizedBox(height: 15.h),
-                                  
-                    // // / CompleteSessionRow
-                    // Obx(() {
-                    //   return CompleteSessionRow(controller: controller);
-                    // }),
+                 
                                    CompleteSessionRow(controller: controller),
                     SizedBox(height: 16.h),
                                   
@@ -377,11 +373,7 @@ class PlayerGameStartScreen extends StatelessWidget {
                                 SizedBox(height: 10 .h),
                                 Obx(() => FilterUseableContainer(
                                       isSelected: controller.gamevalue.value == 2,
-                                      // fontSze: 13 * heightScaleFactor,
-                                      // fontSze: ResponsiveFont.getFontSizeCustom(
-                                      //   defaultSize: 13*widthScaleFactor,
-                                      //   smallSize: 10*widthScaleFactor
-                                      // ),
+                                    
                                       
                                       text: "city_conference_center".tr,
                                       onTap: () {

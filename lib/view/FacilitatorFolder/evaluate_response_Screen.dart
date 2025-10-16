@@ -392,7 +392,7 @@ class EvaluateResponseScreen extends StatelessWidget {
                         ),
                         Center(
                           child: BoldText(
-                            text: "Evaluate Response",
+                           text: "evaluate_response".tr,
                             fontSize: 48.sp,
                             selectionColor: AppColors.blueColor,
                           ),
@@ -506,30 +506,27 @@ class EvaluateResponseScreen extends StatelessWidget {
                                     ),
                                     SizedBox(height: 20.h),
                                     MainText(
-                                      text:
-                                          "Implement real-time feedback system: Deploy customer feedback tools at every service interaction point to capture immediate responses and identify pain points quickly.".tr,
+                               text: "feedback_system".tr,
+
                                       fontSize: 22.sp,
                                       height: 1.2,
                                     ),
                                     SizedBox(height: 20.h),
                                     MainText(
-                                      text:
-                                          "Reduce response time to under 2 hours: Streamline our support processes and implement automated routing to ensure faster resolution of customer inquiries.".tr,
-                                      fontSize: 22.sp,
+  text: "reduce_response_time".tr,
+                                                  fontSize: 22.sp,
                                       height: 1.2,
                                     ),
                                     SizedBox(height: 20.h),
                                     MainText(
-                                      text:
-                                          "Enhance self-service capabilities: comprehensive FAQ sections, video tutorials, and chatbot assistance to empower customers to resolve common issues independently.".tr,
-                                      fontSize: 22.sp,
+  text: "enhance_self_service".tr,
+                                              fontSize: 22.sp,
                                       height: 1.2,
                                     ),
                                     SizedBox(height: 20.h),
                                     MainText(
-                                      text:
-                                          "These strategies align with our company's customer-centric approach and will be measured through monthly satisfaction surveys, response time analytics, and self-service adoption rates.".tr,
-                                      fontSize: 22.sp,
+                                    text: "alignment".tr,
+         fontSize: 22.sp,
                                       height: 1.2,
                                     ),
                                   ],
