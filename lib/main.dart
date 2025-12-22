@@ -10,43 +10,8 @@ import 'package:scorer_web/components/facilitator_folder/audio_container.dart';
 import 'package:scorer_web/constants/app_routes.dart';
 import 'package:scorer_web/localization/app_translation.dart';
 import 'package:scorer_web/localization/translation_service.dart';
-import 'package:scorer_web/view/AudioWaveExample.dart';
-import 'package:scorer_web/view/FacilitatorFolder/create_new_session_screen.dart';
-import 'package:scorer_web/view/FacilitatorFolder/end_session_Screen.dart';
-import 'package:scorer_web/view/FacilitatorFolder/evaluate_response_Screen.dart';
-import 'package:scorer_web/view/FacilitatorFolder/evauate_response_Screen2.dart';
-import 'package:scorer_web/view/FacilitatorFolder/facilitator_dashboard.dart';
-import 'package:scorer_web/view/FacilitatorFolder/over_view_option_screen.dart';
-import 'package:scorer_web/view/FacilitatorFolder/view_response_Screen.dart';
-import 'package:scorer_web/view/FacilitatorFolder/view_score_Screen.dart';
-import 'package:scorer_web/view/adminFolder/admin_create_new_Session_Screen.dart';
 import 'package:scorer_web/view/adminFolder/admin_dashboard.dart';
-import 'package:scorer_web/view/adminFolder/admin_detailed_Screen.dart';
 import 'package:scorer_web/view/adminFolder/admin_over_view_option_screen.dart';
-import 'package:scorer_web/view/adminFolder/create_new_Session_header.dart';
-import 'package:scorer_web/view/adminFolder/game_Screen2_admin_side.dart';
-import 'package:scorer_web/view/adminFolder/game_Screen_Adminside.dart';
-import 'package:scorer_web/view/adminFolder/user_Player_detailed_screen.dart';
-import 'package:scorer_web/view/adminFolder/user_facilitate_detailed_scree.dart';
-import 'package:scorer_web/view/adminFolder/user_managemnet_screen.dart';
-import 'package:scorer_web/view/admin_lgin.dart';
-import 'package:scorer_web/view/choose_ypur_role_screen.dart';
-import 'package:scorer_web/view/facil_login_screen.dart';
-import 'package:scorer_web/view/player_folder/player_dashboard_Screen.dart';
-import 'package:scorer_web/view/player_folder/player_dashboard_Screen2.dart';
-import 'package:scorer_web/view/player_folder/player_game_start_Screen.dart';
-import 'package:scorer_web/view/player_folder/player_leaderboard_Screen.dart';
-import 'package:scorer_web/view/player_folder/player_leaderboard_Screen2.dart';
-import 'package:scorer_web/view/player_folder/player_login_side.dart';
-import 'package:scorer_web/view/player_folder/response_submit_screen1.dart';
-import 'package:scorer_web/view/player_folder/response_submitted_Screen2.dart';
-import 'package:scorer_web/view/player_login_screen.dart';
-import 'package:scorer_web/view/splash_Screen.dart';
-import 'package:scorer_web/view/start_Screen.dart';
-import 'package:scorer_web/view/start_Screen1.dart';
-import 'package:scorer_web/view/start_Screen3.dart';
-import 'package:scorer_web/view/start_screen2.dart';
-import 'package:scorer_web/widgets/widget_nav_item.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -72,7 +37,7 @@ class MyApp extends StatelessWidget {
           getPages: AppRoutes.getAppRoutes(),
           fallbackLocale: const Locale('en', 'US'),
           debugShowCheckedModeBanner: false,
-          home: UserPlayerDetailedScreen(),
+          home: AdminDashboard(),
         );
       },
       // child:  AudioVisualizer(),

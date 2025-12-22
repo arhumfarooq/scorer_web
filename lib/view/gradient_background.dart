@@ -1,33 +1,4 @@
 
-// import 'package:flutter/material.dart';
-// import 'package:scorer_web/constants/appimages.dart';
-
-// class GradientBackground extends StatelessWidget {
-//   final Widget child;
-
-//   const GradientBackground({super.key, required this.child});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Stack(
-//       children: [
-//         // 🔹 Background Image with opacity
-//         Opacity(
-//           opacity: 0.1, // jitni chaho transparency set karo
-//           child: Image.asset(
-//             Appimages.mountain, // apni image ka path
-//             fit: BoxFit.cover,
-//             height: double.infinity,
-//             width: double.infinity,
-//           ),
-//         ),
-
-//         // 🔹 Foreground child
-//         child,
-//       ],
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 import 'package:scorer_web/constants/appimages.dart';
 // import 'package:scorer_web/constants/appimages.dart'; // Keep this if needed

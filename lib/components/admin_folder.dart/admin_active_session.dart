@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/route_name.dart';
+import 'package:scorer_web/view/adminFolder/admin_over_view_option_screen.dart';
 import 'package:scorer_web/widgets/custom_dashboard_container.dart';
 
 class AdminActiveSession extends StatelessWidget {
@@ -26,7 +27,8 @@ class AdminActiveSession extends StatelessWidget {
             //  )
              CustomDashboardContainer(
              onTap: () {
-               Get.toNamed(RouteName.adminOverviewOptionScreens);
+              Get.to(AdminOverViewOptionScreen());
+              //  Get.toNamed(RouteName.adminOverviewOptionScreens);
              },
           // width: 70,
                 heading: "Team Building Workshop",

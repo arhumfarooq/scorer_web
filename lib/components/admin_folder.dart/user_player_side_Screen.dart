@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-// import 'package:scorer/constants/appcolors.dart';
-// import 'package:scorer/constants/appimages.dart';
-// import 'package:scorer/constants/routename.dart';
-// import 'package:scorer/widgets/all_players_container.dart';
+
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
 import 'package:scorer_web/constants/route_name.dart';
