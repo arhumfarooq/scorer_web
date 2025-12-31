@@ -202,7 +202,7 @@ class _PlayerLoginScreenState extends State<PlayerLoginScreen>
                                     text: "login".tr,
                                     fontSize: 20,
                                     onTap: () {
-                                      Get.toNamed(RouteName.bottomNavigation);
+                                      Get.toNamed(RouteName.playerDashboard);
                                     },
                                   ),
                                 ],

@@ -12,6 +12,7 @@ import 'package:scorer_web/localization/app_translation.dart';
 import 'package:scorer_web/localization/translation_service.dart';
 import 'package:scorer_web/view/adminFolder/admin_dashboard.dart';
 import 'package:scorer_web/view/adminFolder/admin_over_view_option_screen.dart';
+import 'package:scorer_web/view/splash_Screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,9 +36,9 @@ class MyApp extends StatelessWidget {
             translations: AppTranslations(),
           locale: locale,
           getPages: AppRoutes.getAppRoutes(),
-          fallbackLocale: const Locale('en', 'US'),
+          fallbackLocale:  Locale('en', 'US'),
           debugShowCheckedModeBanner: false,
-          home: AdminDashboard(),
+          home: SplashScreen(),
         );
       },
       // child:  AudioVisualizer(),
