@@ -4,10 +4,8 @@ import 'package:get/get_utils/get_utils.dart';
 import 'package:scorer_web/components/facilitator_folder/engagement_Container.dart';
 import 'package:scorer_web/components/facilitator_folder/new_session_container.dart';
 import 'package:scorer_web/constants/appcolors.dart';
-import 'package:scorer_web/constants/appimages.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/main_text.dart';
-import 'package:scorer_web/widgets/players_containers.dart';
 
 class OverviewScreen extends StatelessWidget {
   const OverviewScreen({super.key});

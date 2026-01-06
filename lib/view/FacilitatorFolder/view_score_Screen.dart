@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:scorer_web/components/facilitator_folder/analysis_container.dart';
-import 'package:scorer_web/components/facilitator_folder/feedback_container.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
 import 'package:scorer_web/constants/route_name.dart';
@@ -11,15 +10,12 @@ import 'package:scorer_web/view/gradient_background.dart';
 import 'package:scorer_web/view/gradient_color.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/custom_appbar.dart';
-import 'package:scorer_web/widgets/custom_response_container.dart';
-import 'package:scorer_web/widgets/custom_sloder_row.dart';
 import 'package:scorer_web/widgets/custom_stack_image.dart';
 import 'package:scorer_web/widgets/forward_button_container.dart';
 import 'package:scorer_web/widgets/login_button.dart';
 import 'package:scorer_web/widgets/main_text.dart';
 import 'package:scorer_web/widgets/team_alpha_container.dart';
 import 'package:scorer_web/widgets/useable_container.dart';
-// import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class ViewScoreScreen extends StatelessWidget {
   const ViewScoreScreen({super.key});

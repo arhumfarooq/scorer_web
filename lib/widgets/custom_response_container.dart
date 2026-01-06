@@ -42,7 +42,6 @@ class CustomResponseContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // All manual MediaQuery and scale factor calculations are removed.
-    bool isSpanish = Get.locale?.languageCode == 'es';
 
     return Stack(
       clipBehavior: Clip.none,

@@ -12,7 +12,6 @@ import 'package:scorer_web/view/gradient_background.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/forward_button_container.dart';
 import 'package:scorer_web/widgets/main_text.dart';
-import 'package:scorer_web/widgets/page_changed_container.dart';
 
 class ChooseYpurRoleScreen extends StatelessWidget {
   final RoleSelectionController controller = Get.put(RoleSelectionController());

@@ -2,17 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:scorer_web/components/facilitator_folder/leader_board_Screen.dart';
-import 'package:scorer_web/components/facilitator_folder/overview_screen.dart';
-import 'package:scorer_web/components/facilitator_folder/phases_Screen.dart';
-import 'package:scorer_web/components/facilitator_folder/players_Screen.dart';
 import 'package:scorer_web/components/facilitator_folder/view_response_stack_container.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
 import 'package:scorer_web/constants/route_name.dart';
-import 'package:scorer_web/controller/over_view_controller.dart';
 import 'package:scorer_web/controller/stage_controller.dart';
-import 'package:scorer_web/view/FacilitatorFolder/facil_over_view_stack_container.dart';
 import 'package:scorer_web/view/gradient_background.dart';
 import 'package:scorer_web/view/gradient_color.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
@@ -22,7 +16,6 @@ import 'package:scorer_web/widgets/custom_response_container.dart';
 import 'package:scorer_web/widgets/custom_stack_image.dart';
 import 'package:scorer_web/widgets/custom_stratgy_container.dart';
 import 'package:scorer_web/widgets/forward_button_container.dart';
-import 'package:scorer_web/widgets/useable_container.dart';
 
 class ViewResponseScreen extends StatelessWidget {
   final StageController controller = Get.put(StageController());

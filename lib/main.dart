@@ -3,15 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:scorer_web/components/admin_folder.dart/admin_schedule_folder.dart';
-import 'package:scorer_web/components/admin_folder.dart/user_administrate_side.dart';
-import 'package:scorer_web/components/admin_folder.dart/user_player_side_Screen.dart';
-import 'package:scorer_web/components/facilitator_folder/audio_container.dart';
 import 'package:scorer_web/constants/app_routes.dart';
 import 'package:scorer_web/localization/app_translation.dart';
 import 'package:scorer_web/localization/translation_service.dart';
-import 'package:scorer_web/view/adminFolder/admin_dashboard.dart';
-import 'package:scorer_web/view/adminFolder/admin_over_view_option_screen.dart';
 import 'package:scorer_web/view/splash_Screen.dart';
 
 void main() async {

@@ -194,8 +194,7 @@ class CustomDashboardContainer extends StatelessWidget {
                         PauseContainer(
                           // height: 35,
                         fontSize:ResponsiveFont.getFontSizeCustom(
-                        // defaultSize: 13.sp,
-                        // smallSize: 11.sp
+                       
                         
                         ),
                           text: text3 ?? "",
@@ -204,9 +203,7 @@ class CustomDashboardContainer extends StatelessWidget {
                         SizedBox(width: 10 .w),
                         PauseContainer(
                             fontSize:ResponsiveFont.getFontSizeCustom(
-                        // defaultSize: 13*widthScaleFactor,
-                        // smallSize: 11*widthScaleFactor
-                        
+                     
                         ),
                           // height: 35,
                           color: AppColors.forwardColor,

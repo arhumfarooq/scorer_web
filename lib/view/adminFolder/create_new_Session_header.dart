@@ -1,37 +1,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:flutter_switch/flutter_switch.dart';
+
 import 'package:get/get.dart';
-import 'package:scorer_web/components/facilitator_folder/additional_setting_column.dart';
-import 'package:scorer_web/components/facilitator_folder/analysis_container.dart';
-import 'package:scorer_web/components/facilitator_folder/count_container_row.dart';
-import 'package:scorer_web/components/facilitator_folder/custom_phase_container.dart';
-import 'package:scorer_web/components/facilitator_folder/custom_session_Container.dart';
-import 'package:scorer_web/components/facilitator_folder/custom_time_row.dart';
-import 'package:scorer_web/components/facilitator_folder/feedback_container.dart';
-import 'package:scorer_web/components/facilitator_folder/phase_breakdown_container.dart';
-import 'package:scorer_web/components/facilitator_folder/players_Row.dart';
-import 'package:scorer_web/components/responsive_fonts.dart';
+
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
 import 'package:scorer_web/view/gradient_background.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
-import 'package:scorer_web/widgets/create_container.dart';
 import 'package:scorer_web/widgets/custom_appbar.dart';
-import 'package:scorer_web/widgets/custom_response_container.dart';
-import 'package:scorer_web/widgets/custom_sloder_row.dart';
+
 import 'package:scorer_web/widgets/custom_stack_image.dart';
-import 'package:scorer_web/widgets/filter_useable_container.dart';
 import 'package:scorer_web/widgets/forward_button_container.dart';
-import 'package:scorer_web/widgets/game_select_useable_container.dart';
 import 'package:scorer_web/widgets/login_button.dart';
 import 'package:scorer_web/widgets/login_textfield.dart';
-import 'package:scorer_web/widgets/main_text.dart';
-import 'package:scorer_web/widgets/players_containers.dart';
-import 'package:scorer_web/widgets/useable_container.dart';
-// import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class CreateNewSessionHeader extends StatelessWidget {
   final bool isSelected;

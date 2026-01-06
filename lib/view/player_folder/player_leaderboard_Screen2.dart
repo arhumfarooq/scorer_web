@@ -1,43 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:scorer_web/components/admin_folder.dart/abcd_container.dart';
-import 'package:scorer_web/components/admin_folder.dart/admin_team_progress_contaner.dart';
-import 'package:scorer_web/components/facilitator_folder/active_Session_screen.dart';
-import 'package:scorer_web/components/facilitator_folder/facil_dashBoard_stack_container.dart';
 import 'package:scorer_web/components/facilitator_folder/players_Row.dart';
-import 'package:scorer_web/components/facilitator_folder/schedule_Screen.dart';
-import 'package:scorer_web/components/player_folder/complete_session_row.dart';
-import 'package:scorer_web/components/player_folder/device_connect_note.dart';
-import 'package:scorer_web/components/player_folder/phase_strategy_column.dart';
-import 'package:scorer_web/components/player_folder/player_analysis.dart';
-import 'package:scorer_web/components/player_folder/scenerio_container.dart';
-import 'package:scorer_web/components/responsive_fonts.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
-import 'package:scorer_web/controller/facil_dashboard_controller.dart';
-import 'package:scorer_web/controller/game_select_controller.dart';
 import 'package:scorer_web/view/gradient_background.dart';
-import 'package:scorer_web/widgets/add_one_Container.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/create_container.dart';
 import 'package:scorer_web/widgets/custom_appbar.dart';
-import 'package:scorer_web/widgets/custom_dashboard_container.dart';
-import 'package:scorer_web/widgets/custom_sloder_row.dart' show CustomSloderRow;
 import 'package:scorer_web/widgets/custom_stack_image.dart';
-import 'package:scorer_web/widgets/custom_stratgy_container.dart';
-import 'package:scorer_web/widgets/filter_useable_container.dart';
-import 'package:scorer_web/widgets/login_button.dart';
-import 'package:scorer_web/widgets/login_textfield.dart';
 import 'package:scorer_web/widgets/main_text.dart';
-import 'package:scorer_web/widgets/pause_container.dart';
 import 'package:scorer_web/widgets/players_containers.dart';
-import 'package:scorer_web/widgets/setting_container.dart';
-import 'package:scorer_web/widgets/useable_container.dart';
-import 'package:scorer_web/widgets/useable_text_row.dart';
 
 
 class PlayerLeaderboardScreen2 extends StatelessWidget {

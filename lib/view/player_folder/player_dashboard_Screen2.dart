@@ -3,27 +3,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:scorer_web/components/admin_folder.dart/abcd_container.dart';
-import 'package:scorer_web/components/facilitator_folder/active_Session_screen.dart';
-import 'package:scorer_web/components/facilitator_folder/facil_dashBoard_stack_container.dart';
-import 'package:scorer_web/components/facilitator_folder/schedule_Screen.dart';
 import 'package:scorer_web/components/player_folder/device_connect_note.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
 import 'package:scorer_web/constants/route_name.dart';
-import 'package:scorer_web/controller/facil_dashboard_controller.dart';
 import 'package:scorer_web/view/gradient_background.dart';
 import 'package:scorer_web/view/gradient_color.dart';
-import 'package:scorer_web/widgets/add_one_Container.dart';
 import 'package:scorer_web/widgets/bold_text.dart';
 import 'package:scorer_web/widgets/create_container.dart';
 import 'package:scorer_web/widgets/custom_appbar.dart';
-import 'package:scorer_web/widgets/custom_dashboard_container.dart';
 import 'package:scorer_web/widgets/custom_stack_image.dart';
 import 'package:scorer_web/widgets/login_button.dart';
-import 'package:scorer_web/widgets/login_textfield.dart';
 import 'package:scorer_web/widgets/main_text.dart';
 import 'package:scorer_web/widgets/players_containers.dart';
-import 'package:scorer_web/widgets/setting_container.dart';
 
 
 class PlayerDashboardScreen2 extends StatelessWidget {
