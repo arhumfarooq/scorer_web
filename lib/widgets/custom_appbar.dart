@@ -2,8 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
+import 'package:scorer_web/constants/route_name.dart';
 import 'package:scorer_web/widgets/add_one_Container.dart';
 import 'package:scorer_web/widgets/setting_container.dart';
 
@@ -22,7 +25,9 @@ class CustomAppbar extends StatefulWidget {
   final String? text;
   final double? right2;
   final bool ishow3;
-  final double ?padding1;
+  final double? padding1;
+  final VoidCallback? onTap1;
+  final bool? ishow2;
 
   const CustomAppbar({
     super.key,
@@ -39,7 +44,7 @@ class CustomAppbar extends StatefulWidget {
     this.right2,
     this.ishow3 = false,
     this.ishow4 = false,
-    this.onTap, this.padding1,
+    this.onTap, this.padding1, this.onTap1, this.ishow2,
   });
 
   @override
@@ -128,11 +133,17 @@ class _CustomAppbarState extends State<CustomAppbar>
                 child: widget.ishow3
                     ? const SizedBox()
                     : widget.ishow
-                        ? Image.asset(
-                            Appimages.house1,
-                            width: 205.w,
-                            height: 156.h,
-                          )
+                        ? MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                            onTap: widget.ishow2 == true ? widget.onTap1 : ()=> Get.offAllNamed(RouteName.facilitatorDashboard),
+                            child: Image.asset(
+                                Appimages.house1,
+                                width: 205.w,
+                                height: 156.h,
+                              ),
+                          ),
+                        )
                         : Row(
                             children: [
                               SettingContainer(icons: Icons.settings),

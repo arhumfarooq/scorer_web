@@ -32,51 +32,54 @@ class RoleSelectionContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: 539.w,
-        height: 291.h, // responsive height
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30.r), // responsive radius
-          border: Border.all(
-            color: isSelected ? AppColors.forwardColor : AppColors.greyColor,
-            width: 2.w, // responsive border width
+    return MouseRegion(
+        cursor: SystemMouseCursors.click, //
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          width: 539.w,
+          height: 291.h, // responsive height
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30.r), // responsive radius
+            border: Border.all(
+              color: isSelected ? AppColors.forwardColor : AppColors.greyColor,
+              width: 2.w, // responsive border width
+            ),
           ),
-        ),
-        child: Row(
-          children: [
-            Image.asset(
-              image,
-              height: height ?? 374.h,
-              width: width ?? 249.w, // 40% of screen width
-              fit: BoxFit.contain,
-            ),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center, 
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(
-                    image2,
-                    height: 59.h,
-                    width: 59.w,
-                  ),
-                  BoldText(
-                    text: text,
-                    fontSize: 28.sp, // responsive font
-                    selectionColor: AppColors.blueColor,
-                  ),
-                  MainText(
-                    text: text2,
-                    fontSize: 22.sp, // responsive font
-                    height: 1.3,
-                    textAlign: TextAlign.center,
-                  ),
-                ],
+          child: Row(
+            children: [
+              Image.asset(
+                image,
+                height: height ?? 374.h,
+                width: width ?? 249.w, // 40% of screen width
+                fit: BoxFit.contain,
               ),
-            ),
-          ],
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center, 
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      image2,
+                      height: 59.h,
+                      width: 59.w,
+                    ),
+                    BoldText(
+                      text: text,
+                      fontSize: 28.sp, // responsive font
+                      selectionColor: AppColors.blueColor,
+                    ),
+                    MainText(
+                      text: text2,
+                      fontSize: 22.sp, // responsive font
+                      height: 1.3,
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

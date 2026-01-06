@@ -17,6 +17,7 @@ import 'package:scorer_web/widgets/forward_button_container.dart';
 import 'package:scorer_web/widgets/game_select_useable_container.dart';
 import 'package:scorer_web/widgets/login_button.dart';
 import 'package:scorer_web/widgets/main_text.dart';
+import 'package:scorer_web/widgets/session_name_field.dart';
 
 class CreateNewSessionScreen extends StatelessWidget {
   final bool isSelected;
@@ -184,42 +185,7 @@ class CreateNewSessionScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                         // / SizedBox(height: 20.h),
-                         Container(
-                              height: 137.h,
-                              child: TextFormField(
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 42.sp,
-                                    fontWeight: FontWeight.w600,
-                                ),
-                                decoration: InputDecoration(
-                                    hintText: "enter_session_name".tr,
-                                    hintStyle: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.languageTextColor,
-                                    ),
-                                    isDense: false, // 👈 ye add karo
-                                    contentPadding: EdgeInsets.symmetric(
-                            vertical: 40.h, // 👈 isko barhao
-                            horizontal: 16.w,
-                                    ),
-                                    border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.r),
-                            borderSide: BorderSide(
-                              color: AppColors.assignColor,
-                              width: 2.w,
-                            ),
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.r),
-                            borderSide: BorderSide(
-                              color: AppColors.assignColor,
-                              width: 2.w,
-                            ),
-                                    ),
-                                ),
-                              ),
-                            ),
+                         SessionNameField(),
                                SizedBox(height: 50 .h),
                         BoldText(
                                       text:   "select_game_format".tr, 

@@ -32,10 +32,10 @@ class OverViewOptionScreen extends StatelessWidget {
   OverViewOptionScreen({super.key});
 
   final List<String> tabs = [
-    "overview".tr,
-    "phases".tr,
-    "players".tr,
-    "leaderboard".tr,
+   "tab_overview".tr,
+    "tab_phases".tr,
+    "tab_players".tr,
+    "tab_leaderboard".tr,
   ];
 
  

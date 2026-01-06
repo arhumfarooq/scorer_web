@@ -52,7 +52,7 @@ class AdminDashboard extends StatelessWidget {
                       top: -140,
                       right: 312.w,
                       left: 312.w,
-                      child: CustomStackImage(image: Appimages.prince2,text: "Administrator",),
+                      child: CustomStackImage(image: Appimages.prince2,text: "administrator".tr,),
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -134,7 +134,7 @@ class AdminDashboard extends StatelessWidget {
                   width3: 160.w,
                   height3: 61.h,
                   borderW: 1.96.w,
-                  text: "Create",
+                  text: "create".tr,
                   right2: -10.w,
                   right: 0.w,
                   top: -30.h,

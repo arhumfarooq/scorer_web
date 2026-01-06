@@ -79,6 +79,7 @@ class _LoginButtonState extends State<LoginButton> {
     }
 
     return MouseRegion(
+      
       onEnter: (_) => setState(() => _isHovering = true),
       onExit: (_) => setState(() => _isHovering = false),
       cursor: isEnabled ? SystemMouseCursors.click : SystemMouseCursors.forbidden,

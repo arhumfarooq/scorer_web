@@ -95,44 +95,47 @@ class PlayerDashboardScreen extends StatelessWidget {
                                     ),
                       child: Padding(
                         padding:
-                            EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+                            EdgeInsets.symmetric(horizontal: 30.w, vertical: 10.h),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             SizedBox(height: 48.h),
                          
-                            Container(
-                              height: 100.h,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(26.r),
-                                border: Border.all(
-                                  color: AppColors.greyColor,
-                                  width: 1.5.w,
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10.w, ),
+                              child: Container(
+                                height: 100.h,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(26.r),
+                                  border: Border.all(
+                                    color: AppColors.greyColor,
+                                    width: 1.5.w,
+                                  ),
                                 ),
-                              ),
-                              child: Stack(
-                                clipBehavior: Clip.none,
-                                children: [
-                                  Positioned(
-                                    top: -20.h,
-                                    right: 20,
-                                    child: CreateContainer(
-                                      arrowW: 35.w,
-                                      arrowh: 40.h,
-                                      top: -40.h,
-                                      text: "join_with_code".tr,
-                                      width: 387.w,height: 64.h,
-                                      borderW: 2.9.w,
+                                child: Stack(
+                                  clipBehavior: Clip.none,
+                                  children: [
+                                    Positioned(
+                                      top: -20.h,
+                                      right: 20,
+                                      child: CreateContainer(
+                                        arrowW: 35.w,
+                                        arrowh: 40.h,
+                                        top: -40.h,
+                                        text: "join_with_code".tr,
+                                        width: 387.w,height: 64.h,
+                                        borderW: 2.9.w,
+                                      ),
                                     ),
-                                  ),
-                                  Center(
-                                    child: BoldText(
-                                      text: "enter_code".tr,
-                                      fontSize: 42.sp,
+                                    Center(
+                                      child: BoldText(
+                                        text: "enter_code".tr,
+                                        fontSize: 42.sp,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                     

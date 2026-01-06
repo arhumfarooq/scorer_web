@@ -28,37 +28,33 @@ class ForwardButtonContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get the screen dimensions using MediaQuery
-    // final Size screenSize = MediaQuery.of(context).size;
     
-    // A base width to scale from, e.g., a common phone width (iPhone 11)
-    // const double baseWidth = 414.0;
-    
-    // Calculate a scaling factor based on the screen width
-    // final double scaleFactor = screenSize.width / baseWidth;
 
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: height1 ?? 62.h,
-        width: width1 ?? 62.w,
-        decoration: BoxDecoration(
-          color: AppColors.forwardColor.withOpacity(0.5),
-          shape: BoxShape.circle,
-        ),
-        child: Center(
-          child: Container(
-            height: height2 ?? 44.h,
-            width: width2 ?? 44.w,
-            decoration: const BoxDecoration(
-              color: AppColors.forwardColor,
-              shape: BoxShape.circle,
-            ),
-            child: Center(
-              child: SvgPicture.asset(
-                image ?? Appimages.forward,
-                width:imageW?? 12.w,
-                height:imageH?? 14.h,
+    return MouseRegion(
+       cursor: SystemMouseCursors.click, //
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          height: height1 ?? 62.h,
+          width: width1 ?? 62.w,
+          decoration: BoxDecoration(
+            color: AppColors.forwardColor.withOpacity(0.5),
+            shape: BoxShape.circle,
+          ),
+          child: Center(
+            child: Container(
+              height: height2 ?? 44.h,
+              width: width2 ?? 44.w,
+              decoration: const BoxDecoration(
+                color: AppColors.forwardColor,
+                shape: BoxShape.circle,
+              ),
+              child: Center(
+                child: SvgPicture.asset(
+                  image ?? Appimages.forward,
+                  width:imageW?? 12.w,
+                  height:imageH?? 14.h,
+                ),
               ),
             ),
           ),

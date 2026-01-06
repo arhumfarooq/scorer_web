@@ -35,10 +35,10 @@ class AdminOverViewOptionScreen extends StatelessWidget {
     final FacilDashboardController controller = Get.put(FacilDashboardController());
  
     final List<String> tabs = [
-    "Overview".tr,
-    "Phases".tr,
-    "Players".tr,
-    "Leaderboard".tr,
+    "tab_overview".tr,
+    "tab_phases".tr,
+    "tab_players".tr,
+    "tab_leaderboard".tr,
   ];
    AdminOverViewOptionScreen({super.key});
 

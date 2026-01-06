@@ -95,20 +95,23 @@ class FacilOverViewStackContainer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: List.generate(tabs.length, (index) {
                       return Expanded(
-                        child: GestureDetector(
-                          onTap: () => controller.changeTab(index),
-                          child: SizedBox(
-                            width: _getTabWidth(index),
-                            child: Center(
-                              child: Text(
-                                tabs[index],
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 25.sp,
-                                  fontWeight: FontWeight.w500,
-                                  color: selectedIndex == index
-                                      ? AppColors.whiteColor
-                                      : AppColors.languageColor,
+                        child: MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                            onTap: () => controller.changeTab(index),
+                            child: SizedBox(
+                              width: _getTabWidth(index),
+                              child: Center(
+                                child: Text(
+                                  tabs[index],
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 25.sp,
+                                    fontWeight: FontWeight.w500,
+                                    color: selectedIndex == index
+                                        ? AppColors.whiteColor
+                                        : AppColors.languageColor,
+                                  ),
                                 ),
                               ),
                             ),

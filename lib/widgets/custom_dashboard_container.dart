@@ -73,7 +73,7 @@ class CustomDashboardContainer extends StatelessWidget {
     this.width2,
     this.height,  this.isshow=false, this.smallImage, this.right, this.horizontal, this.mainWidth, this.mainHeight,  this.arrowshow=true, this.onTap, this.padding,
   });
-  bool get isSpanish => Get.locale?.languageCode == "es";
+  // bool get isSpanish => Get.locale?.languageCode == "es";
 
   @override
   Widget build(BuildContext context) {
@@ -193,18 +193,13 @@ class CustomDashboardContainer extends StatelessWidget {
                       children: [
                         PauseContainer(
                           // height: 35,
-                        fontSize:ResponsiveFont.getFontSizeCustom(
-                       
-                        
-                        ),
+                      
                           text: text3 ?? "",
                           icon: icon1,
                         ),
                         SizedBox(width: 10 .w),
                         PauseContainer(
-                            fontSize:ResponsiveFont.getFontSizeCustom(
-                     
-                        ),
+                           
                           // height: 35,
                           color: AppColors.forwardColor,
                           text: text4 ?? "",
@@ -217,6 +212,8 @@ class CustomDashboardContainer extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 17 .w),
                     child: PauseContainer(
                       onTap: onTap,
+                      imageH: 20.h,
+                      imageW: 30.h,
                       // height: 94.h,
                       width: double.infinity,
                       color: color3,

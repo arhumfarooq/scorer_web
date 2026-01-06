@@ -25,7 +25,7 @@ class PlayerLoginSide extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              CustomAppbar(ishow4: true),
+              CustomAppbar(ishow4: true,onTap1: () => Get.toNamed(RouteName.playerDashboard),),
               SizedBox(height: 56.h),
 
               /// Top fixed container
@@ -97,9 +97,9 @@ class PlayerLoginSide extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                 
-                         LoginTextfield( text: "enter_nickname".tr,height: 120.h,fontsize: 35.sp,),
+                         LoginTextfield( text: "enter_nickname".tr,height: 100.h,fontsize: 35.sp,),
                           SizedBox(height: 20.h,),
-                          LoginTextfield( text: "enter_team_nickname".tr,height: 120.h,fontsize: 35.sp,),
+                          LoginTextfield( text: "enter_team_nickname".tr,height: 100.h,fontsize: 35.sp,),
                           SizedBox(height: 30.h,),
                           LoginButton(text: "continue".tr,color: AppColors.forwardColor,onTap: () {
                             Get.toNamed(RouteName.playerDashboardScreen2);

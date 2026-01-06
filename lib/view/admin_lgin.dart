@@ -122,7 +122,7 @@ class _AdminLginState extends State<AdminLgin> with TickerProviderStateMixin {
                               child: FadeTransition(
                                 opacity: _fadeController,
                                 child: CreateContainer(
-                                  text: "Administrator Login",
+                                  text: "admin_login".tr,
                                   fontsize2: 30.sp,
                                 ),
                               ),

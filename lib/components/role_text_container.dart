@@ -23,7 +23,7 @@ class RoleTextContainer extends StatelessWidget {
       ),
       child: Center(
         child: BoldText(
-          text:"Role".tr,
+          text:"role".tr,
           selectionColor: AppColors.whiteColor,
             fontSize: 54.sp
         ),

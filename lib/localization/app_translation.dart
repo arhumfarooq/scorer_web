@@ -304,6 +304,8 @@ class AppTranslations extends Translations {
   "enter_player_name": "Enter Player Name",
   "enter_player_email": "Enter Player Email Address",
    "extend_time": "Extend Time",
+     'company_crisis_message': "You’ve just entered a company in crisis. Every\ndecision you make could change its future.",
+
   "export_by_phase": "Export by Phase",
   "export_by_team": "Export by Team",
   "export_by_player": "Export by Player",
@@ -384,7 +386,8 @@ class AppTranslations extends Translations {
 "ai": "AI",
 "mixed": "Mixed",
 
-
+//newly added  translations
+'game_format_management': 'Game Format Management',
 
 
         },
@@ -393,6 +396,12 @@ class AppTranslations extends Translations {
 
 
         'es_ES':{
+            'company_crisis_message': "Acabas de entrar en una empresa en crisis. Cada\ndecisión que tomes podría cambiar su futuro.",
+
+            'game_format_management': 'Gestión de formatos de juego',
+
+          //  'admin_login': 'Inicio de sesión del administrador',
+          // 'player_login': 'Inicio de sesión del jugador',
           "total": "Total",
 "phases": "Fases",
 "time": "Tiempo",

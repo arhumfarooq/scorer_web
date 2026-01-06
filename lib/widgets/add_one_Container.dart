@@ -44,60 +44,63 @@ final double?padding1;
   @override
   Widget build(BuildContext context) {
    
-    return GestureDetector(
-      onTap: onTap,
-      child: Stack(
-          clipBehavior: Clip.none,
-                                      // CreateContainer(text: "Add",height: 61.h,width: 102.w,borderW: 1.97.w,arrowW: 33.w,arrowh: 40.h,)
-
-        children: [
-      Positioned(
-            bottom: -60.h,
-            right:right2 ,
-
-            child: 
-                                    isShow?      CreateContainer(
-                                        top:top?? -28.h,
-                                        right:right?? -50.w,
-                                        text:text?? "Add",height:height3?? 61.h,width:width3?? 102.w,borderW:borderW?? 1.97.w,arrowW:arrowW?? 33.w,arrowh:arrowH?? 40.h,):SizedBox()
-          // 
-          ),
-          Container(
-            // clipBehavior: Clip.none,
-            height: (height1 ?? 86.31).h,
-            width: (width1 ?? 86.31) .w,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: AppColors.plusColor,
+    return MouseRegion(
+        cursor: SystemMouseCursors.click, //
+      child: GestureDetector(
+        onTap: onTap,
+        child: Stack(
+            clipBehavior: Clip.none,
+                                        // CreateContainer(text: "Add",height: 61.h,width: 102.w,borderW: 1.97.w,arrowW: 33.w,arrowh: 40.h,)
+      
+          children: [
+        Positioned(
+              bottom: -60.h,
+              right:right2 ,
+      
+              child: 
+                                      isShow?      CreateContainer(
+                                          top:top?? -28.h,
+                                          right:right?? -50.w,
+                                          text:text?? "Add",height:height3?? 61.h,width:width3?? 102.w,borderW:borderW?? 1.97.w,arrowW:arrowW?? 33.w,arrowh:arrowH?? 40.h,):SizedBox()
+            // 
             ),
-            child: Center(
-              child: Container(
-                height: (height2 ?? 59) .h,
-                width: (width2 ?? 59) .w,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColors.forwardColor,
-                ),
-                child: Center(
-                  child: svgPath != null
-                      ? SvgPicture.asset(
-                          svgPath!,
-                          colorFilter: ColorFilter.mode(AppColors.whiteColor, BlendMode.srcIn),
-                          height: (height ?? 29) .h,
-                          width: (width ?? 29) .w,
-                        )
-                      : icon != null
-                          ? Icon(
-                              icon,
-                              color: AppColors.whiteColor,
-                              size: (height ?? 24) .h,
-                            )
-                          : const SizedBox(),
+            Container(
+              // clipBehavior: Clip.none,
+              height: (height1 ?? 86.31).h,
+              width: (width1 ?? 86.31) .w,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: AppColors.plusColor,
+              ),
+              child: Center(
+                child: Container(
+                  height: (height2 ?? 59) .h,
+                  width: (width2 ?? 59) .w,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.forwardColor,
+                  ),
+                  child: Center(
+                    child: svgPath != null
+                        ? SvgPicture.asset(
+                            svgPath!,
+                            colorFilter: ColorFilter.mode(AppColors.whiteColor, BlendMode.srcIn),
+                            height: (height ?? 29) .h,
+                            width: (width ?? 29) .w,
+                          )
+                        : icon != null
+                            ? Icon(
+                                icon,
+                                color: AppColors.whiteColor,
+                                size: (height ?? 24) .h,
+                              )
+                            : const SizedBox(),
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

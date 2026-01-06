@@ -124,7 +124,7 @@ class _PlayerLoginScreenState extends State<PlayerLoginScreen>
                                 opacity: _fadeController,
                                 child: CreateContainer(
                                   width: 299.w,
-                                  text: "Player Login",
+                                  text: "player_login".tr,
                                   fontsize2: 30.sp,
                                 ),
                               ),

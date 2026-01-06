@@ -31,14 +31,14 @@ class AdminOverViewScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   BoldText(
-                    text: "Session Information",
+                    text: "session_info".tr,
                     selectionColor: AppColors.blueColor,
                     fontSize: 32.sp,
                   ),
                   MainText(
                     fontSize: 26.sp,
                     text:
-                        "Eranove Odyssey sessions immerse teams in fast-paced, collaborative challenges with real-time scoring and progression.",
+                        "session_description".tr,
                   ),
                 ],
               ),

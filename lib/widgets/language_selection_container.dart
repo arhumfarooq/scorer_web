@@ -40,35 +40,38 @@ class LanguageSelectionContainer extends StatelessWidget {
     }
 
 
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: double.infinity,
-        height: 74.h,
-        decoration: BoxDecoration(
-          color: isSelected ? AppColors.selectLangugaeColor : Colors.transparent,
-          borderRadius: BorderRadius.circular(26.r ),
-          border: Border.all(
-            color: isSelected
-                ? AppColors.selectLangugaeColor.withOpacity(0.1)
-                : AppColors.borderColor.withOpacity(0.25),
-            width: 2.w 
+    return MouseRegion(
+        cursor: SystemMouseCursors.click, //
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          width: double.infinity,
+          height: 74.h,
+          decoration: BoxDecoration(
+            color: isSelected ? AppColors.selectLangugaeColor : Colors.transparent,
+            borderRadius: BorderRadius.circular(26.r ),
+            border: Border.all(
+              color: isSelected
+                  ? AppColors.selectLangugaeColor.withOpacity(0.1)
+                  : AppColors.borderColor.withOpacity(0.25),
+              width: 2.w 
+            ),
           ),
-        ),
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 13.w ),
-          child: Row(
-            children: [
-              buildImage(),
-              SizedBox(width: 17.w ),
-              BoldText(
-                text: text,
-                selectionColor: isSelected
-                    ? AppColors.whiteColor
-                    : AppColors.languageTextColor,
-                fontSize: 20 
-              )
-            ],
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 13.w ),
+            child: Row(
+              children: [
+                buildImage(),
+                SizedBox(width: 17.w ),
+                BoldText(
+                  text: text,
+                  selectionColor: isSelected
+                      ? AppColors.whiteColor
+                      : AppColors.languageTextColor,
+                  fontSize: 20 
+                )
+              ],
+            ),
           ),
         ),
       ),
