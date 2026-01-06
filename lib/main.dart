@@ -6,10 +6,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:scorer_web/constants/app_routes.dart';
 import 'package:scorer_web/localization/app_translation.dart';
 import 'package:scorer_web/localization/translation_service.dart';
-import 'package:scorer_web/view/FacilitatorFolder/facilitator_dashboard.dart';
-import 'package:scorer_web/view/adminFolder/admin_dashboard.dart';
 import 'package:scorer_web/view/player_login_screen.dart';
-import 'package:scorer_web/view/splash_Screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

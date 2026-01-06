@@ -2,9 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/export.dart';
-import 'package:scorer_web/components/responsive_fonts.dart';
 import 'package:scorer_web/constants/appcolors.dart';
 import 'package:scorer_web/constants/appimages.dart';
 import 'package:scorer_web/widgets/add_one_Container.dart';
